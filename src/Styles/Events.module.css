@@ -1,0 +1,42 @@
+.FooterDiv{
+    margin-top: 15px;
+    flex-direction: column;
+    font-size: 1.7rem;
+    border-top: 1.5px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 94vw;
+    padding: 3vh;
+}
+
+.FooterFont{
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.FooterEnd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vw 3.5vw ;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    width: 100vw;
+}
+
+@media only screen and (min-width : 800px){
+    .FooterFont{
+        width: 70vw;
+    }
+}
+
+
+@media only screen and (max-width : 800px){
+    .FooterEnd{
+        text-align: center;
+        flex-direction: column !important;
+        gap: 2px;
+        padding-top: 10px !important;
+    }
+}
