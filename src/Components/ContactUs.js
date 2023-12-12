@@ -103,7 +103,7 @@ function ContactUs() {
           </div>
         </div>
         <div className="p-2 w-full text-center">
-          <input className={Styles.SubmitBtn} type='Submit' value='Send' onChange = {() => null} />
+          <input className={Styles.SubmitBtn} type='Submit' value='Send' id="SubmitBtn" onChange = {() => null}  />
         </div>
       </div>
     </div>

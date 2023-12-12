@@ -39,7 +39,7 @@ body{
 
 
 
-@media only screen and (max-width : 900px){
+@media only screen and (max-width : 991.5px){
     .Stickybtn{
         background-color:rgba(87, 0, 128, 0.655);
         width: 35px;

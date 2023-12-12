@@ -17,6 +17,7 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+
 }
 
 .optImage{
@@ -43,9 +44,9 @@
     padding-bottom: 7vw;
 }
 
+
 .about{
     color: antiquewhite;
-    margin-top: 0;
 }
 
 .abouthead{
@@ -120,6 +121,10 @@
 
 
 @media only screen and (min-width : 800px){
+    .aboutContent{
+        font-size: 1.1rem;
+    }
+
     .homecontentDiv{
         transition: all 1s;
         height: 100vh;
@@ -166,6 +171,12 @@
 
 
 @media only screen and (max-width : 800px){
+    .about{
+        color: antiquewhite;
+        margin-top: 8vw;
+        margin-bottom: 5vw;
+    }
+
     .aboutheadLarge{
         display: none;
     }
