@@ -18,14 +18,12 @@ function App() {
       <Navbar />
   
       <Routes>
-
           <Route exact path='/' element={<Home/>}></Route>
           <Route exact path='/home' element={<Home/>}></Route>
           <Route exact path='/events' element={<Events/>}></Route>
           <Route exact path='/team' element={<Team/>}></Route>
           <Route exact path='/contactus' element={<ContactUs/>}></Route>
           <Route exact path='/feedback' element={<Feedback/>}></Route>
-
       </Routes> 
 
     </Router>
