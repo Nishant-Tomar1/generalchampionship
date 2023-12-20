@@ -16,9 +16,9 @@ export default function Navbar() {
   <motion.nav className=" navbar fixed-top navbar-expand-lg navbar-dark bg-transparent ">
   <div className={Styles.Stickybtn} onClick={()=> window.scrollTo(0,0)}>  <button > <FaArrowUp /> </button></div> 
     <div className="container-fluid " >
-    <Link className="d-flex navbar-brand head fs-2 fw-bold px-2 pt-1 ps-md-4 Head" to ="/" >{/*<span style={{color:'gold !important'}}> < GiTrophy/> </span>*/}Astro_Champ </Link>
+    <Link className="d-flex navbar-brand head fs-2 fw-bold px-2 pt-1 ps-md-4 Head" to ="/AstroChamp_Frontend/" >{/*<span style={{color:'gold !important'}}> < GiTrophy/> </span>*/}Astro_Champ </Link>
 
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button className={`navbar-toggler ${Styles.Toggler}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
 
@@ -27,16 +27,16 @@ export default function Navbar() {
       
       <div className="navbar-nav ms-auto mb-2 mb-lg-0 px-2 gap-md-4 gap-3 pt-md-2">
         <div className="pt-3 pt-lg-0">
-          <Link className = {Styles.NavlinkListElement} aria-current="page" to ="/" onClick={()=> window.scrollTo(0,0)}>Home</Link>
+          <Link className = {Styles.NavlinkListElement} aria-current="page" to ="/AstroChamp_Frontend/" onClick={()=> window.scrollTo(0,0)}>Home</Link>
         </div>
         <div >
-          <Link className={Styles.NavlinkListElement} to ="/events" onClick={()=> window.scrollTo(0,0)}>AstroEvents</Link>
+          <Link className={Styles.NavlinkListElement} to ="/AstroChamp_Frontend/events" onClick={()=> window.scrollTo(0,0)}>AstroEvents</Link>
         </div>
         <div className="nav-item">
-          <Link className={Styles.NavlinkListElement} to ="/team" onClick={()=> window.scrollTo(0,0)}>Our Team</Link>
+          <Link className={Styles.NavlinkListElement} to ="/AstroChamp_Frontend/team" onClick={()=> window.scrollTo(0,0)}>Our Team</Link>
         </div>
         <div className="nav-item">
-          <Link className={Styles.NavlinkListElement} to ="/contactus" onClick={()=> window.scrollTo(0,0)}>Contact Us</Link>
+          <Link className={Styles.NavlinkListElement} to ="/AstroChamp_Frontend/contactus" onClick={()=> window.scrollTo(0,0)}>Contact Us</Link>
         </div>
         <div className="nav-item">
           <Link className={Styles.NavlinkListElement} to ="/feedback" >Feedback</Link>

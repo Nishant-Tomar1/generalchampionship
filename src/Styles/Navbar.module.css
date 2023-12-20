@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Prompt:wght@400;600&family=Roboto:wght@400;700&display=swap');
+/* @import url('//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Prompt:wght@400;600&family=Roboto:wght@400;700&display=swap'); */
 
 
-:root{
+/* :root{
     --bs-border-radius: 0.775rem;
-}
+} */
 
-body{
+/* body{
     font-family: "Prompt",sans-serif;
+} */
+.Toggler{
+    border-radius: 0.775rem;
 }
 
 .Stickybtn{

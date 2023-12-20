@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Prompt:wght@400;600&family=Roboto:wght@400;700&display=swap');
+@import url('//fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Prompt:wght@400;600&family=Roboto:wght@400;700&display=swap');
 
-*{
+*{  
+    font-family: 'Prompt',sans-serif;
     color: antiquewhite;
 }
-
 
 .homediv{ 
     margin: 0;
@@ -21,21 +21,24 @@
 }
 
 .optImage{
-    margin-top: 5vh;
+    margin-top: 6.5vh;
     width: 100vw;
     height: 68vh;
     background-image: url(../Components/BG/HomepageastroCopy.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    box-shadow: 10px 10px 5px 20vh black;
+    background-color: #000;
 }
+
 
 .homecontentDiv{
     height: 95vh;
     width: 100vw;
     text-align: center;
     color: antiquewhite;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat' !important;
     font-weight: 800;
     font-size: 7.5vw;
     line-height: 1.2em;

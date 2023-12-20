@@ -87,19 +87,19 @@ function ContactUs() {
         <div className="p-2 w-full md:w-2/5">
           <div className="relative ">
             <label htmlFor="name" className="leading-7 text-gray-400 " >Name</label>
-            <input type="text" id="name" name="Name" value={createForm.Name} onChange={updateCreateFormField} required className="w-full bg-transparent bg-opacity-0 border-2 rounded  border-gray-600  focus:border-white focus:border-2 focus:ring-5 focus:ring-indigo-200 text-base outline-none text-white-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+            <input type="text" id="name" name="Name" value={createForm.Name} onChange={updateCreateFormField} required className="w-full bg-transparent bg-opacity-0 border-2 rounded-xl  border-gray-600  focus:border-white focus:border-2 focus:ring-5 focus:ring-indigo-200 text-base outline-none text-white-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
           </div>
         </div>
         <div className="p-2 w-full md:w-3/5">
           <div className="relative">
             <label htmlFor="email" className="leading-7  text-gray-400">Email</label>
-            <input type="email" id="email" name="email" value={createForm.email} onChange={updateCreateFormField} required className="w-full bg-transparent bg-opacity-0 border-2 rounded border-gray-600 focus:border-white focus:ring-5 focus:ring-indigo-200 text-base outline-none text-white-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+            <input type="email" id="email" name="email" value={createForm.email} onChange={updateCreateFormField} required className="w-full bg-transparent bg-opacity-0 border-2 rounded-xl border-gray-600 focus:border-white focus:ring-5 focus:ring-indigo-200 text-base outline-none text-white-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
           </div>
         </div>
         <div className="p-2 w-full">
           <div className="relative">
             <label htmlFor="message"  className="leading-7  text-gray-400">Message</label>
-            <textarea id="message" name="message" value={createForm.message} required onChange={updateCreateFormField} className=" border-2 h-32 w-full bg-transparent bg-opacity-0 rounded border-gray-600 focus:border-white focus:ring-5 focus:ring-indigo-200 text-base outline-none text-white-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"></textarea>
+            <textarea id="message" name="message" value={createForm.message} required onChange={updateCreateFormField} className=" border-2 h-32 w-full bg-transparent bg-opacity-0 rounded-xl border-gray-600 focus:border-white focus:ring-5 focus:ring-indigo-200 text-base outline-none text-white-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"></textarea>
           </div>
         </div>
         <div className="p-2 w-full text-center">
