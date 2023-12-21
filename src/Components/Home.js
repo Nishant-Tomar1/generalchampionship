@@ -34,7 +34,7 @@ function Home() {
         <div className={Styles.homecontentDiv}> 
 
           <div className={Styles.optImage}> </div>
-          <div className={Styles.homeContentText}> Unveiling the COSMOS <br></br>At <br ></br>IIT Bhubaneswar</div>
+          <div className={Styles.homeContentText} style={{fontWeight : '650'}}> Unveiling the COSMOS <br></br>At <br ></br>IIT Bhubaneswar</div>
         </div>
 
         <div className={Styles.about} >

@@ -16,7 +16,7 @@ export default function Navbar() {
   <motion.nav className=" navbar fixed-top navbar-expand-lg navbar-dark bg-transparent ">
   <div className={Styles.Stickybtn} onClick={()=> window.scrollTo(0,0)}>  <button > <FaArrowUp /> </button></div> 
     <div className="container-fluid " >
-    <Link className="d-flex navbar-brand head fs-2 fw-bold px-2 pt-1 ps-md-4 Head" to ="/AstroChamp_Frontend/" >{/*<span style={{color:'gold !important'}}> < GiTrophy/> </span>*/}Astro_Champ </Link>
+    <Link className="d-flex navbar-brand head fs-2 fw-bold px-2 pt-1 ps-md-4 Head " to ="/AstroChamp_Frontend/" style={{color : 'rgb(220, 150, 0)'}}>{/*<span style={{color:'gold !important'}}> < GiTrophy/> </span>*/}Astro_Champ </Link>
 
     <button className={`navbar-toggler ${Styles.Toggler}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@ export default function Navbar() {
           <Link className={Styles.NavlinkListElement} to ="/AstroChamp_Frontend/contactus" onClick={()=> window.scrollTo(0,0)}>Contact Us</Link>
         </div>
         <div className="nav-item">
-          <Link className={Styles.NavlinkListElement} to ="/feedback" >Feedback</Link>
+          <Link className={Styles.Registerbtn} to ="/feedback" >Register</Link>
         </div> 
       </div>
     </div>

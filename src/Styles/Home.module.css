@@ -1,7 +1,9 @@
-@import url('//fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Prompt:wght@400;600&family=Roboto:wght@400;700&display=swap');
+@import url('//fonts.googleapis.com/css2?family=Montserrat:wght@400;550;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Prompt:wght@400;650;700;800&family=Roboto:wght@400;700&display=swap');
 
 *{  
+    border-radius: 0.775rem;
     font-family: 'Prompt',sans-serif;
+    font-weight: 400;
     color: antiquewhite;
 }
 
@@ -37,9 +39,7 @@
     height: 95vh;
     width: 100vw;
     text-align: center;
-    color: antiquewhite;
-    font-family: 'Montserrat' !important;
-    font-weight: 800;
+    /* font-family: 'Montserrat'; */
     font-size: 7.5vw;
     line-height: 1.2em;
     overflow:visible;
@@ -91,7 +91,7 @@
     cursor: pointer;
     transform: scalex(1.03);
     opacity: 1;
-    border:1.5px solid goldenrod;
+    border:1.5px solid rgb(218, 128, 32);
 }
 
 .FooterDiv{
