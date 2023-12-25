@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AstroChamp_Frontend/static/css/main.59919c58.css",
-    "main.js": "/AstroChamp_Frontend/static/js/main.07cdfd81.js",
+    "main.css": "/AstroChamp_Frontend/static/css/main.8eb74ada.css",
+    "main.js": "/AstroChamp_Frontend/static/js/main.aed56804.js",
     "static/js/787.9e9f4ffd.chunk.js": "/AstroChamp_Frontend/static/js/787.9e9f4ffd.chunk.js",
     "static/media/astrobg4edit2.png": "/AstroChamp_Frontend/static/media/astrobg4edit2.4df8272d035fb856fb27.png",
     "static/media/WaterRocket.png": "/AstroChamp_Frontend/static/media/WaterRocket.480f78d6849d2e24198c.png",
@@ -11,12 +11,12 @@
     "static/media/SpaceQuiz.jpg": "/AstroChamp_Frontend/static/media/SpaceQuiz.03e14113366ed5988536.jpg",
     "static/media/AsteroidVenture.jpg": "/AstroChamp_Frontend/static/media/AsteroidVenture.a3b8edfda16b4de0f9a6.jpg",
     "index.html": "/AstroChamp_Frontend/index.html",
-    "main.59919c58.css.map": "/AstroChamp_Frontend/static/css/main.59919c58.css.map",
-    "main.07cdfd81.js.map": "/AstroChamp_Frontend/static/js/main.07cdfd81.js.map",
+    "main.8eb74ada.css.map": "/AstroChamp_Frontend/static/css/main.8eb74ada.css.map",
+    "main.aed56804.js.map": "/AstroChamp_Frontend/static/js/main.aed56804.js.map",
     "787.9e9f4ffd.chunk.js.map": "/AstroChamp_Frontend/static/js/787.9e9f4ffd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.59919c58.css",
-    "static/js/main.07cdfd81.js"
+    "static/css/main.8eb74ada.css",
+    "static/js/main.aed56804.js"
   ]
 }

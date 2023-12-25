@@ -145,7 +145,7 @@ function Home() {
           <h2 className="font-medium title-font text-purple-600 mb-1 text-xxl md:text-4xl">Starborn Sagas</h2>
           <p className="leading-relaxed md:text-lg">A competition where you can express your creativity and thoughts in form of words! Give the beginning of an exciting story, your job is to complete it int the most amazing way possible!</p>
           <div className={Styles.KnowMorebtn }>
-      <Link to='/AstroChamp_Frontend/events' style={{textDecoration:'none',color:'antiquewhite'}} onClick={()=>  window.scrollTo(0,0)}>Know More  </Link>
+      <Link to='events' style={{textDecoration:'none',color:'antiquewhite'}} onClick={()=>  window.scrollTo(0,0)}>Know More  </Link>
     </div>
         </div>
 

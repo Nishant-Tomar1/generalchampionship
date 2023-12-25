@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-function Feedback() {
+function Register() {
   const variant = {
     entry : {
         opacity: [0,1], 
@@ -21,9 +21,9 @@ function Feedback() {
   return (
     <motion.div variants={variant} animate='entry' exit='exit'>
     
-      Feedback
+      <div className='flex  h-40 items-center justify-content-center'><a href='https://forms.gle/sj7gYPFAPnbqR4T86' target='-blank' >Register Yourself</a></div>
     </motion.div>
   )
 }
 
-export default Feedback
+export default Register

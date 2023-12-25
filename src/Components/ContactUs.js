@@ -23,9 +23,8 @@ function ContactUs() {
 
   const createNote = async (e) => {
   try{
-    
     e.preventDefault();
-    await axios.post("http://localhost:3000/notes", createForm);
+    await axios.post("http://localhost:8000/notes", createForm);
 
     setCreateForm({Name:"", email:"", message:""});
   }catch(error){

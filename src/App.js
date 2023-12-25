@@ -4,9 +4,9 @@ import Home from './Components/Home';
 import Events from './Components/Events';
 import Team from './Components/Team';
 import ContactUs from './Components/ContactUs';
-import Feedback from './Components/Feedback';
+import Register from './Components/Register';
 import { AnimatePresence } from 'framer-motion';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route} from 'react-router-dom';
 
 
 function App() {
@@ -18,13 +18,12 @@ function App() {
       <Navbar />
   
       <Routes>
-          <Route exact path='/AstroChamp_Frontend' element={<Home/>}></Route>
-          {/* <Route exact path='/' element={<Home/>}></Route> */}
-          <Route exact path='/AstroChamp_Frontend/home' element={<Home/>}></Route>
-          <Route exact path='/AstroChamp_Frontend/events' element={<Events/>}></Route>
-          <Route exact path='/AstroChamp_Frontend/team' element={<Team/>}></Route>
-          <Route exact path='/AstroChamp_Frontend/contactus' element={<ContactUs/>}></Route>
-          <Route exact path='/AstroChamp_Frontend/feedback' element={<Feedback/>}></Route>
+          <Route exact path='' element={<Home/>}></Route>
+          <Route exact path='home' element={<Home/>}></Route>
+          <Route exact path='events' element={<Events/>}></Route>
+          <Route exact path='team' element={<Team/>}></Route>
+          <Route exact path='contactus' element={<ContactUs/>}></Route>
+          <Route exact path='register' element={<Register/>}></Route>
       </Routes> 
 
     </Router>
