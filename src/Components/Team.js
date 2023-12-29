@@ -4,6 +4,14 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import Styles from '../Styles/Home.module.css';
 import { motion } from 'framer-motion';
+import het from "../Components/IMAGES/het.jpg";
+import nobel from "../Components/IMAGES/nobel.jpg";
+import harsh from "../Components/IMAGES/harsh.jpg";
+import arshad from "../Components/IMAGES/arshad.jpg";
+import yash from "../Components/IMAGES/yash.jpg";
+import bibushree from "../Components/IMAGES/bibushree.jpg";
+import nishant from "../Components/IMAGES/nishant.jpg"
+
 
 function Team() {
 
@@ -54,7 +62,7 @@ function Team() {
 
       <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/201x201" ></img>
+          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={het} ></img>
           <div className="flex-grow sm:pl-8">
             <h2 className="title-font font-medium text-xl text-orange-500">Het Sarsava</h2>
             <h3 className="text-gray-500 mb-3 text-lg">Events Head</h3>
@@ -72,7 +80,7 @@ function Team() {
 
       <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/204x204"></img>
+          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={harsh} />
           <div className="flex-grow sm:pl-8">
             <h2 className="title-font font-medium text-xl text-orange-500">Harsh Sharma</h2>
             <h3 className="text-gray-500 mb-3 text-lg">Designer </h3>
@@ -91,7 +99,7 @@ function Team() {
 
       <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/206x206"></img>
+          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={nishant}></img>
           <div className="flex-grow sm:pl-8">
             <h2 className="title-font font-medium text-xl text-orange-500">Nishant Tomar</h2>
             <h3 className="text-gray-500 mb-3 text-lg">Management Head</h3>
@@ -108,7 +116,7 @@ function Team() {
 
       <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/204x204"></img>
+          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={arshad}></img>
           <div className="flex-grow sm:pl-8">
             <h2 className="title-font font-medium text-xl text-orange-500">Arshad Amaan</h2>
             <h3 className="text-gray-500 mb-3 text-lg">UI Developer</h3>
@@ -127,7 +135,7 @@ function Team() {
 
       <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/206x206"></img>
+          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={yash}></img>
           <div className="flex-grow sm:pl-8">
             <h2 className="title-font font-medium text-xl text-orange-500">Yash Goyal</h2>
             <h3 className="text-gray-500 mb-3 text-lg">Designer</h3>
@@ -163,7 +171,7 @@ function Team() {
 
       <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/206x206"></img>
+          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={bibushree}></img>
           <div className="flex-grow sm:pl-8">
             <h2 className="title-font font-medium text-xl text-orange-500">Bibushree Mahapatra</h2>
             <h3 className="text-gray-500 mb-3 text-lg">Designer</h3>
@@ -198,9 +206,9 @@ function Team() {
 
       <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/206x206"></img>
+          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={nobel}></img>
           <div className="flex-grow sm:pl-8">
-            <h2 className="title-font font-medium text-xl text-orange-500">Biswajit Rout</h2>
+            <h2 className="title-font font-medium text-xl text-orange-500">Nobel Das</h2>
             <h3 className="text-gray-500 mb-3 text-lg">Designer</h3>
             {/* <p className="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p> */}
             <span className="inline-flex text-white text-lg gap-2">
