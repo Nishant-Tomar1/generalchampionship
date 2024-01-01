@@ -3,7 +3,7 @@ import Styles from "../Styles/Navbar.module.css"
 import {Link} from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowUp } from "react-icons/fa";
-// import { GiTrophy } from "react-icons/gi";
+import logo from "../Components/IMAGES/Astrologo.png";
 
 
 
@@ -16,7 +16,7 @@ export default function Navbar() {
   <motion.nav className=" navbar fixed-top navbar-expand-lg navbar-dark bg-transparent ">
   <div className={Styles.Stickybtn} onClick={()=> window.scrollTo(0,0)}>  <button > <FaArrowUp /> </button></div> 
     <div className="container-fluid " >
-    <Link className="d-flex navbar-brand head fs-2 fw-bold px-2 pt-1 ps-md-4 Head " to =""> {/*<span style={{color:'gold !important'}}> < GiTrophy/> </span>*/} Astro_Champ </Link>
+    <Link className="d-flex navbar-brand head fs-2 fw-bold px-2 pt-1 ps-md-4 Head " to =""> <img style={{width:"1.4em",height:"1.4em",margin:"1px 4px 2px 0px",borderRadius:"50%"}} src={logo} alt="logo"/>Astro_Champ </Link>
 
     <button className={`navbar-toggler ${Styles.Toggler}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@ export default function Navbar() {
           <Link className={Styles.NavlinkListElement} to ="contactus" onClick={()=> window.scrollTo(0,0)}>Contact Us</Link>
         </div>
         <div className="nav-item">
-          <Link className={Styles.Registerbtn} to ="register" >Register</Link>
+          <Link className={Styles.Registerbtn}  to="https://forms.gle/sj7gYPFAPnbqR4T86" target='blank' >Register</Link>
         </div> 
       </div>
     </div>
