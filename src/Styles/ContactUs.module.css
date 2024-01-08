@@ -11,7 +11,7 @@
     background: linear-gradient(130deg, black 5%,indigo 70%, purple 110%, red 120% );
 }
 
-.SubmitBtn:hover{
+.hoverClass:hover{
     transform: scalex(1.05);
     opacity: 1;
 }
@@ -61,7 +61,7 @@
     .SubmitBtn{
         opacity:1
     }
-    .SubmitBtn:hover{
+    /* .SubmitBtn:hover{
         transform: scalex(1.08);
-    }
+    } */
 }
