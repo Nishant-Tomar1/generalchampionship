@@ -24,7 +24,7 @@ function ContactUs() {
   const createNote = async (e) => {
   try{
     e.preventDefault();
-    await axios.post("http://localhost:8000/notes", createForm);
+    await axios.post("https://astrochamp.onrender.com/notes", createForm);
 
     setCreateForm({Name:"", email:"", message:""});
   }catch(error){
@@ -36,7 +36,7 @@ function ContactUs() {
 }
 
 
-  const variant = {
+const variant = {
     entry : {
         opacity: [0,1], 
         transition:{
@@ -52,9 +52,9 @@ function ContactUs() {
         }
     },
 }
+
   return (
     <motion.div variants={variant} animate='entry' exit='exit' className='flex flex-col items-center justify-center'>
-
 
   <div className="w-full md:w-4/5 overflow-hidden p-3 flex flex-col gap-6 justify-center items-center mt-16 ">
 
