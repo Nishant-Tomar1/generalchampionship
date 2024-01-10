@@ -40,3 +40,27 @@
         padding-top: 10px !important;
     }
 }
+
+.SpecialText{
+    color: rgb(255, 196, 0);
+}
+
+.Registerbtn{
+    width: fit-content;
+    color: antiquewhite;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    padding: 4px 25px;
+    text-align: center;
+    border-radius: 30px;
+    border: 1.5px solid antiquewhite;
+    background: linear-gradient(130deg, black 5%,indigo 70%, purple 110%, red 120% );
+}
+
+.Registerbtn:hover{
+    color: goldenrod;
+    cursor: pointer;
+    opacity: 1;
+    border:1.5px solid goldenrod;
+}

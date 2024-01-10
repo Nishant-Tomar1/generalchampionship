@@ -26,17 +26,9 @@ function ContactUs() {
   const createNote = async (e) => {
   try{
     e.preventDefault();
-    await axios.post("https://astrochamp.onrender.com/notes", createForm);
+    
+    setTimeout(()=> {
     setCreateForm({Name:"", email:"", message:""});
-
-    control.start({
-      scale: [1,0.01,0.01,1],
-      transition : {
-        times : [0,0.1,0.15,0.25],
-        // ease : "easeInOut"
-      }
-    });
-
     setBtntext("Sent ✅");
     const btn = e.target.SubmitBtn;
     btn.disabled = true; 
@@ -44,11 +36,15 @@ function ContactUs() {
     btn.style.borderColor = "lightgreen";
     btn.style.opacity = "75%";
     btn.classList.remove(`${Styles.hoverClass}`);
-  
-
-  
-  
+    control.start({
+      scale: [1,0.01,0.01,1],
+      transition : {
+        times : [0,0.1,0.15,0.25],
+      }
+    });
+    }, 500)
     
+    await axios.post("https://astrochamp.onrender.com/notes", createForm);
 
   }catch(error){
     // console.log(error);
@@ -90,7 +86,7 @@ const variant = {
         </div>
         <div className=" px-6 mt-1 ">
           <h2 className="title-font font-semibold text-black tracking-widest text-xs">EMAIL</h2>
-          <p className="" >secyastronomy@iitbbs.ac.in</p>
+          <a className="" href="mailto:secyastronomy.sg@iitbbs.ac.in"  style={{textDecoration:"",color:"orange"}}>secyastronomy.sg@iitbbs.ac.in</a>
         </div>
       </div>
   </div>

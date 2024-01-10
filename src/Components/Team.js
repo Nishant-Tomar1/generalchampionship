@@ -234,7 +234,7 @@ function Team() {
         <div className="h-full flex items-center border-gray-200 border p-3 rounded-lg text-center">
           {/* <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/80x80"></img> */}
           <div className="flex-grow">
-            <h2 className="text-pink-600 title-font font-medium text-xl">Holden Caulfield</h2>
+            <h2 className="text-pink-600 title-font font-medium text-xl">Ayush Mittal</h2>
             {/* <p className="text-gray-500">UI Designer</p> */}
           </div>
         </div>
@@ -244,7 +244,7 @@ function Team() {
         <div className="h-full flex items-center border-gray-200 border p-3 rounded-lg text-center">
           {/* <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/84x84"></img> */}
           <div className="flex-grow">
-            <h2 className="text-pink-600 title-font font-medium text-xl">Henry Letham</h2>
+            <h2 className="text-pink-600 title-font font-medium text-xl">Sudhanshu Jha</h2>
             {/* <p className="text-gray-500">CTO</p> */}
           </div>
         </div>
@@ -253,7 +253,7 @@ function Team() {
         <div className="h-full flex items-center border-gray-200 border p-3 rounded-lg text-center">
           {/* <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/88x88"></img> */}
           <div className="flex-grow">
-            <h2 className="text-pink-600 title-font font-medium text-xl">Oskar Blinde</h2>
+            <h2 className="text-pink-600 title-font font-medium text-xl">Kunal</h2>
             {/* <p className="text-gray-500">Founder</p> */}
           </div>
         </div>
@@ -262,7 +262,7 @@ function Team() {
         <div className="h-full flex items-center border-gray-200 border p-3 rounded-lg text-center">
           {/* <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/90x90"></img> */}
           <div className="flex-grow">
-            <h2 className="text-pink-600 title-font font-medium text-xl">John Doe</h2>
+            <h2 className="text-pink-600 title-font font-medium text-xl">Spandan Satapathy</h2>
             {/* <p className="text-gray-500">DevOps</p> */}
           </div>
         </div>
@@ -271,7 +271,7 @@ function Team() {
         <div className="h-full flex items-center border-gray-200 border p-3 rounded-lg text-center">
           {/* <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/94x94"></img> */}
           <div className="flex-grow">
-            <h2 className="text-pink-600 title-font font-medium text-xl">Martin Eden</h2>
+            <h2 className="text-pink-600 title-font font-medium text-xl">Anurag Mishra</h2>
             {/* <p className="text-gray-500">Software Engineer</p> */}
           </div>
         </div>
@@ -280,7 +280,7 @@ function Team() {
         <div className="h-full flex items-center border-gray-200 border p-3 rounded-lg text-center">
           {/* <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/98x98"></img> */}
           <div className="flex-grow">
-            <h2 className="text-pink-600 title-font font-medium text-xl">Boris Kitua</h2>
+            <h2 className="text-pink-600 title-font font-medium text-xl">Gagan Gupta</h2>
             {/* <p className="text-gray-500">UX Researcher</p> */}
           </div>
         </div>
@@ -289,7 +289,7 @@ function Team() {
         <div className="h-full flex items-center border-gray-200 border p-3 rounded-lg text-center">
           {/* <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/100x90"></img> */}
           <div className="flex-grow">
-            <h2 className="text-pink-600 title-font font-medium text-xl">Atticus Finch</h2>
+            <h2 className="text-pink-600 title-font font-medium text-xl">Ganesh</h2>
             {/* <p className="text-gray-500">QA Engineer</p> */}
           </div>
         </div>
@@ -298,7 +298,7 @@ function Team() {
         <div className="h-full flex items-center border-gray-200 border p-3 rounded-lg text-center">
           {/* <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/104x94"></img> */}
           <div className="flex-grow">
-            <h2 className="text-pink-600 title-font font-medium text-xl">Alper Kamu</h2>
+            <h2 className="text-pink-600 title-font font-medium text-xl">Shashank</h2>
             {/* <p className="text-gray-500">System</p> */}
           </div>
         </div>
@@ -307,7 +307,7 @@ function Team() {
         <div className="h-full flex items-center border-gray-200 border p-3 rounded-lg text-center">
           {/* <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/108x98"></img> */}
           <div className="flex-grow">
-            <h2 className="text-pink-600 title-font font-medium text-xl">Rodrigo Monchi</h2>
+            <h2 className="text-pink-600 title-font font-medium text-xl">Jahnavi</h2>
             {/* <p className="text-gray-500">Product Manager</p> */}
           </div>
         </div>
