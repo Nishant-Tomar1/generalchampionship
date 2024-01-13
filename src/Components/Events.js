@@ -20,14 +20,14 @@ function Events() {
     entry : {
         opacity: [0,1], 
         transition:{
-            duration:1,
+            duration:0.125,
             times:[0,1],
         }
     },
     exit : {
         opacity: [1,0], 
         transition:{
-            duration:1,
+            duration:0.125,
             times:[0,1],
         }
     },
@@ -42,7 +42,7 @@ function Events() {
     <img class="lg:w-2/3 md:w-4/6 w-5/6 mb-6 border-1 border-orange-400 object-cover object-center rounded h-64" alt="" src={SpaceQuiz} />
     <div class="w-full md:w-5/6 flex flex-col mb-16 px-4 items-center text-center">
       <h1 class="title-font sm:text-4xl text-2xl mb-3 font-medium text-orange-400">1. SPACE QUIZ</h1>
-      <p class="mb-8 leading-relaxed text-md md:text-sm text-white-400"> A two-round Quiz competition based on astronomy, aerospace and 
+      <p class="mb-8 leading-relaxed text-md md:text-lg text-white-400"> A two-round Quiz competition based on astronomy, aerospace and 
 astrophysics where your knowledge in these fields will be put to the test. <br></br>
 <span className={Styles.SpecialText} >Date : </span> 21 January, 2024. 
 <span className={Styles.SpecialText} > Time : </span>11 : 00 am.
@@ -75,7 +75,7 @@ Any details or justification, if needed, will be shared later.
     <img class="lg:w-2/3 md:w-4/6 w-5/6 mb-6 border-1 border-orange-400 object-cover object-center rounded h-64  " alt="" src={AsteroidVenture} />
     <div class="w-full md:w-5/6 flex flex-col mb-16 px-4 items-center text-center">
       <h1 class="title-font sm:text-4xl text-2xl mb-3 font-medium text-orange-400">2. ASTEROID VENTURE</h1>
-      <p class="mb-8 leading-relaxed text-md md:text-sm text-white-400">An exciting case study based competition where a problem statement related 
+      <p class="mb-8 leading-relaxed text-md md:text-lg text-white-400">An exciting case study based competition where a problem statement related 
 to asteroid mining will be given and you have to solve it. <br></br>
 <span className={Styles.SpecialText} >Date : </span> ......
 <span className={Styles.SpecialText} > Time : </span>......
@@ -99,7 +99,7 @@ Any details or justification, if needed, will be shared later.
     <img class="lg:w-2/3 md:w-4/6 w-5/6 mb-6 border-1 border-orange-400 object-cover object-center rounded h-64  " alt="" src={WaterRocket} />
     <div class="w-full md:w-5/6 flex flex-col mb-16 px-4 items-center text-center">
       <h1 class="title-font sm:text-4xl text-2xl mb-3 font-medium text-orange-400">3. BLAST OFF</h1>
-      <p class="mb-8 leading-relaxed text-md md:text-sm text-white-400">A water bottle rocket competition in which you have to make your own water 
+      <p class="mb-8 leading-relaxed text-md md:text-lg text-white-400">A water bottle rocket competition in which you have to make your own water 
 bottle rocket and use the provided launcher to maximize the distance travelled 
 by your rocket. <br></br>
 <span className={Styles.SpecialText} >Date : </span> ......
@@ -131,7 +131,7 @@ Any details or justification, if needed, will be shared later.
     <img class="lg:w-2/3 md:w-4/6 w-5/6 mb-6 border-1 border-orange-400 object-cover object-center rounded h-64  " alt="" src={SpaceArt} />
     <div class="w-full md:w-5/6 flex flex-col mb-16 px-4 items-center text-center">
       <h1 class="title-font sm:text-4xl text-2xl mb-3 font-medium text-orange-400">4. SPACE ART</h1>
-      <p class="mb-8 leading-relaxed text-md md:text-sm text-white-400">A Space Art based Competition, to showcase your artistic skills, that will be organized in collaboration with KALAKRITI, the Fine Arts Society of IIT Bhubaneswar.<br></br>
+      <p class="mb-8 leading-relaxed text-md md:text-lg text-white-400">A Space Art based Competition, to showcase your artistic skills, that will be organized in collaboration with KALAKRITI, the Fine Arts Society of IIT Bhubaneswar.<br></br>
 <span className={Styles.SpecialText} >Date : </span> ......
 <span className={Styles.SpecialText} > Time : </span>......
 <span className={Styles.SpecialText} >  Mode : </span> Offline. <br /><br />
@@ -152,7 +152,7 @@ Participants need to bring their equipment.
     <img class="lg:w-2/3 md:w-4/6 w-5/6 mb-6 border-1 border-orange-400 object-cover object-center rounded h-64  " alt="" src={StarbornSagas} />
     <div class="w-full md:w-5/6 flex flex-col mb-16 px-4 items-center text-center">
       <h1 class="title-font sm:text-4xl text-2xl mb-3 font-medium text-orange-400">5. STARBORN SAGAS</h1>
-      <p class="mb-8 leading-relaxed text-md md:text-sm text-white-400">A competition where you can express your creativity and thoughts in form of 
+      <p class="mb-8 leading-relaxed text-md md:text-lg text-white-400">A competition where you can express your creativity and thoughts in form of 
 words! Give the beginning of an exciting story, your job is to complete it int the 
 most amazing way possible! <br></br>
 <span className={Styles.SpecialText} >Date : </span> ......
@@ -180,8 +180,8 @@ Any details or justification, if needed, will be shared later.
   <div class="container mx-auto flex flex-col px-2  justify-center items-center">
     <img class="lg:w-2/3 md:w-4/6 w-5/6 mb-6 border-1 border-orange-400 object-cover object-center rounded h-64  " alt="" src={CosmoMath} />
     <div class="w-full md:w-5/6 flex flex-col mb-16 px-4 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-2xl mb-3 font-medium text-orange-400">6. ASTRO MATH</h1>
-      <p class="mb-8 leading-relaxed text-md md:text-sm text-white-400">A competition where you can express your creativity and thoughts in form of 
+      <h1 class="title-font sm:text-4xl text-2xl mb-3 font-medium text-orange-400">6. MATHO-STELLAR</h1>
+      <p class="mb-8 leading-relaxed text-md md:text-lg text-white-400">A competition where you can express your creativity and thoughts in form of 
 words! Give the beginning of an exciting story, your job is to complete it int the 
 most amazing way possible! <br></br>
 <span className={Styles.SpecialText} >Date : </span> ......

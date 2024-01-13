@@ -6,14 +6,14 @@ function Register() {
     entry : {
         opacity: [0,1], 
         transition:{
-            duration:1.5,
+            duration:0.2,
             times:[0,1],
         }
     },
     exit : {
         opacity: [1,0], 
         transition:{
-            duration:1.5,
+            duration:0.2,
             times:[0,1],
         }
     },

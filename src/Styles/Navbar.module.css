@@ -48,6 +48,7 @@
 }
 
 .NavlinkListElement{
+    font-size: larger;
     transition: all 0.5s ease-out;
     text-decoration: none;
     color: white;
@@ -64,11 +65,6 @@
 
 
 @media only screen and (max-width : 991.5px){
-    .Registerbtn{
-        opacity: 1;
-        background-image: linear-gradient( 0deg,  #000000 38.2%,  #380557 138.2% );
-    }
-
     .Stickybtn{
         background-color:rgba(87, 0, 128, 0.655);
         width: 35px;
@@ -80,6 +76,7 @@
     }
     
     .NavlinkListElement{
+        font-size: 1rem;
         border: 1px solid ;
         color: antiquewhite;
         padding: 2px 10vw ;

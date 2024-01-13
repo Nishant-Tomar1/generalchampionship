@@ -56,14 +56,14 @@ const variant = {
     entry : {
         opacity: [0,1], 
         transition:{
-            duration:1.5,
+            duration:0.2,
             times:[0,1],
         }
     },
     exit : {
         opacity: [1,0], 
         transition:{
-            duration:1.5,
+            duration:0.2,
             times:[0,1],
         }
     },
@@ -75,7 +75,7 @@ const variant = {
   <div className="w-full md:w-4/5 overflow-hidden p-3 flex flex-col gap-6 justify-center items-center mt-16 ">
 
     <div style={{width:'100%',height:'70vh'}}>
-      <iframe width="100%" height="100%" className="relative inset-0" frameBorder="0" title="map" marginHeight="5" marginWidth="5" scrolling="no" src="https://maps.google.com/maps/?width=100%&height=600&hl=en&q= IIT Bhubaneswar, Jatni&t=&z=15&ie=UTF8&iwloc=B&output=embed"
+      <iframe width="100%" height="100%" className="relative inset-0" frameBorder="0" title="map" marginHeight="5" marginWidth="5" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7062.1227120045605!2d85.67155698909002!3d20.14838391111869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19ac2e52a057f5%3A0x564b6e83a7504a16!2sIndian%20Institute%20Of%20Technology%20(IIT)%20Bhubaneswar!5e1!3m2!1sen!2sin!4v1705138207885!5m2!1sen!2sin" 
  style={{borderRadius:'16px',border:'2.4px solid gray'}}></iframe>
     </div>   
  
@@ -94,26 +94,26 @@ const variant = {
 <form action="" onSubmit={createNote}>
   <div className="container px-4 px-md-5 py-12 mx-auto">
     <div className="flex flex-col text-center w-full mb-2">
-      <h1 className="sm:text-3xl font-medium title-font text-orange-400">Send a Message!</h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Feel free to reach out with any questions or messages, and we'll get back to you as soon as we can.</p>
+      <h1 className="sm:text-3xl font-medium title-font text-orange-400 md:text-5xl">Send a Message!</h1>
+      <p className="lg:w-2/3 mx-auto leading-relaxed text-base md:text-xl">Feel free to reach out with any questions or messages, and we'll get back to you as soon as we can.</p>
     </div>
     <div className="flex flex-col items-center w-full ">
       <div className="flex flex-wrap ">
         <div className="p-2 w-full md:w-2/5">
           <div className="relative ">
-            <label htmlFor="name" className="leading-7 text-gray-400 " >Name</label>
+            <label htmlFor="name" className="leading-7 text-gray-400 md:text-lg" >Name</label>
             <input type="text" id="name" name="Name" value={createForm.Name} required onChange={updateCreateFormField}  className="w-full bg-transparent bg-opacity-0 border-2 rounded-xl  border-gray-600  focus:border-white focus:border-2 focus:ring-5 focus:ring-indigo-200 text-base outline-none text-white-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
           </div>
         </div>
         <div className="p-2 w-full md:w-3/5">
           <div className="relative">
-            <label htmlFor="email" className="leading-7  text-gray-400">Email</label>
+            <label htmlFor="email" className="leading-7  text-gray-400 md:text-lg">Email</label>
             <input type="email" id="email" name="email" value={createForm.email} required onChange={updateCreateFormField} className="w-full bg-transparent bg-opacity-0 border-2 rounded-xl border-gray-600 focus:border-white focus:ring-5 focus:ring-indigo-200 text-base outline-none text-white-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
           </div>
         </div>
         <div className="p-2 w-full">
           <div className="relative">
-            <label htmlFor="message"  className="leading-7  text-gray-400">Message</label>
+            <label htmlFor="message"  className="leading-7  text-gray-400 md:text-lg">Message</label>
             <textarea id="message" name="message" value={createForm.message} required onChange={updateCreateFormField} className=" border-2 h-32 w-full bg-transparent bg-opacity-0 rounded-xl border-gray-600 focus:border-white focus:ring-5 focus:ring-indigo-200 text-base outline-none text-white-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"></textarea>
           </div>
         </div>
