@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation} from 'react-router
 
 function App() {
   return (
-    <Router basename='/AstroChamp_Frontend/'>
+    <Router basename={"/AstroChamp_Frontend"}>
       <Routefunction/>
     </Router>
   )
@@ -27,11 +27,11 @@ function Routefunction() {
       <Navbar />
   
       <Routes location={location} key={location.key}>
-          <Route exact path='' element={<Home/>}></Route>
-          <Route exact path='home' element={<Home/>}></Route>
-          <Route exact path='events' element={<Events/>}></Route>
-          <Route exact path='team' element={<Team/>}></Route>
-          <Route exact path='contactus' element={<ContactUs/>}></Route>
+          <Route exact path="/" element={<Home/>}></Route>
+          <Route exact path="/home" element={<Home/>}></Route>
+          <Route exact path="/events" element={<Events/>}></Route>
+          <Route exact path="/team" element={<Team/>}></Route>
+          <Route exact path="/contactus" element={<ContactUs/>}></Route>
       </Routes> 
 
     </AnimatePresence>

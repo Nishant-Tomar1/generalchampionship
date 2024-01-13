@@ -160,7 +160,7 @@ function Home() {
           <h2 className="font-medium title-font text-pink-700 mb-1 text-3xl md:text-4xl">Matho-Stellar</h2>
           <p className="leading-relaxed md:text-lg lg:text-xl">Prepare for the liftoff with Matho-Stellar, a competition that combines your Cosmic curiosity with mathematical mastery ! </p>
           <div >
-      <Link to='events' style={{textDecoration:'none',color:'orange',fontSize:"1.2rem"}} onClick={()=>  window.scrollTo(0,0)}>Know More . . .  </Link>
+      <Link to="/events" style={{textDecoration:'none',color:'orange',fontSize:"1.2rem"}} onClick={()=>  window.scrollTo(0,0)}>Know More . . .  </Link>
     </div>
         </div>
 
