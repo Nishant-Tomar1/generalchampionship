@@ -1,4 +1,4 @@
-import React, { useState } from 'react';  
+import React from 'react';  
 import Styles from "../Styles/Navbar.module.css"
 import {Link} from 'react-router-dom';
 import { motion } from 'framer-motion';

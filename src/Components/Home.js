@@ -6,8 +6,7 @@ import { TfiThought } from "react-icons/tfi";
 import { TbMathIntegrals } from "react-icons/tb";
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import nakshatra from "../Components/logos/webd.png";
-import webnd from "../Components/logos/webd.png";
+
 
 function Home() {
 
