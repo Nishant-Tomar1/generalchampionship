@@ -1,14 +1,13 @@
 import React from 'react';
 import Styles from '../Styles/Home.module.css';
-import { FaQuestion } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
+import { FaQuestion, FaPaintBrush, FaSearch,FaRupeeSign } from "react-icons/fa";
 import { IoMdRocket } from "react-icons/io";
-import { FaPaintBrush } from "react-icons/fa";
 import { TfiThought } from "react-icons/tfi";
 import { TbMathIntegrals } from "react-icons/tb";
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import nakshatra from "../Components/logos/webd.png";
+import webnd from "../Components/logos/webd.png";
 
 function Home() {
 
@@ -170,8 +169,8 @@ function Home() {
   </div>
 
   <div className={Styles.prizepooldiv}>
-    <div>Prize Pool :</div>
-    <div>25 K</div>
+    <div style={{color:"goldenrod"}}>Prize Pool :</div>
+    <div > <FaRupeeSign style={{fontSize: "90%"}}/>25 K</div>
   </div>
   
 
@@ -182,13 +181,13 @@ function Home() {
     {/* Footer */}
     <div className={Styles.FooterDiv} style={{color:'gray !important'}}>
 
-      <div>  Astro_Champ </div>
-      <div className={Styles.FooterFont}> Dive into the cosmic adventure at AstroChamp 2024! Explore the universe through quizzes, art, science, and more. <br ></br> Join us in this celestial celebration!"</div>
-
-
+      <div className='mb-1 font-xs md:text-2xl text-lg '>  Astro_Champ | Nakshatra, IITBBS </div> 
+      <div className={Styles.FooterFont}> Dive into the cosmic adventure at AstroChamp 2024! Explore the universe through quizzes, art, science, and more. <br ></br> Join us in this celestial celebration!"<hr /></div>
+      <div style={{marginTop:"4px"}} className='md:text-xl'><span style={{color:"goldenrod"}}> Collaborations </span>: WebnD Society  </div>
+      
       <div className={Styles.FooterEnd}> 
         <div>© Copyright 2024 | All rights Reserved </div>
-        <div> Designed and developed by <a href="https://www.github.com/DEV-NISHANT-HERE" style={{textDecoration:'none',color:'purple'}}>Nishant Tomar</a> (team Astro_Champ) </div>
+        <div> Designed and developed by <a href="https://www.github.com/DEV-NISHANT-HERE" target='#' style={{textDecoration:'none',color:'purple'}}>Nishant Tomar</a> (team Astro_Champ) </div>
       </div>
 
     </div>

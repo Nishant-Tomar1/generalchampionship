@@ -20,7 +20,7 @@
 .FooterDiv{
     margin-top: 15px;
     flex-direction: column;
-    font-size: 1.7rem;
+    /* font-size: 1.7rem; */
     border-top: 1.5px solid gray;
     display: flex;
     justify-content: center;

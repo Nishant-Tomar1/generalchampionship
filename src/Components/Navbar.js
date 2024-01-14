@@ -1,4 +1,4 @@
-import React from 'react';  
+import React, { useState } from 'react';  
 import Styles from "../Styles/Navbar.module.css"
 import {Link} from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -8,13 +8,11 @@ import logo from "../Components/IMAGES/Astrologo.png";
 
 
 export default function Navbar() {
-
-
+  
   return (
-
 <>
   <motion.nav className=" navbar fixed-top navbar-expand-lg navbar-dark bg-transparent ">
-  <div className={Styles.Stickybtn} onClick={()=> window.scrollTo(0,0)}>  <button > <FaArrowUp /> </button></div> 
+  { <div   className={Styles.Stickybtn} onClick={()=> window.scrollTo(0,0)}>  <button > <FaArrowUp /> </button></div> }
     <div className="container-fluid " >
     <Link className="d-flex navbar-brand head fs-2 fw-bold px-2 pt-1 ps-md-4 Head " to =""> <img style={{width:"1.4em",height:"1.4em",margin:"1px 4px 2px 0px",borderRadius:"50%"}} src={logo} alt="logo"/>Astro_Champ </Link>
 

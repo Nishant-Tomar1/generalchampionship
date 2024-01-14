@@ -72,7 +72,7 @@ const variant = {
   return (
     <motion.div variants={variant} animate='entry' exit='exit' className='flex flex-col items-center justify-center'>
 
-  <div className="w-full md:w-4/5 overflow-hidden p-3 flex flex-col gap-6 justify-center items-center mt-16 ">
+  <div className="w-full md:w-4/5 overflow-hidden p-3 flex flex-col gap-6 justify-center items-center mt-20 ">
 
     <div style={{width:'100%',height:'70vh'}}>
       <iframe width="100%" height="100%" className="relative inset-0" frameBorder="0" title="map" marginHeight="5" marginWidth="5" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7062.1227120045605!2d85.67155698909002!3d20.14838391111869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19ac2e52a057f5%3A0x564b6e83a7504a16!2sIndian%20Institute%20Of%20Technology%20(IIT)%20Bhubaneswar!5e1!3m2!1sen!2sin!4v1705138207885!5m2!1sen!2sin" 
@@ -130,13 +130,13 @@ const variant = {
   {/* Footer */}
   <div className={Styles.FooterDiv} style={{color:'gray !important'}}>
 
-<div> Astro_Champ </div>
-<div className={Styles.FooterFont}> Dive into the cosmic adventure at AstroChamp 2024! Explore the universe through quizzes, art, science, and more. <br ></br> Join us in this celestial celebration!"</div>
-
+<div className='mb-1 font-xs md:text-2xl text-lg '>  Astro_Champ | Nakshatra, IITBBS </div> 
+<div className={Styles.FooterFont}> Dive into the cosmic adventure at AstroChamp 2024! Explore the universe through quizzes, art, science, and more. <br ></br> Join us in this celestial celebration!"<hr /></div>
+<div style={{marginTop:"4px"}} className='md:text-xl'><span style={{color:"goldenrod"}}> Collaborations </span>: WebnD Society  </div>
 
 <div className={Styles.FooterEnd}> 
   <div>© Copyright 2024 | All rights Reserved </div>
-  <div> Designed and developed by <a href="https://www.github.com/DEV-NISHANT-HERE" style={{textDecoration:'none',color:'purple'}}>Nishant Tomar</a> (team Astro_Champ) </div>
+  <div> Designed and developed by <a href="https://www.github.com/DEV-NISHANT-HERE" target='#' style={{textDecoration:'none',color:'purple'}}>Nishant Tomar</a> (team Astro_Champ) </div>
 </div>
 
 </div>

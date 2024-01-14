@@ -34,7 +34,7 @@ function Events() {
 }
 
   return (
-    <motion.div variants={variant} animate='entry' exit='exit' className='flex flex-col items-center justify-center'>
+    <motion.div variants={variant} animate='entry' exit='exit' className='items-center justify-center'>
 
 <section class="text-gray-600 body-font ">
   
@@ -44,8 +44,8 @@ function Events() {
       <h1 class="title-font sm:text-4xl text-2xl mb-3 font-medium text-orange-400">1. SPACE QUIZ</h1>
       <p class="mb-8 leading-relaxed text-md md:text-lg text-white-400"> A two-round Quiz competition based on astronomy, aerospace and 
 astrophysics where your knowledge in these fields will be put to the test. <br></br>
-<span className={Styles.SpecialText} >Date : </span> 21 January, 2024. 
-<span className={Styles.SpecialText} > Time : </span>11 : 00 am.
+<span className={Styles.SpecialText} >Date : </span> 20 January, 2024 |
+<span className={Styles.SpecialText} > Time : </span>06 : 00 pm |
 <span className={Styles.SpecialText} >  Mode : </span> Offline. <br /> <br />
 <Link className={Styles.Registerbtn}  to="https://forms.gle/Gk8jbJzQSSZSPMgr6" target='blank' >Register Now ! </Link> <p><br /></p> <hr />
 <details className="dropdown" value=" Show Rules "> 
@@ -59,10 +59,10 @@ to round 2.
 In case of tie in round one, one question will be asked until extra teams are 
 eliminated. <br /> <br />
 In round two, one question will be asked at a time and the first responders will 
-get a chance to answer. If the first team succeeds we move to the next 
-question. If the first team fails, then other 9 teams get to answer the question 
+get a chance to answer. If the first team succeeds, we move to the next 
+question. If the first team fails, then the other 9 teams get to answer the question 
 for half the points and if the second team successfully answers the question, 
-then equal point will be deducted from the first team. <br /> <br />
+then equal points will be deducted from the first team. <br /> <br />
 Any details or justification, if needed, will be shared later.
 </details>  
 </p>
@@ -77,8 +77,8 @@ Any details or justification, if needed, will be shared later.
       <h1 class="title-font sm:text-4xl text-2xl mb-3 font-medium text-orange-400">2. ASTEROID VENTURE</h1>
       <p class="mb-8 leading-relaxed text-md md:text-lg text-white-400">An exciting case study based competition where a problem statement related 
 to asteroid mining will be given and you have to solve it. <br></br>
-<span className={Styles.SpecialText} >Date : </span> ......
-<span className={Styles.SpecialText} > Time : </span>......
+<span className={Styles.SpecialText} >Date : </span> TBD |
+<span className={Styles.SpecialText} > Time : </span>TBD |
 <span className={Styles.SpecialText} >  Mode : </span> Online. <br /><br />
 <Link className={Styles.Registerbtn}  to="https://forms.gle/NA2LF9SghaamyCk57" target='blank' >Register Now ! </Link> <p><br /></p> <hr />
 <details className="dropdown" value=" Show Rules "> 
@@ -86,7 +86,7 @@ to asteroid mining will be given and you have to solve it. <br></br>
   
     <span className={Styles.SpecialText} style={{fontSize : "1.5rem"}} >Rules : </span>
     <br />  Open for all. <br />
-From the start date, each team has 7 days to submit their report. <br />
+From the start date, each team has 5 days to submit their report. <br />
 Problem Statement of the case study will be uploaded on unstop. <br />
 Any details or justification, if needed, will be shared later.
 </details>  
@@ -102,8 +102,8 @@ Any details or justification, if needed, will be shared later.
       <p class="mb-8 leading-relaxed text-md md:text-lg text-white-400">A water bottle rocket competition in which you have to make your own water 
 bottle rocket and use the provided launcher to maximize the distance travelled 
 by your rocket. <br></br>
-<span className={Styles.SpecialText} >Date : </span> ......
-<span className={Styles.SpecialText} > Time : </span>......
+<span className={Styles.SpecialText} >Date : </span> 21 January, 2024 |
+<span className={Styles.SpecialText} > Time : </span>10:00 am |
 <span className={Styles.SpecialText} >  Mode : </span> Offline. <br /><br />
 <Link className={Styles.Registerbtn}  to="https://forms.gle/5Z9CwRMUJLu5BCun6" target='blank' >Register Now ! </Link> <p><br /></p> <hr />
 <details className="dropdown" value=" Show Rules "> 
@@ -132,8 +132,8 @@ Any details or justification, if needed, will be shared later.
     <div class="w-full md:w-5/6 flex flex-col mb-16 px-4 items-center text-center">
       <h1 class="title-font sm:text-4xl text-2xl mb-3 font-medium text-orange-400">4. SPACE ART</h1>
       <p class="mb-8 leading-relaxed text-md md:text-lg text-white-400">A Space Art based Competition, to showcase your artistic skills, that will be organized in collaboration with KALAKRITI, the Fine Arts Society of IIT Bhubaneswar.<br></br>
-<span className={Styles.SpecialText} >Date : </span> ......
-<span className={Styles.SpecialText} > Time : </span>......
+<span className={Styles.SpecialText} >Date : </span> TBD |
+<span className={Styles.SpecialText} > Time : </span> TBD |
 <span className={Styles.SpecialText} >  Mode : </span> Offline. <br /><br />
 
 <Link className={Styles.Registerbtn}  to="https://forms.gle/pHAXt1GGsLq4TJka6" target='blank' >Register Now ! </Link> <p><br /></p><hr />
@@ -142,7 +142,8 @@ Any details or justification, if needed, will be shared later.
   
     <span className={Styles.SpecialText} style={{fontSize : "1.5rem"}} >Rules : </span> <br />
     Canvas will be provided.
-Participants need to bring their equipment.
+Participants need to bring their own equipment for themselves.
+Any details or justification, if needed, will be shared later.
 </details>  
 </p>    
     </div>
@@ -153,10 +154,10 @@ Participants need to bring their equipment.
     <div class="w-full md:w-5/6 flex flex-col mb-16 px-4 items-center text-center">
       <h1 class="title-font sm:text-4xl text-2xl mb-3 font-medium text-orange-400">5. STARBORN SAGAS</h1>
       <p class="mb-8 leading-relaxed text-md md:text-lg text-white-400">A competition where you can express your creativity and thoughts in form of 
-words! Give the beginning of an exciting story, your job is to complete it int the 
+words! Given the beginning of an exciting story, your job is to complete it in the 
 most amazing way possible! <br></br>
-<span className={Styles.SpecialText} >Date : </span> ......
-<span className={Styles.SpecialText} > Time : </span>......
+<span className={Styles.SpecialText} >Date : </span> 20 January, 2024 |
+<span className={Styles.SpecialText} > Time : </span>02 : 00 pm |
 <span className={Styles.SpecialText} >  Mode : </span> Offline. <br /><br />
 
 <Link className={Styles.Registerbtn}  to="https://forms.gle/SShpuiEioYZ3dN9N9" target='blank' >Register Now ! </Link> <p><br /></p><hr />
@@ -184,8 +185,8 @@ Any details or justification, if needed, will be shared later.
       <p class="mb-8 leading-relaxed text-md md:text-lg text-white-400">A competition where you can express your creativity and thoughts in form of 
 words! Give the beginning of an exciting story, your job is to complete it int the 
 most amazing way possible! <br></br>
-<span className={Styles.SpecialText} >Date : </span> ......
-<span className={Styles.SpecialText} > Time : </span>......
+<span className={Styles.SpecialText} >Date : </span> 21 January, 2024 |
+<span className={Styles.SpecialText} > Time : </span> 02 : 00 pm |
 <span className={Styles.SpecialText} >  Mode : </span> Online. <br /><br />
 
 <Link className={Styles.Registerbtn}  to="https://forms.gle/iDoEB5Lqxu4FsP7XA" target='blank' >Register Now ! </Link> <p><br /></p>  <hr /> 
@@ -203,24 +204,27 @@ Any details or justification, if needed, will be shared later.
 </details>  
 </p>    
     </div>
-  </div>
 
-</section>
+  {/* Footer */}
+<div className={Styles.FooterDiv} style={{color:'gray !important'}}>
 
-      {/* Footer */}
-  <div className={Styles.FooterDiv} style={{color:'gray !important'}}>
-
-<div> Astro_Champ </div>
-<div className={Styles.FooterFont}> Dive into the cosmic adventure at AstroChamp 2024! Explore the universe through quizzes, art, science, and more. <br ></br> Join us in this celestial celebration!"</div>
-
+<div className='mb-1 font-xs md:text-2xl text-lg '>  Astro_Champ | Nakshatra, IITBBS </div> 
+<div className={Styles.FooterFont}> Dive into the cosmic adventure at AstroChamp 2024! Explore the universe through quizzes, art, science, and more. <br ></br> Join us in this celestial celebration!"<hr /></div>
+<div style={{marginTop:"4px"}} className='md:text-xl'><span style={{color:"goldenrod"}}> Collaborations </span>: WebnD Society  </div>
 
 <div className={Styles.FooterEnd}> 
   <div>© Copyright 2024 | All rights Reserved </div>
-  <div> Designed and developed by <a href="https://www.github.com/DEV-NISHANT-HERE" style={{textDecoration:'none',color:'purple'}}>Nishant Tomar</a> (team Astro_Champ) </div>
+  <div> Designed and developed by <a href="https://www.github.com/DEV-NISHANT-HERE" target='#' style={{textDecoration:'none',color:'purple'}}>Nishant Tomar</a> (team Astro_Champ) </div>
 </div>
 
 </div>
+  
+  </div> 
 
+</section>
+
+
+  
     </motion.div>
 
   )
