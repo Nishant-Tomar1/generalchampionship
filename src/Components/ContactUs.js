@@ -56,14 +56,14 @@ const variant = {
     entry : {
         opacity: [0,1], 
         transition:{
-            duration:0.2,
+            duration:0.125,
             times:[0,1],
         }
     },
     exit : {
         opacity: [1,0], 
         transition:{
-            duration:0.2,
+            duration:0.125,
             times:[0,1],
         }
     },
@@ -95,7 +95,7 @@ const variant = {
   <div className="container px-4 px-md-5 py-12 mx-auto">
     <div className="flex flex-col text-center w-full mb-2">
       <h1 className="sm:text-3xl font-medium title-font text-orange-400 md:text-5xl">Send a Message!</h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base md:text-xl">Feel free to reach out with any questions or messages, and we'll get back to you as soon as we can.</p>
+      <p className="lg:w-2/3 mx-auto leading-relaxed  text-sm md:text-xl">Feel free to reach out with any questions or messages, and we'll get back to you as soon as we can.</p>
     </div>
     <div className="flex flex-col items-center w-full ">
       <div className="flex flex-wrap ">
@@ -132,7 +132,7 @@ const variant = {
 
 <div className='mb-1 font-xs md:text-2xl text-lg '>  Astro_Champ | Nakshatra, IITBBS </div> 
 <div className={Styles.FooterFont}> Dive into the cosmic adventure at AstroChamp 2024! Explore the universe through quizzes, art, science, and more. <br ></br> Join us in this celestial celebration!"<hr /></div>
-<div style={{marginTop:"4px"}} className='md:text-xl'><span style={{color:"goldenrod"}}> Collaborations </span>: WebnD Society  </div>
+{/* <div style={{marginTop:"4px"}} className='md:text-xl'><span style={{color:"goldenrod"}}> Collaborations </span>: WebnD Society  </div> */}
 
 <div className={Styles.FooterEnd}> 
   <div>© Copyright 2024 | All rights Reserved </div>

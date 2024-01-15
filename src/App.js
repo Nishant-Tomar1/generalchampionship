@@ -5,7 +5,7 @@ import Events from './Components/Events';
 import Team from './Components/Team';
 import ContactUs from './Components/ContactUs';
 import { AnimatePresence } from 'framer-motion';
-import { BrowserRouter as Router, Routes, Route, useLocation, Navigate} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
 
 
 function App() {
@@ -22,13 +22,13 @@ function Routefunction() {
 
   return (
     
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode='wait'>
   
       <Navbar />
   
       <Routes location={location} key={location.key}>
           <Route path="/home" element={<Home/>}></Route>
-          <Route path="/" element={<Navigate to="/home" />}></Route>
+          <Route path="/" element={<Home/>}></Route>
           <Route path="/events" element={<Events/>}></Route>
           <Route path="/team" element={<Team/>}></Route>
           <Route path="/contactus" element={<ContactUs/>}></Route>

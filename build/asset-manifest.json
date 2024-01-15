@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/AstroChamp_Frontend/static/css/main.ec4e6da2.css",
-    "main.js": "/AstroChamp_Frontend/static/js/main.3b7926f9.js",
+    "main.css": "/AstroChamp_Frontend/static/css/main.80863751.css",
+    "main.js": "/AstroChamp_Frontend/static/js/main.26820753.js",
     "static/media/Homepagebg.jpg": "/AstroChamp_Frontend/static/media/Homepagebg.46d7147c01bfc219cf7f.jpg",
     "static/media/WaterRocket.png": "/AstroChamp_Frontend/static/media/WaterRocket.480f78d6849d2e24198c.png",
+    "static/media/StarbornSagas.png": "/AstroChamp_Frontend/static/media/StarbornSagas.4124bba71da305f03a12.png",
     "static/media/sharath.png": "/AstroChamp_Frontend/static/media/sharath.3ff536d7540c5f93f37a.png",
     "static/media/yash.jpg": "/AstroChamp_Frontend/static/media/yash.cc5c731bd064db971f21.jpg",
     "static/media/SpaceArt.jpg": "/AstroChamp_Frontend/static/media/SpaceArt.378843f1aca15a39948d.jpg",
     "static/media/cosmomath.jpeg": "/AstroChamp_Frontend/static/media/cosmomath.5287c215b70261fb8e75.jpeg",
-    "static/media/het.jpg": "/AstroChamp_Frontend/static/media/het.7962c1905d47307ef076.jpg",
+    "static/media/het.jpg": "/AstroChamp_Frontend/static/media/het.d0084b2a2bcdc1e7b370.jpg",
     "static/media/harsh.jpg": "/AstroChamp_Frontend/static/media/harsh.0dd3737436fc8da6031d.jpg",
+    "static/media/akshat.jpg": "/AstroChamp_Frontend/static/media/akshat.cf77203b530d1d759cd8.jpg",
     "static/media/HomepageastroCopy.jpg": "/AstroChamp_Frontend/static/media/HomepageastroCopy.1f2d56ee0e9539ff6116.jpg",
     "static/media/nishant.jpg": "/AstroChamp_Frontend/static/media/nishant.24b277da733b0d4ca7d5.jpg",
     "static/media/bibushree.jpg": "/AstroChamp_Frontend/static/media/bibushree.3514427f10a7e276e106.jpg",
@@ -17,15 +19,20 @@
     "static/media/SpaceQuiz.jpg": "/AstroChamp_Frontend/static/media/SpaceQuiz.03e14113366ed5988536.jpg",
     "static/media/AsteroidVenture.jpg": "/AstroChamp_Frontend/static/media/AsteroidVenture.a3b8edfda16b4de0f9a6.jpg",
     "static/media/bhavya.jpg": "/AstroChamp_Frontend/static/media/bhavya.8aa5e092867d8492b220.jpg",
+    "static/media/mubbashir.jpg": "/AstroChamp_Frontend/static/media/mubbashir.a9025f4691d728cbda2d.jpg",
     "static/media/sai santosh.jpg": "/AstroChamp_Frontend/static/media/sai santosh.50b0f43b23a19b1e84f0.jpg",
+    "static/media/nobel.jpg": "/AstroChamp_Frontend/static/media/nobel.c9b8d755811d51465ac6.jpg",
+    "static/media/arshad.jpg": "/AstroChamp_Frontend/static/media/arshad.3342da18c5cdfaa67a36.jpg",
     "static/media/mvvvs raju.jpg": "/AstroChamp_Frontend/static/media/mvvvs raju.a4e9df31b4184c88cef0.jpg",
+    "static/media/vikas.jpg": "/AstroChamp_Frontend/static/media/vikas.98f0ea9077d8ee5fe7a6.jpg",
+    "static/media/vikas2.jpg": "/AstroChamp_Frontend/static/media/vikas2.f16b3833d8027678185a.jpg",
     "static/media/Astrologo.png": "/AstroChamp_Frontend/static/media/Astrologo.48c795d417845a3809d8.png",
     "index.html": "/AstroChamp_Frontend/index.html",
-    "main.ec4e6da2.css.map": "/AstroChamp_Frontend/static/css/main.ec4e6da2.css.map",
-    "main.3b7926f9.js.map": "/AstroChamp_Frontend/static/js/main.3b7926f9.js.map"
+    "main.80863751.css.map": "/AstroChamp_Frontend/static/css/main.80863751.css.map",
+    "main.26820753.js.map": "/AstroChamp_Frontend/static/js/main.26820753.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec4e6da2.css",
-    "static/js/main.3b7926f9.js"
+    "static/css/main.80863751.css",
+    "static/js/main.26820753.js"
   ]
 }

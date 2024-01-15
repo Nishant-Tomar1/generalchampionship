@@ -220,7 +220,7 @@ const variant1 = {
         </div>
       </div>
 
-      {/* <div className="p-4 lg:w-1/2">
+      <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
           <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={imageList[17]}></img>
           <div className="flex-grow sm:pl-8">
@@ -228,11 +228,11 @@ const variant1 = {
             <h3 className="text-gray-500 mb-3 text-lg">Core Squad</h3>
             <span className="inline-flex text-white text-lg gap-2">
               <a href='https://www.instagram.com/nobel_das' target='#'><FaInstagram /></a>
-              <a href='https://www.linkedin.com/in/' target='#'><FaLinkedinIn /></a>
+              <a href='https://www.linkedin.com/in/nobel-das-2a74a828b' target='#'><FaLinkedinIn /></a>
             </span>
           </div>
         </div>
-      </div> */}
+      </div>
 
       <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
@@ -293,7 +293,7 @@ const variant1 = {
 
       <div className='mb-1 font-xs md:text-2xl text-lg '> Astro_Champ | Nakshatra, IITBBS </div>
       <div className={Styles.FooterFont}> Dive into the cosmic adventure at AstroChamp 2024! Explore the universe through quizzes, art, science, and more. <br ></br> Join us in this celestial celebration!" <hr /></div> 
-      <div style={{marginTop:"4px"}} className='md:text-xl'><span style={{color:"goldenrod"}} > Collaborations </span>: WebnD Society  </div>
+      {/* <div style={{marginTop:"4px"}} className='md:text-xl'><span style={{color:"goldenrod"}} > Collaborations </span>: WebnD Society  </div> */}
 
 
       <div className={Styles.FooterEnd}> 

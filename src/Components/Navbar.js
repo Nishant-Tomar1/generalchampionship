@@ -37,7 +37,7 @@ export default function Navbar() {
           <Link className={Styles.NavlinkListElement} to ="/contactus" onClick={()=> window.scrollTo(0,0)}>Contact Us</Link>
         </div>
         <div className="nav-item">
-          <Link className={Styles.NavlinkListElement}  to="https://drive.google.com/file/d/1Apyl9sic4I6S8qPrOc92jI36jJr5WSUc/view?usp=drive_open" target='blank' >Brochure</Link>
+          <Link className={Styles.NavlinkListElement}  to="https://drive.google.com/file/d/1jUBQrOCHdUsMUWQx2gfrZwJflEzlGw1E/view?usp=sharing" target='blank' >Brochure</Link>
         </div> 
       </div>
     </div>
