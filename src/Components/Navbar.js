@@ -7,6 +7,12 @@ import logo from "../Assets/IMAGES/GClogo.png";
 
 
 export default function Navbar() {
+
+  document.addEventListener('click', () => {
+    const toggler = document.getElementsByClassName('closer');
+    toggler[0].classList.remove('show');
+  })
+
   
   return (
 <>
@@ -17,12 +23,12 @@ export default function Navbar() {
     <div className={Styles.PCText}><Link className={`d-flex justify-center items-center navbar-brand head fs-4 fw-bold px-2 pt-1 Head`} to =""> <img style={{width:"3rem",height:"3rem",margin:"0px 5px"}} src={logo} alt="logo"/> General Championship 2024</Link></div>
     <div className={Styles.PhoneText}><Link className={`d-flex justify-center items-center navbar-brand head fs-3 gap-1 fw-bold px-0 pt-1 ps-md-2 Head`} to =""><img style={{width:"2.75rem",height:"2.5rem",marginRight:"3px"}} src={logo} alt="logo"/>  GC 2024</Link></div>
 
-    <button className={`navbar-toggler ${Styles.Toggler}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button className={`closer1 navbar-toggler ${Styles.Toggler}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
 
 
-    <div className="collapse navbar-collapse text-center" id="navbarSupportedContent" >
+    <div className="closer collapse navbar-collapse text-center" id="navbarSupportedContent" >
       
       <div className="navbar-nav ms-auto mb-2 mb-lg-0 px-2 gap-md-4 gap-3 pb-3 pb-md-0 rounded-bottom">
         <div className="pt-3 pt-lg-0">

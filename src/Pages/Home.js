@@ -2,7 +2,6 @@ import React from 'react'
 import Hero from '../Components/Hero'
 import Carousel from '../Components/Carousel'
 import LeaderBoard from '../Components/LeaderBoard'
-// import Footer from '../Components/Footer'
 
 function GcHome() {
   return (
@@ -10,7 +9,6 @@ function GcHome() {
       <Hero/>
       <Carousel/>
       <LeaderBoard/>
-      {/* <Footer/> */}
     </div>
   )
 }

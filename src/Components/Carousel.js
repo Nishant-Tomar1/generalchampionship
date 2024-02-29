@@ -13,7 +13,7 @@ function Carousel() {
 
   return (
     <>
-    <div className='flex items-center justify-center shadow-2xl'>
+    <div className='flex items-center justify-center shadow-2xl lg:w-4/5'>
     <div className='flex flex-col items-center justify-center rounded w-5/6 md:w-2/3 mb-10'>
         <h1>--- Teams ---</h1>
       <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
@@ -30,7 +30,7 @@ function Carousel() {
 
 
   <div className="carousel-inner rounded-xl lg:rounded-3xl">
-    <div className="carousel-item active  " data-bs-interval="3000">
+    <div className="carousel-item active " data-bs-interval="2500">
       <img src={cse} style={{"opacity":"0.8"}} className="d-block w-100" alt="..." />
     </div>   
 

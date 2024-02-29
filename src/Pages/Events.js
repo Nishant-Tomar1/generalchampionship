@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import logo from './../Assets/IMAGES/GClogo.png'
 import cse from '../Assets/IMAGES/cse.png'
 import ece_meta from '../Assets/IMAGES/ece-meta.png'
 import ee from '../Assets/IMAGES/ee.png'
@@ -130,9 +129,9 @@ function Events() {
     return (
         <div className='flex flex-col justify-center items-center'>
             <h1 className="text-5xl font-semibold text-center mt-20 mb-3">Events</h1>
-            <div className="bg-gray-400 w-5/6 shadow-lg md:w-3/4 lg:w-2/3 py-1 lg:py-2 mx-auto flex items-center justify-around px-auto rounded-full mt-7 border-3 border-pink-600">
+            <div className="bg-blur w-5/6 shadow-lg md:w-3/4 lg:w-2/3 py-1 lg:py-2 mx-auto flex items-center justify-around px-auto rounded-full mt-7 border-3 border-pink-600">
                 <button
-                    className={`duration-300 py-1 px-4 rounded-3xl text-black font-bold text-md md:text-lg hover:bg-pink-500 ${showcult ? "bg-pink-500 decoration- ":""} cursor-pointer`}
+                    className={`duration-300 py-1 px-4 rounded-3xl text-white font-bold text-md md:text-lg hover:bg-pink-500 ${showcult ? "bg-pink-500 decoration- ":""} cursor-pointer`}
                     onClick={() => {
                         setshowcult(true);
                         setshowsports(false);
@@ -142,7 +141,7 @@ function Events() {
                     Cult
                 </button>
                 <button
-                    className={`duration-300 py-1 px-4 rounded-3xl text-black font-bold text-md md:text-lg hover:bg-pink-500 ${showsports ? "bg-pink-500":""} cursor-pointer`}
+                    className={`duration-300 py-1 px-4 rounded-3xl text-white font-bold text-md md:text-lg hover:bg-pink-500 ${showsports ? "bg-pink-500":""} cursor-pointer`}
                     onClick={() => {
                         setshowcult(false);
                         setshowsports(true);
@@ -152,7 +151,7 @@ function Events() {
                     Sports
                 </button>
                 <button
-                    className={`duration-300 py-1 px-4 rounded-3xl text-black font-bold text-md md:text-lg hover:bg-pink-500 ${showtech ? "bg-pink-500":""} cursor-pointer`}
+                    className={`duration-300 py-1 px-4 rounded-3xl text-white font-bold text-md md:text-lg hover:bg-pink-500 ${showtech ? "bg-pink-500":""} cursor-pointer`}
                     onClick={() => {
                         setshowcult(false);
                         setshowsports(false);
@@ -163,8 +162,8 @@ function Events() {
                 </button>
             </div>
 
-            {showcult && <div>Cult events</div>}
-            {showtech && <div>Tech events</div>}
+            {showcult && <div className='flex flex-col mt-4 mb-2 md:mt-6  justify-center items-center'>Cultural events</div>}
+            {showtech && <div className='flex flex-col mt-4 mb-2 md:mt-6  justify-center items-center' >Tech events</div>}
             {showsports && (
                 <>
                     <div className="flex items-center justify-around mt-4 mb-2 md:mt-6 w-4/5 md:w-3/4 lg:w-2/3 gap-3">

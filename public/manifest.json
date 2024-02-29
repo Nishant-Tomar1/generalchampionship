@@ -1,19 +1,19 @@
 {
-  "short_name": "AstroChamp",
-  "name": "AstroChamp : Astronomy fest of IIT Bhubaneswar",
+  "short_name": "GC 2024",
+  "name": "General Championship, IIT Bhubaneswar",
   "icons": [
     {
-      "src": "Astrologo.png",
+      "src": "GClogo.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "Astrologo.png",
+      "src": "GClogo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "Astrologo.png",
+      "src": "GClogo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
