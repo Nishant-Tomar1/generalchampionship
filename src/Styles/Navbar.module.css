@@ -1,5 +1,5 @@
 .Toggler{
-    border-radius: 0.775rem;
+    border-radius: 0.775rem ;
 }
 
 .PhoneText{
@@ -57,14 +57,17 @@
        
     .NavlinkListElement{
         font-size: 1rem;
-        border: 1px solid rgb(255, 0, 0); 
-        color: antiquewhite;
-        padding: 2px 10vw ;
+        border: 1.25px solid white; 
+        font-weight: 600;
+        color: white;
+        padding: 2px 40px;
         border-radius: 20px;
         background: linear-gradient(150deg,#dc4f17 5%,#df1111 20%,#903ec7 100%);
     }
 
     .NavlinkListElement:focus{
-        color: rgb(255, 170, 0) ;
+        color: rgb(0, 0, 0) ;
+        border: 3px solid white;
+        font-weight: 900;
     }
 }

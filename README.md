@@ -1,2 +1,2 @@
-This a Website made using REACT.
-You can view the website at : https://dev-nishant-here.github.io/AstroChamp_Frontend/
+This website is made for General Championship 2024 which is an annual competition happening every year at Indian Institute of Technology, Bhubaneswar.
+The website is made usind React and Tailwindcss.

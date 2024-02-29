@@ -3,14 +3,14 @@ import Styles from "../Styles/Navbar.module.css"
 import {Link} from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowUp } from "react-icons/fa";
-import logo from "../Components/IMAGES/GClogo.png";
+import logo from "../Assets/IMAGES/GClogo.png";
 
 
 export default function Navbar() {
   
   return (
 <>
-  <motion.nav className=" navbar fixed-top navbar-expand-lg navbar-dark bg-black p-1 p-md-0 shadow-xl">
+  <motion.nav className=" navbar fixed-top navbar-expand-lg navbar-dark bg-black p-1 p-md-1 shadow-xl">
   { <div   className={Styles.Stickybtn} onClick={()=> window.scrollTo(0,0)}>  <button > <FaArrowUp /> </button></div> }
     <div className="container-fluid " >
     
@@ -29,13 +29,13 @@ export default function Navbar() {
           <Link className = {Styles.NavlinkListElement} aria-current="page" to ="/home" onClick={()=> window.scrollTo(0,0)}> Home </Link>
         </div>
         <div >
-          <Link className={Styles.NavlinkListElement} to ="/home" onClick={()=> window.scrollTo(0,0)}>GC Events </Link>
+          <Link className={Styles.NavlinkListElement} to ="/home" onClick={()=> window.scrollTo(0,0)}>Events </Link>
         </div>
         <div className="nav-item">
-          <Link className={Styles.NavlinkListElement} to ="/home" onClick={()=> window.scrollTo(0,0)}>LeaderBoard</Link>
+          <Link className={Styles.NavlinkListElement} to ="/home" onClick={()=> window.scrollTo(0,0)}>Leaderboard</Link>
         </div>
         <div className="nav-item">
-          <Link className={Styles.NavlinkListElement} to ="/home" onClick={()=> window.scrollTo(0,0)}>Our Team</Link>
+          <Link className={Styles.NavlinkListElement} to ="/team" onClick={()=> window.scrollTo(0,0)}>Team</Link>
         </div>
         <div className="nav-item">
           <Link className={Styles.NavlinkListElement} to ="/home" onClick={()=> window.scrollTo(0,0)}>Rulebook</Link>

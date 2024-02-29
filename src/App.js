@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from './Components/Navbar';
-import Home from './Components/Home';
+import Home from './Pages/Home';
+import Team from './Pages/Team';
+import Footer from './Components/Footer';
 import { AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
 
@@ -19,15 +21,18 @@ function Routefunction() {
 
   return (
     
-    <AnimatePresence mode='wait'>
+    <AnimatePresence mode=''>
   
       <Navbar />
   
       <Routes location={location} key={location.key}>
           <Route path="/home" element={<Home/>}></Route>
           <Route path="/" element={<Home/>}></Route>
+          <Route path='/team' element={<Team/>}></Route>
           
       </Routes> 
+
+      <Footer/>
 
     </AnimatePresence>
   
