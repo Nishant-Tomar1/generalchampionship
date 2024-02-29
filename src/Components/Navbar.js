@@ -29,7 +29,7 @@ export default function Navbar() {
           <Link className = {Styles.NavlinkListElement} aria-current="page" to ="/home" onClick={()=> window.scrollTo(0,0)}> Home </Link>
         </div>
         <div >
-          <Link className={Styles.NavlinkListElement} to ="/home" onClick={()=> window.scrollTo(0,0)}>Events </Link>
+          <Link className={Styles.NavlinkListElement} to ="/events" onClick={()=> window.scrollTo(0,0)}>Events </Link>
         </div>
         <div className="nav-item">
           <Link className={Styles.NavlinkListElement} to ="/home" onClick={()=> window.scrollTo(0,0)}>Leaderboard</Link>
