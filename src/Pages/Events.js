@@ -1,8 +1,4 @@
 import React, { useState } from 'react'
-<<<<<<< HEAD
-=======
-// import logo from './../Assets/IMAGES/GClogo.png'
->>>>>>> 6933ab919055787e870543781f98f4a69a75d0d4
 import cse from '../Assets/IMAGES/cse.png'
 import ece_meta from '../Assets/IMAGES/ece-meta.png'
 import ee from '../Assets/IMAGES/ee.png'
@@ -136,56 +132,56 @@ const roughMatches = [
 ];
 const cultdummydata = [
     {
-        id: "1",
+        // id: "1",
         event_name: "Dance Battle",
         date: "2024-03-15",
         Time: "8pm",
         Venue: "LBC",
     },
     {
-        id: "2",
+        // id: "2",
         event_name: "Singing",
         date: "2024-03-14",
         Time: "10pm",
         Venue: "LBC",
     },
     {
-        id: "3",
+        // id: "3",
         event_name: "Drams",
         date: "2024-03-19",
         Time: "3pm",
         Venue: "LBC",
     },
     {
-        id: "4",
+        // id: "4",
         event_name: "Drams",
         date: "2024-03-12",
         Time: "8pm",
         Venue: "LBC",
     },
     {
-        id: "5",
+        // id: "5",
         event_name: "Mic drop",
         date: "2023-04-15",
         Time: "8pm",
         Venue: "LBC",
     },
     {
-        id: "1",
+        // id: "1",
         event_name: "Singing",
         date: "2023-07-15",
         Time: "8pm",
         Venue: "LBC",
     },
     {
-        id: "2",
+        // id: "2",
         event_name: "Costume",
         date: "2024-06-15",
         Time: "8pm",
         Venue: "LBC",
     },
     {
-        id: "5",
+        // id: "5",
         event_name: "Skit",
         date: "2023-03-16",
         Time: "8pm",
@@ -194,70 +190,70 @@ const cultdummydata = [
 ];
 const data = [
     {
-        id: "1",
+        // id: "1",
         event_name: "GC webathon",
         date: "2024-03-15",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
-        id: "2",
+        // id: "2",
         event_name: "GC webathon",
         date: "2024-03-14",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
-        id: "3",
+        // id: "3",
         event_name: "GC webathon",
         date: "2024-03-19",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
-        id: "4",
+        // id: "4",
         event_name: "GC webathon",
         date: "2024-03-12",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
-        id: "5",
+        // id: "5",
         event_name: "GC webathon",
         date: "2023-04-15",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
-        id: "1",
+        // id: "1",
         event_name: "GC webathon",
         date: "2023-07-15",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
-        id: "2",
+        // id: "2",
         event_name: "GC webathon",
         date: "2024-06-15",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
-        id: "3",
+        // id: "3",
         event_name: "GC webathon",
         date: "2023-04-5",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
-        id: "4",
+        // id: "4",
         event_name: "GC webathon",
         date: "2023-03-17",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
-        id: "5",
+        // id: "5",
         event_name: "GC webathon",
         date: "2023-03-16",
         Time: "8-9pm",
@@ -265,11 +261,11 @@ const data = [
     },
 ];
 export const columns = [
-    {
-        accessorKey: "id",
-        header: "S.no",
-        cell: ({ row }) => <div className="capitalize">{row.getValue("id")}</div>,
-    },
+    // {
+    //     accessorKey: "id",
+    //     // header: "S.no",
+    //     cell: ({ row }) => <div className="capitalize">{row.getValue("id")}</div>,
+    // },
 
     {
         accessorKey: "event_name",
@@ -378,11 +374,7 @@ function Events() {
             <h1 className="text-5xl font-semibold text-center mt-20 mb-3">Events</h1>
             <div className="bg-blur w-5/6 shadow-lg md:w-3/4 lg:w-2/3 py-1 lg:py-2 mx-auto flex items-center justify-around px-auto rounded-full mt-7 border-3 border-pink-600">
                 <button
-<<<<<<< HEAD
-                    className={`duration-300 py-1 px-4 rounded-3xl text-white font-bold text-md md:text-lg hover:bg-pink-500 ${showcult ? "bg-pink-500 decoration- ":""} cursor-pointer`}
-=======
-                    className={`duration-300 py-1 px-4 rounded-3xl text-black font-bold text-md md:text-lg hover:bg-pink-500 ${showcult ? "bg-pink-500 decoration- " : ""} cursor-pointer`}
->>>>>>> 6933ab919055787e870543781f98f4a69a75d0d4
+                    className={`duration-300 py-1 px-8 rounded-3xl text-white font-bold text-md md:text-lg hover:bg-pink-500 ${showcult ? "bg-pink-500 decoration- " : ""} cursor-pointer`}
                     onClick={() => {
                         setshowcult(true);
                         setshowsports(false);
@@ -392,11 +384,7 @@ function Events() {
                     Cult
                 </button>
                 <button
-<<<<<<< HEAD
-                    className={`duration-300 py-1 px-4 rounded-3xl text-white font-bold text-md md:text-lg hover:bg-pink-500 ${showsports ? "bg-pink-500":""} cursor-pointer`}
-=======
-                    className={`duration-300 py-1 px-4 rounded-3xl text-black font-bold text-md md:text-lg hover:bg-pink-500 ${showsports ? "bg-pink-500" : ""} cursor-pointer`}
->>>>>>> 6933ab919055787e870543781f98f4a69a75d0d4
+                    className={`duration-300 py-1 px-4 rounded-3xl text-white font-bold text-md md:text-lg hover:bg-pink-500 ${showsports ? "bg-pink-500" : ""} cursor-pointer`}
                     onClick={() => {
                         setshowcult(false);
                         setshowsports(true);
@@ -406,11 +394,7 @@ function Events() {
                     Sports
                 </button>
                 <button
-<<<<<<< HEAD
-                    className={`duration-300 py-1 px-4 rounded-3xl text-white font-bold text-md md:text-lg hover:bg-pink-500 ${showtech ? "bg-pink-500":""} cursor-pointer`}
-=======
-                    className={`duration-300 py-1 px-4 rounded-3xl text-black font-bold text-md md:text-lg hover:bg-pink-500 ${showtech ? "bg-pink-500" : ""} cursor-pointer`}
->>>>>>> 6933ab919055787e870543781f98f4a69a75d0d4
+                    className={`duration-300 py-1 px-4 rounded-3xl text-white font-bold text-md md:text-lg hover:bg-pink-500 ${showtech ? "bg-pink-500" : ""} cursor-pointer`}
                     onClick={() => {
                         setshowcult(false);
                         setshowsports(false);
@@ -421,13 +405,9 @@ function Events() {
                 </button>
             </div>
 
-<<<<<<< HEAD
-            {showcult && <div className='flex flex-col mt-4 mb-2 md:mt-6  justify-center items-center'>Cultural events</div>}
-            {showtech && <div className='flex flex-col mt-4 mb-2 md:mt-6  justify-center items-center' >Tech events</div>}
-=======
             {showcult && (
                 <>
-                    <div className="flex items-center justify-around mt-4 mb-3 md:mt-6 w-4/5 md:w-3/4 lg:w-1/3 gap-3 ">
+                    <div className="flex items-center justify-around mt-4 mb-3 md:mt-6 w-5/6 md:w-3/4 lg:w-2/3 gap-3 ">
                         <button
                             onClick={() => {
                                 setshowupcomingcult(true);
@@ -435,7 +415,7 @@ function Events() {
                             }}
                             className={`duration-300 md:text-xl ${showupcomingcult ? "text-pink-700 font-bold border-b-2 border-pink-700" : "text-gray-400"}`}
                         >
-                            Upcomming Events
+                            Upcoming Events
                         </button>
                         <button
                             onClick={() => {
@@ -450,14 +430,14 @@ function Events() {
 
                     {showupcomingcult && (
                         <>
-                            <div className="rounded-md border">
-                                <Table>
-                                    <TableHeader>
+                            <div className="rounded-xl lg:rounded-3xl py-2 border-2 md:border-4 w-11/12 lg:w-5/6 mx-4 my-lg-4 mb-2 pb-md-4">
+                                <Table >
+                                    <TableHeader >
                                         {table1.getHeaderGroups().map((headerGroup) => (
                                             <TableRow key={headerGroup.id}>
                                                 {headerGroup.headers.map((header) => {
                                                     return (
-                                                        <TableHead key={header.id}>
+                                                        <TableHead key={header.id} className='text-lg font-bold'>
                                                             {header.isPlaceholder
                                                                 ? null
                                                                 : flexRender(
@@ -570,7 +550,7 @@ function Events() {
               }}
               className={`md:text-xl ${showupcomingtech ? "text-pink-700 font-bold border-b-2 border-pink-700" : "text-gray-400"}`}
             >
-              Upcomming Events
+              Upcoming Events
             </button>
             <button
               onClick={() => {
@@ -692,7 +672,6 @@ function Events() {
           )}
         </>
       )}
->>>>>>> 6933ab919055787e870543781f98f4a69a75d0d4
             {showsports && (
                 <>
                     <div className="flex items-center justify-around mt-4 mb-2 md:mt-6 w-4/5 md:w-3/4 lg:w-2/3 gap-3">
@@ -717,7 +696,7 @@ function Events() {
                             {upcomingEvents.map((match, index) => (
 
 
-                                <div key={index} className="flex flex-col bg-gray-500 border-3 border-black rounded-2xl  md:rounded-3xl shadow-lg shadow-black w-5/6 md:w-3/4 lg:w-2/3 my-3 overflow-hidden">
+                                <div key={index} className="flex flex-col bg-gray-500 border-3 border-black rounded-2xl  md:rounded-3xl shadow-lg shadow-black w-5/6 md:w-3/4 lg:w-2/3 my-2 my-lg-3 overflow-hidden">
 
                                     <div className="text-2xl lg:text-4xl font-bold tracking-tight text-gray-900 dark:text-white text-center my-2 md:my-4 px-1">
                                         {match.matchname} - {match.type}
@@ -757,7 +736,7 @@ function Events() {
 
                             {pastEvents.map((match, index) => (
 
-                                <div key={index} className="flex flex-col bg-gray-500 border-3 border-black rounded-2xl  md:rounded-3xl shadow-lg shadow-black w-5/6 md:w-3/4 lg:w-2/3 my-3 overflow-hidden">
+                                <div key={index} className="flex flex-col bg-gray-500 border-3 border-black rounded-2xl md:rounded-3xl shadow-lg shadow-black w-5/6 md:w-3/4 lg:w-2/3 my-2 my-lg-3 overflow-hidden">
 
                                     <div className="text-2xl lg:text-4xl font-bold tracking-tight text-gray-900 dark:text-white text-center my-2 md:my-4">
                                         {match.matchname} - {match.type}

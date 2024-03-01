@@ -13,10 +13,13 @@ function Carousel() {
 
   return (
     <>
-    <div className='flex items-center justify-center shadow-2xl lg:w-4/5'>
-    <div className='flex flex-col items-center justify-center rounded w-5/6 md:w-2/3 mb-10'>
-        <h1>--- Teams ---</h1>
+    <div className='flex items-center justify-center lg:w-4/5 '>
+    <div className='flex flex-col items-center justify-center rounded w-5/6 md:w-2/3 mb-10 '>
+
+        <h1>Participating Teams <hr /></h1>
+
       <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+
   <div className="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -30,35 +33,35 @@ function Carousel() {
 
 
   <div className="carousel-inner rounded-xl lg:rounded-3xl">
-    <div className="carousel-item active " data-bs-interval="2500">
+    <div className="carousel-item active " data-bs-interval="2000">
       <img src={cse} style={{"opacity":"0.8"}} className="d-block w-100" alt="..." />
     </div>   
 
-    <div className="carousel-item " data-bs-interval="3000">
+    <div className="carousel-item " data-bs-interval="2000">
       <img src={ec} style={{"opacity":"0.8"}} className="d-block w-100" alt="..." />
     </div>   
     
-    <div className="carousel-item  " data-bs-interval="3000">
+    <div className="carousel-item " data-bs-interval="2000">
       <img src={ee} style={{"opacity":"0.8"}} className="d-block w-100" alt="..." />
     </div>   
  
-    <div className="carousel-item " data-bs-interval="3000">
+    <div className="carousel-item " data-bs-interval="2000">
       <img src={me} style={{"opacity":"0.8"}} className="d-block w-100" alt="..." />
     </div>   
  
-    <div className="carousel-item " data-bs-interval="3000">
+    <div className="carousel-item " data-bs-interval="2000">
       <img src={civil} style={{"opacity":"0.8"}} className="d-block w-100" alt="..." />
     </div>   
 
-    <div className="carousel-item  " data-bs-interval="3000">
+    <div className="carousel-item  " data-bs-interval="2000">
       <img src={mt} style={{"opacity":"0.8"}} className="d-block w-100" alt="..." />
     </div>   
   
-    <div className="carousel-item  " data-bs-interval="3000">
+    <div className="carousel-item  " data-bs-interval="2000">
       <img src={msc} style={{"opacity":"0.8"}} className="d-block w-100" alt="..." />
     </div>   
 
-    <div className="carousel-item  " data-bs-interval="3000">
+    <div className="carousel-item  " data-bs-interval="2000">
       <img src={phd} style={{"opacity":"0.8"}} className="d-block w-100" alt="..." />
     </div>   
   </div>
@@ -66,11 +69,9 @@ function Carousel() {
 
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
   </button>
   <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
     <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
   </button>
 </div>
 </div>

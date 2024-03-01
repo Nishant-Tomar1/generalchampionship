@@ -38,7 +38,7 @@ export default function Navbar() {
           <Link className={Styles.NavlinkListElement} to ="/events" onClick={()=> window.scrollTo(0,0)}>Events </Link>
         </div>
         <div className="nav-item">
-          <Link className={Styles.NavlinkListElement} to ="/home" onClick={()=> window.scrollTo(0,0)}>Leaderboard</Link>
+          <Link className={Styles.NavlinkListElement} to ="/leaderboard" onClick={()=> window.scrollTo(0,0)}>Leaderboard</Link>
         </div>
         <div className="nav-item">
           <Link className={Styles.NavlinkListElement} to ="/team" onClick={()=> window.scrollTo(0,0)}>Team</Link>

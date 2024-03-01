@@ -6,6 +6,7 @@ import Footer from './Components/Footer';
 import { AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Events from './Pages/Events';
+import Leaderboard from './Pages/Leaderboard';
 
 
 function App() {
@@ -31,6 +32,7 @@ function Routefunction() {
         <Route path="/" element={<Home />}></Route>
         <Route path='/team' element={<Team />}></Route>
         <Route path='/events' element={<Events />}></Route>
+        <Route path='/leaderboard' element={<Leaderboard />}></Route>
 
       </Routes>
 

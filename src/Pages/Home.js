@@ -1,14 +1,14 @@
 import React from 'react'
 import Hero from '../Components/Hero'
 import Carousel from '../Components/Carousel'
-import LeaderBoard from '../Components/LeaderBoard'
+import Leader from '../Components/Leader.tsx'
 
 function GcHome() {
   return (
-    <div className='flex flex-col justify-center items-center '>
+    <div className='flex flex-col justify-center items-center gap-4'>
       <Hero/>
       <Carousel/>
-      <LeaderBoard/>
+      <Leader/>
     </div>
   )
 }
