@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import cse from '../Assets/IMAGES/cse.png'
 import ece_meta from '../Assets/IMAGES/ece-meta.png'
 import ee from '../Assets/IMAGES/ee.png'
@@ -23,6 +23,9 @@ import {
     TableHeader,
     TableRow,
 } from "./../Components/Eventscomponents/table";
+import axios from 'axios'
+
+
 const roughMatches = [
     {
         matchname: "Football",
@@ -257,67 +260,49 @@ const data = [
         Venue: "LBC",
     },
 ];
-function sortEventsByDate(events) {
+
+function sortEventsByDateup(events) {
     return events.slice().sort((a, b) => {
-      const dateA = new Date(a.Date);
-      const dateB = new Date(b.Date);
-      return dateA - dateB;
+        const dateA = new Date(a.Date);
+        const dateB = new Date(b.Date);
+        return dateA - dateB;
     });
-  }
+}
+function sortEventsByDatedown(events) {
+    return events.slice().sort((a, b) => {
+        const dateA = new Date(a.Date);
+        const dateB = new Date(b.Date);
+        return dateB - dateA;
+    });
+}
 function formatDate(dateString) {
     const [year, month, day] = dateString.split('-');
     return `${day}-${month}-${year}`;
 }
 function formatDatetomonth(inputDate) {
     const dateObject = new Date(inputDate);
-  
+
     const options = { day: 'numeric', month: 'long' };
     const formattedDate = dateObject.toLocaleDateString(undefined, options);
-  
+
     const [month, day] = formattedDate.split(' ');
-  return `${day} ${month}`;
-  }
-  function filterUpcomingEvents(matches, currentDate) {
+    return `${day} ${month}`;
+}
+function filterUpcomingEvents(matches, currentDate) {
     const filteredEvents = matches.filter(
-      (match) => new Date(match.Date).setHours(0, 0, 0, 0) > currentDate
+        (match) => new Date(match.Date).setHours(0, 0, 0, 0) > currentDate
     );
-  
+
     return filteredEvents;
-  }
-  function filterpastEvents(matches, currentDate) {
+}
+function filterpastEvents(matches, currentDate) {
     const filteredEvents = matches.filter(
-      (match) => new Date(match.Date).setHours(0, 0, 0, 0) <= currentDate
+        (match) => new Date(match.Date).setHours(0, 0, 0, 0) <= currentDate
     );
-  
+
     return filteredEvents;
-  }
-const currentDate = new Date().setHours(0, 0, 0, 0);
-const upcomingEvents1 = filterUpcomingEvents(roughMatches, currentDate);
-const pastEvents = filterpastEvents(roughMatches, currentDate);
-const filteredDataup1 =filterUpcomingEvents(data,currentDate);
-const filteredDatapast1 = filterpastEvents(data,currentDate);
-const filteredcultdummydataup1 = filterUpcomingEvents(cultdummydata,currentDate);
-const filteredcultdummydatapast1 = filterpastEvents(cultdummydata,currentDate);
-const upcomingEvents = sortEventsByDate(upcomingEvents1);
-const upcomingcult = sortEventsByDate(filteredcultdummydataup1);
-const upcomingtech = sortEventsByDate(filteredDataup1);
-const filteredDataup = upcomingtech.map((item) => ({
-    ...item,
-    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
-  }));
-  const filteredDatapast = filteredDatapast1.map((item) => ({
-    ...item,
-    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
-  }));
-  const filteredcultdummydataup = upcomingcult.map((item) => ({
-    ...item,
-    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
-  }));
-  const filteredcultdummydatapast = filteredcultdummydatapast1.map((item) => ({
-    ...item,
-    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
-  }));
-  console.log(filteredDataup);
+}
+
 export const columns = [
     {
         accessorKey: "event_name",
@@ -329,7 +314,7 @@ export const columns = [
         header: "DATE",
         cell: ({ row }) => <div className="capitalize">{row.getValue("combinedDateTime")}</div>,
     },
-    
+
     {
         accessorKey: "Venue",
         header: "VENUE",
@@ -351,13 +336,100 @@ function Events() {
     const [showpastscult, setshowpastcult] = useState(false);
     const [showupcomingtech, setshowupcomingtech] = useState(true);
     const [showpasttech, setshowpasttech] = useState(false);
-    
     const [sorting, setSorting] = React.useState([]);
     const [columnFilters, setColumnFilters] = React.useState([]);
     const [columnVisibility, setColumnVisibility] = React.useState({});
     const [rowSelection, setRowSelection] = React.useState({});
+    const [upcommingcultevents, setupcomingcultevents] = useState([]);
+    const [pastcultevents, setpastcultevents] = useState([]);
+    const [upcommingsportsevents, setupcommingsportsevents] = useState([]);
+    const [pastsportsevents, setpastsportsevents] = useState([]);
+    const [upcommingtechevents, setupcomingtechevents] = useState([]);
+    const [pasttechevents, setpasttechevents] = useState([]);
+    const currentDate = new Date().setHours(0, 0, 0, 0);
+    // console.log("sdvb")
+    useEffect(() => {
+        const fetchdata = async () => {
+            try {
+                const response = await axios.get('http://localhost:3002/api/event/getEventByCategory?category=cult');
+                console.log(response.data.events);
+                // setcultevents(response.data.events)
+                const upcomingcultraw = filterUpcomingEvents(cultdummydata, currentDate);
+                const pastcultraw =  filterpastEvents(cultdummydata, currentDate);
+                const filteredcultdummydataup1 = filterUpcomingEvents(upcomingcultraw, currentDate);
+                const filteredcultdummydatapast1 = filterpastEvents(pastcultraw, currentDate);
+                const upcomingcult = sortEventsByDateup(filteredcultdummydataup1);
+                const pastcult = sortEventsByDatedown(filteredcultdummydatapast1);
+                 const filteredcultdummydataup = upcomingcult.map((item) => ({
+                     ...item,
+                      combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                }));
+                const filteredcultdummydatapast = pastcult.map((item) => ({
+                    ...item,
+                    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                }));
+                setupcomingcultevents(filteredcultdummydataup);
+                setpastcultevents(filteredcultdummydatapast);
+            }
+            catch (e) {
+                console.log(e);
+            }
+        }
+        fetchdata();
+    }, [currentDate])
+
+    useEffect(() => {
+        const fetchdata = async () => {
+            try {
+                const response = await axios.get('http://localhost:3002/api/event/getEventByCategory?category=tech');
+                console.log(response.data.events);
+                // setcultevents(response.data.events)
+                const upcomingtechsraw = filterUpcomingEvents(data, currentDate);
+                const pasttechraw =  filterpastEvents(data, currentDate);
+                const dummyup1 = filterUpcomingEvents(upcomingtechsraw, currentDate);
+                const dummypast1 = filterpastEvents(pasttechraw, currentDate);
+                const upcomingtech = sortEventsByDateup(dummyup1);
+                const pasttech = sortEventsByDatedown(dummypast1);
+                 const filteredtechdummydataup = upcomingtech.map((item) => ({
+                     ...item,
+                      combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                }));
+                const filteredtechdummydatapast = pasttech.map((item) => ({
+                    ...item,
+                    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                }));
+                setupcomingtechevents(filteredtechdummydataup);
+                setpasttechevents(filteredtechdummydatapast);
+            }
+            catch (e) {
+                console.log(e);
+            }
+        }
+        fetchdata();
+    }, [currentDate])
+    useEffect(() => {
+        const fetchdata = async () => {
+            try {
+                const response = await axios.get('http://localhost:3002/api/event/getEventByCategory?category=sports');
+                console.log(response.data.events);
+                // setcultevents(response.data.events)
+                const upcomingsportsraw = filterUpcomingEvents(roughMatches, currentDate);
+                const pastsportsraw =  filterpastEvents(roughMatches, currentDate);
+                const dummyup1 = filterUpcomingEvents(upcomingsportsraw, currentDate);
+                const dummypast1sports = filterpastEvents(pastsportsraw, currentDate);
+                const upcomingsports = sortEventsByDateup(dummyup1);
+                console.log(upcomingsports);
+                setupcommingsportsevents(upcomingsports);
+                setpastsportsevents(dummypast1sports);
+            }
+            catch (e) {
+                console.log(e);
+            }
+        }
+        fetchdata();
+    }, [currentDate])
     const table = useReactTable({
-        data: showupcomingtech ? filteredDataup : filteredDatapast,
+        data:showupcomingtech ? upcommingtechevents:pasttechevents,
         columns,
         onSortingChange: setSorting,
         onColumnFiltersChange: setColumnFilters,
@@ -375,7 +447,7 @@ function Events() {
         },
     });
     const table1 = useReactTable({
-        data: showupcomingcult ? filteredcultdummydataup : filteredcultdummydatapast,
+        data: showupcomingcult ? upcommingcultevents: pastcultevents,
         columns,
         onSortingChange: setSorting,
         onColumnFiltersChange: setColumnFilters,
@@ -564,137 +636,137 @@ function Events() {
                 </>
             )}
             {showtech && (
-        <>
-          <div className="flex items-center justify-around mt-4 mb-3 md:mt-6 w-4/5 md:w-3/4 lg:w-2/3 gap-3">
-            <button
-              onClick={() => {
-                setshowupcomingtech(true);
-                setshowpasttech(false);
-              }}
-              className={`md:text-xl ${showupcomingtech ? "text-pink-700 font-bold border-b-2 border-pink-700" : "text-gray-400"}`}
-            >
-              Upcoming Events
-            </button>
-            <button
-              onClick={() => {
-                setshowupcomingtech(false);
-                setshowpasttech(true);
-              }}
-              className={` md:text-xl ${showpasttech ? "text-pink-700 font-bold border-b-2 border-pink-700" : "text-gray-400"}`}
-            >
-              Past Events
-            </button>
-          </div>
-          {showpasttech && (
-            <>
-              <div className="w-11/12 md:w-7/12 rounded-xl border-2">
-                <Table>
-                  <TableHeader>
-                    {table.getHeaderGroups().map((headerGroup) => (
-                      <TableRow key={headerGroup.id}>
-                        {headerGroup.headers.map((header) => {
-                          return (
-                            <TableHead key={header.id} className='text-md w-1/3 font-bold text-center'>
-                              {header.isPlaceholder
-                                ? null
-                                : flexRender(
-                                    header.column.columnDef.header,
-                                    header.getContext()
-                                  )}
-                            </TableHead>
-                          );
-                        })}
-                      </TableRow>
-                    ))}
-                  </TableHeader>
-                  <TableBody>
-                    {table.getRowModel().rows?.length ? (
-                      table.getRowModel().rows.map((row) => (
-                        <TableRow
-                          key={row.id}
-                          data-state={row.getIsSelected() && "selected"}
+                <>
+                    <div className="flex items-center justify-around mt-4 mb-3 md:mt-6 w-4/5 md:w-3/4 lg:w-2/3 gap-3">
+                        <button
+                            onClick={() => {
+                                setshowupcomingtech(true);
+                                setshowpasttech(false);
+                            }}
+                            className={`md:text-xl ${showupcomingtech ? "text-pink-700 font-bold border-b-2 border-pink-700" : "text-gray-400"}`}
                         >
-                          {row.getVisibleCells().map((cell) => (
-                            <TableCell key={cell.id} className='w-1/3 text-md text-center px-4 '>
-                              {flexRender(
-                                cell.column.columnDef.cell,
-                                cell.getContext()
-                              )}
-                            </TableCell>
-                          ))}
-                        </TableRow>
-                      ))
-                    ) : (
-                      <TableRow>
-                        <TableCell
-                          colSpan={columns.length}
-                          className="h-24 text-center"
+                            Upcoming Events
+                        </button>
+                        <button
+                            onClick={() => {
+                                setshowupcomingtech(false);
+                                setshowpasttech(true);
+                            }}
+                            className={` md:text-xl ${showpasttech ? "text-pink-700 font-bold border-b-2 border-pink-700" : "text-gray-400"}`}
                         >
-                          No results.
-                        </TableCell>
-                      </TableRow>
+                            Past Events
+                        </button>
+                    </div>
+                    {showpasttech && (
+                        <>
+                            <div className="w-11/12 md:w-7/12 rounded-xl border-2">
+                                <Table>
+                                    <TableHeader>
+                                        {table.getHeaderGroups().map((headerGroup) => (
+                                            <TableRow key={headerGroup.id}>
+                                                {headerGroup.headers.map((header) => {
+                                                    return (
+                                                        <TableHead key={header.id} className='text-md w-1/3 font-bold text-center'>
+                                                            {header.isPlaceholder
+                                                                ? null
+                                                                : flexRender(
+                                                                    header.column.columnDef.header,
+                                                                    header.getContext()
+                                                                )}
+                                                        </TableHead>
+                                                    );
+                                                })}
+                                            </TableRow>
+                                        ))}
+                                    </TableHeader>
+                                    <TableBody>
+                                        {table.getRowModel().rows?.length ? (
+                                            table.getRowModel().rows.map((row) => (
+                                                <TableRow
+                                                    key={row.id}
+                                                    data-state={row.getIsSelected() && "selected"}
+                                                >
+                                                    {row.getVisibleCells().map((cell) => (
+                                                        <TableCell key={cell.id} className='w-1/3 text-md text-center px-4 '>
+                                                            {flexRender(
+                                                                cell.column.columnDef.cell,
+                                                                cell.getContext()
+                                                            )}
+                                                        </TableCell>
+                                                    ))}
+                                                </TableRow>
+                                            ))
+                                        ) : (
+                                            <TableRow>
+                                                <TableCell
+                                                    colSpan={columns.length}
+                                                    className="h-24 text-center"
+                                                >
+                                                    No results.
+                                                </TableCell>
+                                            </TableRow>
+                                        )}
+                                    </TableBody>
+                                </Table>
+                            </div>
+                        </>
                     )}
-                  </TableBody>
-                </Table>
-              </div>
-            </>
-          )}
-          {showupcomingtech && (
-            <>
-              <div className="w-11/12 md:w-7/12 rounded-xl border-2">
-                <Table>
-                  <TableHeader>
-                    {table.getHeaderGroups().map((headerGroup) => (
-                      <TableRow key={headerGroup.id}>
-                        {headerGroup.headers.map((header) => {
-                          return (
-                            <TableHead key={header.id} className='text-md w-1/3 font-bold text-center'>
-                              {header.isPlaceholder
-                                ? null
-                                : flexRender(
-                                    header.column.columnDef.header,
-                                    header.getContext()
-                                  )}
-                            </TableHead>
-                          );
-                        })}
-                      </TableRow>
-                    ))}
-                  </TableHeader>
-                  <TableBody>
-                    {table.getRowModel().rows?.length ? (
-                      table.getRowModel().rows.map((row) => (
-                        <TableRow
-                          key={row.id}
-                          data-state={row.getIsSelected() && "selected"}
-                        >
-                          {row.getVisibleCells().map((cell) => (
-                            <TableCell key={cell.id} className='w-1/3 text-md text-center px-4 '>
-                              {flexRender(
-                                cell.column.columnDef.cell,
-                                cell.getContext()
-                              )}
-                            </TableCell>
-                          ))}
-                        </TableRow>
-                      ))
-                    ) : (
-                      <TableRow>
-                        <TableCell
-                          colSpan={columns.length}
-                          className="h-24 text-center"
-                        >
-                          No results.
-                        </TableCell>
-                      </TableRow>
+                    {showupcomingtech && (
+                        <>
+                            <div className="w-11/12 md:w-7/12 rounded-xl border-2">
+                                <Table>
+                                    <TableHeader>
+                                        {table.getHeaderGroups().map((headerGroup) => (
+                                            <TableRow key={headerGroup.id}>
+                                                {headerGroup.headers.map((header) => {
+                                                    return (
+                                                        <TableHead key={header.id} className='text-md w-1/3 font-bold text-center'>
+                                                            {header.isPlaceholder
+                                                                ? null
+                                                                : flexRender(
+                                                                    header.column.columnDef.header,
+                                                                    header.getContext()
+                                                                )}
+                                                        </TableHead>
+                                                    );
+                                                })}
+                                            </TableRow>
+                                        ))}
+                                    </TableHeader>
+                                    <TableBody>
+                                        {table.getRowModel().rows?.length ? (
+                                            table.getRowModel().rows.map((row) => (
+                                                <TableRow
+                                                    key={row.id}
+                                                    data-state={row.getIsSelected() && "selected"}
+                                                >
+                                                    {row.getVisibleCells().map((cell) => (
+                                                        <TableCell key={cell.id} className='w-1/3 text-md text-center px-4 '>
+                                                            {flexRender(
+                                                                cell.column.columnDef.cell,
+                                                                cell.getContext()
+                                                            )}
+                                                        </TableCell>
+                                                    ))}
+                                                </TableRow>
+                                            ))
+                                        ) : (
+                                            <TableRow>
+                                                <TableCell
+                                                    colSpan={columns.length}
+                                                    className="h-24 text-center"
+                                                >
+                                                    No results.
+                                                </TableCell>
+                                            </TableRow>
+                                        )}
+                                    </TableBody>
+                                </Table>
+                            </div>
+                        </>
                     )}
-                  </TableBody>
-                </Table>
-              </div>
-            </>
-          )}
-        </>
-      )}
+                </>
+            )}
             {showsports && (
                 <>
                     <div className="flex items-center justify-around mt-4 mb-2 md:mt-6 w-4/5 md:w-3/4 lg:w-2/3 gap-3">
@@ -716,7 +788,7 @@ function Events() {
 
                         <div className="flex flex-col justify-center items-center w-full">
 
-                            {upcomingEvents.map((match, index) => (
+                            {upcommingsportsevents.map((match, index) => (
 
 
                                 <div key={index} className="flex flex-col bg-gray-500 border-3 border-black rounded-2xl  md:rounded-3xl shadow-lg shadow-black w-5/6 md:w-3/4 lg:w-2/3 my-2 my-lg-3 overflow-hidden">
@@ -757,7 +829,7 @@ function Events() {
                     {showpastsports && (
                         <div className="flex flex-col justify-center items-center w-full">
 
-                            {pastEvents.map((match, index) => (
+                            {pastsportsevents.map((match, index) => (
 
                                 <div key={index} className="flex flex-col bg-gray-500 border-3 border-black rounded-2xl md:rounded-3xl shadow-lg shadow-black w-5/6 md:w-3/4 lg:w-2/3 my-2 my-lg-3 overflow-hidden">
 
