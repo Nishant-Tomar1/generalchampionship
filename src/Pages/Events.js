@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import cse from '../Assets/IMAGES/cse.png'
 import ece_meta from '../Assets/IMAGES/ece-meta.png'
 import ee from '../Assets/IMAGES/ee.png'
-import mech from '../Assets/IMAGES/Mech.png'
+import mech from '../Assets/IMAGES/mech.png'
 import civil from '../Assets/IMAGES/civil.png'
-import mtech from '../Assets/IMAGES/Mtech.png'
+import mtech from '../Assets/IMAGES/mtech.png'
 import msc from '../Assets/IMAGES/msc.png'
-import phd from './../Assets/IMAGES/Phd.png'
+import phd from './../Assets/IMAGES/phd.png'
 import {
     flexRender,
     getCoreRowModel,
@@ -466,14 +466,14 @@ function Events() {
 
                     {showupcomingcult && (
                         <>
-                            <div className="rounded-md border">
+                            <div className="w-11/12 md:w-7/12 rounded-xl border-2">
                                 <Table >
                                     <TableHeader >
                                         {table1.getHeaderGroups().map((headerGroup) => (
                                             <TableRow key={headerGroup.id}>
                                                 {headerGroup.headers.map((header) => {
                                                     return (
-                                                        <TableHead key={header.id} className='text-lg font-bold'>
+                                                        <TableHead key={header.id} className='text-md w-1/3 font-bold px-4 md:text-center px-md-auto'>
                                                             {header.isPlaceholder
                                                                 ? null
                                                                 : flexRender(
@@ -494,7 +494,7 @@ function Events() {
                                                     data-state={row.getIsSelected() && "selected"}
                                                 >
                                                     {row.getVisibleCells().map((cell) => (
-                                                        <TableCell key={cell.id}>
+                                                        <TableCell key={cell.id} className='text-md text-start px-4 '>
                                                             {flexRender(
                                                                 cell.column.columnDef.cell,
                                                                 cell.getContext()
@@ -520,14 +520,14 @@ function Events() {
                     )}
                     {showpastscult && (
                         <>
-                            <div className="rounded-md border">
+                            <div className="w-11/12 md:w-7/12 rounded-xl border-2">
                                 <Table>
                                     <TableHeader>
                                         {table1.getHeaderGroups().map((headerGroup) => (
                                             <TableRow key={headerGroup.id}>
                                                 {headerGroup.headers.map((header) => {
                                                     return (
-                                                        <TableHead key={header.id}>
+                                                        <TableHead key={header.id} className='text-md w-1/3 font-bold px-4 md:text-center px-md-auto'>
                                                             {header.isPlaceholder
                                                                 ? null
                                                                 : flexRender(
@@ -548,7 +548,7 @@ function Events() {
                                                     data-state={row.getIsSelected() && "selected"}
                                                 >
                                                     {row.getVisibleCells().map((cell) => (
-                                                        <TableCell key={cell.id}>
+                                                        <TableCell key={cell.id} className='text-md text-start px-4 '>
                                                             {flexRender(
                                                                 cell.column.columnDef.cell,
                                                                 cell.getContext()
@@ -600,14 +600,14 @@ function Events() {
           </div>
           {showpasttech && (
             <>
-              <div className="rounded-md border">
+              <div className="w-11/12 md:w-7/12 rounded-xl border-2">
                 <Table>
                   <TableHeader>
                     {table.getHeaderGroups().map((headerGroup) => (
                       <TableRow key={headerGroup.id}>
                         {headerGroup.headers.map((header) => {
                           return (
-                            <TableHead key={header.id}>
+                            <TableHead key={header.id} className='text-md w-1/3 font-bold px-4 md:text-center px-md-auto'>
                               {header.isPlaceholder
                                 ? null
                                 : flexRender(
@@ -628,7 +628,7 @@ function Events() {
                           data-state={row.getIsSelected() && "selected"}
                         >
                           {row.getVisibleCells().map((cell) => (
-                            <TableCell key={cell.id}>
+                            <TableCell key={cell.id} className='text-md text-start px-4 '>
                               {flexRender(
                                 cell.column.columnDef.cell,
                                 cell.getContext()
@@ -654,14 +654,14 @@ function Events() {
           )}
           {showupcomingtech && (
             <>
-              <div className="rounded-md border">
+              <div className="w-11/12 md:w-7/12 rounded-xl border-2">
                 <Table>
                   <TableHeader>
                     {table.getHeaderGroups().map((headerGroup) => (
                       <TableRow key={headerGroup.id}>
                         {headerGroup.headers.map((header) => {
                           return (
-                            <TableHead key={header.id}>
+                            <TableHead key={header.id} className='text-md w-1/3 font-bold px-4 md:text-center px-md-auto'>
                               {header.isPlaceholder
                                 ? null
                                 : flexRender(
@@ -682,7 +682,7 @@ function Events() {
                           data-state={row.getIsSelected() && "selected"}
                         >
                           {row.getVisibleCells().map((cell) => (
-                            <TableCell key={cell.id}>
+                            <TableCell key={cell.id} className='text-md text-start px-4 '>
                               {flexRender(
                                 cell.column.columnDef.cell,
                                 cell.getContext()

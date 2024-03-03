@@ -40,14 +40,14 @@ export default function Navbar() {
         <div className="nav-item">
           <Link className={Styles.NavlinkListElement} to ="/leaderboard" onClick={()=> window.scrollTo(0,0)}>Leaderboard</Link>
         </div>
-        <div className="nav-item">
+        {/* <div className="nav-item">
           <Link className={Styles.NavlinkListElement} to ="/team" onClick={()=> window.scrollTo(0,0)}>Team</Link>
-        </div>
+        </div> */}
         <div className="nav-item">
           <Link className={Styles.NavlinkListElement} to ="/home" onClick={()=> window.scrollTo(0,0)}>Rulebook</Link>
         </div>
 
-       
+      
       </div>
     </div>
   </div>

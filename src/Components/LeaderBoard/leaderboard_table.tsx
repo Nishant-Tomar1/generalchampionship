@@ -19,14 +19,16 @@ const LeaderboardTable: React.FC<TableProps> = ({ data, showTopThree }) => {
         ),
       },
       {
-        Header: " ",
+        Header: "Logo",
         accessor: (row: Data) => row.branch,
         Cell: ({ value }: { value: string }) => (
+          <div className="flex items-center justify-center">
           <img
             src={require('../../Assets/IMAGES/' + value.toLowerCase() + '.png')}
             alt="Icon"
-            className="h-7 w-auto sm:h-8 md:h-10 lg:h-12 xl:h-14 2xl:h-16"
+            className=" h-7 w-auto sm:h-8 md:h-10 lg:h-12 xl:h-14 2xl:h-16"
           />
+          </div>
         ),
       },
       {
@@ -34,7 +36,7 @@ const LeaderboardTable: React.FC<TableProps> = ({ data, showTopThree }) => {
         accessor: "branch",
       },
       {
-        Header: "Score",
+        Header: "Points",
         accessor: "score",
       },
     ],
@@ -45,10 +47,10 @@ const LeaderboardTable: React.FC<TableProps> = ({ data, showTopThree }) => {
     useTable({ columns, data: sortedData });
 
   return (
-    <div className="w-custom mx-auto">
+    <div className="w-11/12 mt-2 md:mt-4">
       <table
         {...getTableProps()}
-        className="w-full divide-y divide-gray-200 table-auto bg-gray-800 text-white"
+        className="w-full divide-y divide-gray-200 table-auto"
       >
         <thead className="bg-gray-900">
           {headerGroups.map((headerGroup: HeaderGroup<Data>) => (
@@ -56,7 +58,7 @@ const LeaderboardTable: React.FC<TableProps> = ({ data, showTopThree }) => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps()}
-                  className="px-6 py-3 text-left text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-medium text-gray-300 uppercase tracking-wider w-1/4"
+                  className="py-3 text-center text-sm sm:text-md md:text-base lg:text-lg xl:text-xl font-medium text-gray-300 uppercase tracking-wider w-1/4"
                 >
                   {column.render("Header")}
                 </th>
@@ -75,7 +77,7 @@ const LeaderboardTable: React.FC<TableProps> = ({ data, showTopThree }) => {
                 {row.cells.map((cell) => (
                   <td
                     {...cell.getCellProps()}
-                    className="  px-6 py-4 whitespace-nowrap w-1/4 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl"
+                    className=" text-center px-6 py-4 whitespace-nowrap w-1/4 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl"
                   >
                     {cell.render("Cell")}
                   </td>
