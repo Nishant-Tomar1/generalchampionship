@@ -15,9 +15,6 @@ import {
     getSortedRowModel,
     useReactTable,
 } from "@tanstack/react-table";
-import { ArrowUpDown } from "lucide-react";
-
-import { Button } from "./../Components/Eventscomponents/button";
 import {
     Table,
     TableBody,
@@ -324,28 +321,18 @@ const filteredDataup = upcomingtech.map((item) => ({
 export const columns = [
     {
         accessorKey: "event_name",
-        header: ({ column }) => {
-            return (
-                <Button
-                    variant="ghost"
-                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-                >
-                    Event Name
-                    <ArrowUpDown className="ml-2 h-4 w-4" />
-                </Button>
-            );
-        },
-        cell: ({ row }) => <div>{row.getValue("event_name")}</div>,
+        header: "EVENT",
+        cell: ({ row }) => <div className='capitalize'>{row.getValue("event_name")}</div>,
     },
     {
         accessorKey: "combinedDateTime",
-        header: "Date & Time",
+        header: "DATE",
         cell: ({ row }) => <div className="capitalize">{row.getValue("combinedDateTime")}</div>,
     },
     
     {
         accessorKey: "Venue",
-        header: "Venue",
+        header: "VENUE",
         cell: ({ row }) => (
             <div className="capitalize">{row.getValue("Venue")}</div>
         ),
@@ -473,7 +460,7 @@ function Events() {
                                             <TableRow key={headerGroup.id}>
                                                 {headerGroup.headers.map((header) => {
                                                     return (
-                                                        <TableHead key={header.id} className='text-md w-1/3 font-bold px-4 md:text-center px-md-auto'>
+                                                        <TableHead key={header.id} className='text-md w-1/3 font-bold text-center'>
                                                             {header.isPlaceholder
                                                                 ? null
                                                                 : flexRender(
@@ -494,7 +481,7 @@ function Events() {
                                                     data-state={row.getIsSelected() && "selected"}
                                                 >
                                                     {row.getVisibleCells().map((cell) => (
-                                                        <TableCell key={cell.id} className='text-md text-start px-4 '>
+                                                        <TableCell key={cell.id} className='text-md text-center px-4 w-1/3'>
                                                             {flexRender(
                                                                 cell.column.columnDef.cell,
                                                                 cell.getContext()
@@ -527,7 +514,7 @@ function Events() {
                                             <TableRow key={headerGroup.id}>
                                                 {headerGroup.headers.map((header) => {
                                                     return (
-                                                        <TableHead key={header.id} className='text-md w-1/3 font-bold px-4 md:text-center px-md-auto'>
+                                                        <TableHead key={header.id} className='text-md w-1/3 font-bold text-center '>
                                                             {header.isPlaceholder
                                                                 ? null
                                                                 : flexRender(
@@ -548,7 +535,7 @@ function Events() {
                                                     data-state={row.getIsSelected() && "selected"}
                                                 >
                                                     {row.getVisibleCells().map((cell) => (
-                                                        <TableCell key={cell.id} className='text-md text-start px-4 '>
+                                                        <TableCell key={cell.id} className='w-1/3 px-4 text-md text-center'>
                                                             {flexRender(
                                                                 cell.column.columnDef.cell,
                                                                 cell.getContext()
@@ -607,7 +594,7 @@ function Events() {
                       <TableRow key={headerGroup.id}>
                         {headerGroup.headers.map((header) => {
                           return (
-                            <TableHead key={header.id} className='text-md w-1/3 font-bold px-4 md:text-center px-md-auto'>
+                            <TableHead key={header.id} className='text-md w-1/3 font-bold text-center'>
                               {header.isPlaceholder
                                 ? null
                                 : flexRender(
@@ -628,7 +615,7 @@ function Events() {
                           data-state={row.getIsSelected() && "selected"}
                         >
                           {row.getVisibleCells().map((cell) => (
-                            <TableCell key={cell.id} className='text-md text-start px-4 '>
+                            <TableCell key={cell.id} className='w-1/3 text-md text-center px-4 '>
                               {flexRender(
                                 cell.column.columnDef.cell,
                                 cell.getContext()
@@ -661,7 +648,7 @@ function Events() {
                       <TableRow key={headerGroup.id}>
                         {headerGroup.headers.map((header) => {
                           return (
-                            <TableHead key={header.id} className='text-md w-1/3 font-bold px-4 md:text-center px-md-auto'>
+                            <TableHead key={header.id} className='text-md w-1/3 font-bold text-center'>
                               {header.isPlaceholder
                                 ? null
                                 : flexRender(
@@ -682,7 +669,7 @@ function Events() {
                           data-state={row.getIsSelected() && "selected"}
                         >
                           {row.getVisibleCells().map((cell) => (
-                            <TableCell key={cell.id} className='text-md text-start px-4 '>
+                            <TableCell key={cell.id} className='w-1/3 text-md text-center px-4 '>
                               {flexRender(
                                 cell.column.columnDef.cell,
                                 cell.getContext()

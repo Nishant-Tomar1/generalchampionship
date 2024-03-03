@@ -44,8 +44,8 @@ export default function Navbar() {
           <Link className={Styles.NavlinkListElement} to ="/team" onClick={()=> window.scrollTo(0,0)}>Team</Link>
         </div> */}
         <div className="nav-item">
-          <Link className={Styles.NavlinkListElement} to ="/home" onClick={()=> window.scrollTo(0,0)}>Rulebook</Link>
-        </div>
+          <Link className={`${Styles.NavlinkListElement} cursor-not-allowed `} onClick={()=> window.scrollTo(0,0)}>Rulebook</Link>
+        </div> 
 
       
       </div>
