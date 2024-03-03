@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import cse from '../Assets/IMAGES/cse.png'
 import ece_meta from '../Assets/IMAGES/ece-meta.png'
 import ee from '../Assets/IMAGES/ee.png'
-import mech from '../Assets/IMAGES/mech.png'
+import mech from '../Assets/IMAGES/Mech.png'
 import civil from '../Assets/IMAGES/civil.png'
-import mtech from '../Assets/IMAGES/mtech.png'
+import mtech from '../Assets/IMAGES/Mtech.png'
 import msc from '../Assets/IMAGES/msc.png'
-import phd from '../Assets/IMAGES/phd.png'
+import phd from './../Assets/IMAGES/Phd.png'
 import {
     flexRender,
     getCoreRowModel,
@@ -134,56 +134,56 @@ const cultdummydata = [
     {
         // id: "1",
         event_name: "Dance Battle",
-        date: "2024-03-15",
+        Date: "2024-03-15",
         Time: "8pm",
         Venue: "LBC",
     },
     {
         // id: "2",
         event_name: "Singing",
-        date: "2024-03-14",
+        Date: "2024-03-14",
         Time: "10pm",
         Venue: "LBC",
     },
     {
         // id: "3",
         event_name: "Drams",
-        date: "2024-03-19",
+        Date: "2024-03-19",
         Time: "3pm",
         Venue: "LBC",
     },
     {
         // id: "4",
         event_name: "Drams",
-        date: "2024-03-12",
+        Date: "2024-03-12",
         Time: "8pm",
         Venue: "LBC",
     },
     {
         // id: "5",
         event_name: "Mic drop",
-        date: "2023-04-15",
+        Date: "2023-04-15",
         Time: "8pm",
         Venue: "LBC",
     },
     {
         // id: "1",
         event_name: "Singing",
-        date: "2023-07-15",
+        Date: "2023-07-15",
         Time: "8pm",
         Venue: "LBC",
     },
     {
         // id: "2",
         event_name: "Costume",
-        date: "2024-06-15",
+        Date: "2024-06-15",
         Time: "8pm",
         Venue: "LBC",
     },
     {
         // id: "5",
         event_name: "Skit",
-        date: "2023-03-16",
+        Date: "2023-03-16",
         Time: "8pm",
         Venue: "LBC",
     },
@@ -192,81 +192,136 @@ const data = [
     {
         // id: "1",
         event_name: "GC webathon",
-        date: "2024-03-15",
+        Date: "2024-03-15",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
         // id: "2",
         event_name: "GC webathon",
-        date: "2024-03-14",
+        Date: "2024-03-14",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
         // id: "3",
         event_name: "GC webathon",
-        date: "2024-03-19",
+        Date: "2024-03-19",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
         // id: "4",
         event_name: "GC webathon",
-        date: "2024-03-12",
+        Date: "2024-03-12",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
         // id: "5",
         event_name: "GC webathon",
-        date: "2023-04-15",
+        Date: "2023-04-15",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
         // id: "1",
         event_name: "GC webathon",
-        date: "2023-07-15",
+        Date: "2023-07-15",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
         // id: "2",
         event_name: "GC webathon",
-        date: "2024-06-15",
+        Date: "2024-06-15",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
         // id: "3",
         event_name: "GC webathon",
-        date: "2023-04-5",
+        Date: "2023-04-5",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
         // id: "4",
         event_name: "GC webathon",
-        date: "2023-03-17",
+        Date: "2023-03-17",
         Time: "8-9pm",
         Venue: "LBC",
     },
     {
         // id: "5",
         event_name: "GC webathon",
-        date: "2023-03-16",
+        Date: "2023-03-16",
         Time: "8-9pm",
         Venue: "LBC",
     },
 ];
+function sortEventsByDate(events) {
+    return events.slice().sort((a, b) => {
+      const dateA = new Date(a.Date);
+      const dateB = new Date(b.Date);
+      return dateA - dateB;
+    });
+  }
+function formatDate(dateString) {
+    const [year, month, day] = dateString.split('-');
+    return `${day}-${month}-${year}`;
+}
+function formatDatetomonth(inputDate) {
+    const dateObject = new Date(inputDate);
+  
+    const options = { day: 'numeric', month: 'long' };
+    const formattedDate = dateObject.toLocaleDateString(undefined, options);
+  
+    const [month, day] = formattedDate.split(' ');
+  return `${day} ${month}`;
+  }
+  function filterUpcomingEvents(matches, currentDate) {
+    const filteredEvents = matches.filter(
+      (match) => new Date(match.Date).setHours(0, 0, 0, 0) > currentDate
+    );
+  
+    return filteredEvents;
+  }
+  function filterpastEvents(matches, currentDate) {
+    const filteredEvents = matches.filter(
+      (match) => new Date(match.Date).setHours(0, 0, 0, 0) <= currentDate
+    );
+  
+    return filteredEvents;
+  }
+const currentDate = new Date().setHours(0, 0, 0, 0);
+const upcomingEvents1 = filterUpcomingEvents(roughMatches, currentDate);
+const pastEvents = filterpastEvents(roughMatches, currentDate);
+const filteredDataup1 =filterUpcomingEvents(data,currentDate);
+const filteredDatapast1 = filterpastEvents(data,currentDate);
+const filteredcultdummydataup1 = filterUpcomingEvents(cultdummydata,currentDate);
+const filteredcultdummydatapast1 = filterpastEvents(cultdummydata,currentDate);
+const upcomingEvents = sortEventsByDate(upcomingEvents1);
+const upcomingcult = sortEventsByDate(filteredcultdummydataup1);
+const upcomingtech = sortEventsByDate(filteredDataup1);
+const filteredDataup = upcomingtech.map((item) => ({
+    ...item,
+    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+  }));
+  const filteredDatapast = filteredDatapast1.map((item) => ({
+    ...item,
+    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+  }));
+  const filteredcultdummydataup = upcomingcult.map((item) => ({
+    ...item,
+    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+  }));
+  const filteredcultdummydatapast = filteredcultdummydatapast1.map((item) => ({
+    ...item,
+    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+  }));
+  console.log(filteredDataup);
 export const columns = [
-    // {
-    //     accessorKey: "id",
-    //     // header: "S.no",
-    //     cell: ({ row }) => <div className="capitalize">{row.getValue("id")}</div>,
-    // },
-
     {
         accessorKey: "event_name",
         header: ({ column }) => {
@@ -282,17 +337,12 @@ export const columns = [
         },
         cell: ({ row }) => <div>{row.getValue("event_name")}</div>,
     },
-
     {
-        accessorKey: "date",
-        header: "Date",
-        cell: ({ row }) => <div className="capitalize">{row.getValue("date")}</div>,
+        accessorKey: "combinedDateTime",
+        header: "Date & Time",
+        cell: ({ row }) => <div className="capitalize">{row.getValue("combinedDateTime")}</div>,
     },
-    {
-        accessorKey: "Time",
-        header: "Time",
-        cell: ({ row }) => <div className="capitalize">{row.getValue("Time")}</div>,
-    },
+    
     {
         accessorKey: "Venue",
         header: "Venue",
@@ -303,17 +353,6 @@ export const columns = [
 
 ];
 
-const currentDate = new Date().setHours(0, 0, 0, 0);
-const upcomingEvents = roughMatches.filter(
-    (match) => new Date(match.Date).setHours(0, 0, 0, 0) > currentDate
-);
-const pastEvents = roughMatches.filter(
-    (match) => new Date(match.Date).setHours(0, 0, 0, 0) <= currentDate
-);
-const filteredDataup = data.filter((event) => new Date(event.date) > currentDate)
-const filteredDatapast = data.filter((event) => new Date(event.date) <= currentDate)
-const filteredcultdummydataup = cultdummydata.filter((event) => new Date(event.date) > currentDate)
-const filteredcultdummydatapast = cultdummydata.filter((event) => new Date(event.date) <= currentDate)
 
 function Events() {
     const [showcult, setshowcult] = useState(false);
@@ -325,10 +364,7 @@ function Events() {
     const [showpastscult, setshowpastcult] = useState(false);
     const [showupcomingtech, setshowupcomingtech] = useState(true);
     const [showpasttech, setshowpasttech] = useState(false);
-    function formatDate(dateString) {
-        const [year, month, day] = dateString.split('-');
-        return `${day}-${month}-${year}`;
-    }
+    
     const [sorting, setSorting] = React.useState([]);
     const [columnFilters, setColumnFilters] = React.useState([]);
     const [columnVisibility, setColumnVisibility] = React.useState({});
@@ -430,7 +466,7 @@ function Events() {
 
                     {showupcomingcult && (
                         <>
-                            <div className="rounded-xl lg:rounded-3xl py-2 border-2 md:border-4 w-11/12 lg:w-5/6 mx-4 my-lg-4 mb-2 pb-md-4">
+                            <div className="rounded-md border">
                                 <Table >
                                     <TableHeader >
                                         {table1.getHeaderGroups().map((headerGroup) => (
