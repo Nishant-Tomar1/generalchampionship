@@ -6,7 +6,7 @@ import Footer from './Components/Footer';
 import { AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Events from './Pages/Events';
-import Leaderboard from './Pages/Leaderboard';
+import Leaderboard from './Pages/Leaderboard.tsx';
 
 
 function App() {

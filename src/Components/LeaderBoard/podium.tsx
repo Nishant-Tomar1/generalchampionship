@@ -8,12 +8,16 @@ const Podium: React.FC<TableProps> = ({ data }) => {
 
   const position1 = sortedData.find((team) => team.position === 1);
   const position2 = sortedData.find((team) => team.position === 2);
+
   const position3 = sortedData.find((team) => team.position === 3);
 
   return (
+<>
+<h1>Leaderboard <hr /> </h1>
+
     <div
       className="flex justify-center items-end w-full text-shadow gap-1 gap-md-2 border-b-2 border-gray-700 pb-md-0 "
-      style={{ height:"37vmax" }}
+      style={{ height:"360px" }}
     >
 
       {position2 && (
@@ -22,8 +26,9 @@ const Podium: React.FC<TableProps> = ({ data }) => {
           style={{ height: "83%" }}
         >
           <h4 className="text-center font-bold text-white">{position2.branch}</h4>
+          
           <img
-            src={require("../../Assets/LeaderBoardFlags/" + position2.branch + ".png")}
+            src={require("../../Assets/IMAGES/" + position2.branch.toLowerCase() + ".png")}
             alt="Icon"
             className="h-7 w-auto sm:h-12 md:h-16 lg:h-20 "
             style={{ backdropFilter: "blur(10px)" }}
@@ -42,7 +47,7 @@ const Podium: React.FC<TableProps> = ({ data }) => {
         >
           <h4 className="text-center font-bold text-white">{position1.branch}</h4>
           <img
-            src={require("../../Assets/LeaderBoardFlags/" + position1.branch + ".png")}
+            src={require("../../Assets/IMAGES/" + position1.branch.toLowerCase() + ".png")}
             alt="Icon"
             className="h-7 w-auto sm:h-12 md:h-16 lg:h-20 "
             style={{ backdropFilter: "blur(10px)" }}
@@ -61,7 +66,7 @@ const Podium: React.FC<TableProps> = ({ data }) => {
         >
           <h4 className="text-center font-bold text-white">{position3.branch}</h4>
           <img
-            src={require("../../Assets/LeaderBoardFlags/" + position3.branch + ".png")}
+            src={require("../../Assets/IMAGES/" + position3.branch.toLowerCase() + ".png")}
             alt="Icon"
             className="h-7 w-auto sm:h-12 md:h-16 lg:h-20 "
             style={{ backdropFilter: "blur(10px)" }}
@@ -70,6 +75,7 @@ const Podium: React.FC<TableProps> = ({ data }) => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

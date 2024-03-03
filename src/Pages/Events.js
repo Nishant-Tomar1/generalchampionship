@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import cse from '../Assets/IMAGES/cse.png'
 import ece_meta from '../Assets/IMAGES/ece-meta.png'
 import ee from '../Assets/IMAGES/ee.png'
-import mech from '../Assets/IMAGES/Mech.png'
+import mech from '../Assets/IMAGES/mech.png'
 import civil from '../Assets/IMAGES/civil.png'
-import mtech from '../Assets/IMAGES/Mtech.png'
+import mtech from '../Assets/IMAGES/mtech.png'
 import msc from '../Assets/IMAGES/msc.png'
-import phd from '../Assets/IMAGES/Phd.png'
+import phd from '../Assets/IMAGES/phd.png'
 import {
     flexRender,
     getCoreRowModel,

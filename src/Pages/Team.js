@@ -2,14 +2,12 @@ import React from 'react'
 
 function Team() {
     const team = [
-        ["Rishita","VP"],
-        ["Ayush","gsec"],
-        ["Yuvraj","gsec"],
-        ["Sambit","gsec"],
-        ["Rishita","VP"],
-        ["Ayush","gsec"],
-        ["Yuvraj","gsec"],
-        ["Sambit","gsec"]        
+        ["Gottipati Rishithaa ","Vice President - Gymkhana"],
+        ["Yuvraj Pratap Singh","GSec - Cultural Council"],
+        ["Sambit Mishra","GSec - Technical Council"],
+        ["Ayush Pratap Singh","Secretary - Neuromancers"],
+        ["Saurabh Kumar","Secretary - FEBS"],
+        ["Anurag Mani Tripathi","Secretary - WebnD Society"],     
     ]
 
 
@@ -21,7 +19,7 @@ function Team() {
     <div className="container px-5 py-24 mx-auto">
       <div className="flex flex-col text-center w-full mb-10">
         <h1 className="text-3xl md:text-5xl font-bold title-font mb-4 text-pink-700">Organizing Team</h1>
-        <p className="lg:w-2/3 mx-auto leading-relaxed text-sm md:text-lg">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</p>
+        <p className="lg:w-2/3 mx-auto leading-relaxed text-sm md:text-lg">The General Championship organizing team is a dedicated group of individuals committed to ensuring the success of the event. Their expertise, passion, and collaborative efforts create a seamless and memorable experience for participants.</p>
       </div>
 
 

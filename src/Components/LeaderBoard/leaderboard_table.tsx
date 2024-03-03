@@ -3,10 +3,10 @@ import { useMemo } from "react";
 import { useTable, Column, HeaderGroup, Row } from "react-table";
 import { Data, TableProps } from "./model.tsx";
 
+
 const LeaderboardTable: React.FC<TableProps> = ({ data, showTopThree }) => {
-  let sortedData: Data[] = data
-    .sort((a, b) => Number(b.score) - Number(a.score))
-    .map((team, index) => ({ ...team, position: index + 1 }));
+
+  let sortedData : Data[] = data.sort((a, b) => Number(b.score) - Number(a.score)).map((team, index) => ({ ...team, position: index + 1 }));
 
   sortedData = showTopThree ? sortedData : sortedData.slice(3);
 
@@ -23,7 +23,7 @@ const LeaderboardTable: React.FC<TableProps> = ({ data, showTopThree }) => {
         accessor: (row: Data) => row.branch,
         Cell: ({ value }: { value: string }) => (
           <img
-            src={require("../../assets/" + value + ".png")}
+            src={require('../../Assets/IMAGES/' + value.toLowerCase() + '.png')}
             alt="Icon"
             className="h-7 w-auto sm:h-8 md:h-10 lg:h-12 xl:h-14 2xl:h-16"
           />
