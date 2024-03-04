@@ -1,6 +1,7 @@
 import React from 'react'
 import Leader from '../Components/Leader.tsx'
 import LeaderboardTable from '../Components/LeaderBoard/leaderboard_table.tsx'
+import {motion} from 'framer-motion'
 
 export const data: Data[] = [
   {
@@ -9,7 +10,7 @@ export const data: Data[] = [
   },
   {
     branch: "CSE",
-    score: "110",
+    score: "10",
   },
   {
     branch: "ECE-META",
@@ -24,12 +25,28 @@ export const data: Data[] = [
 
 
 
-function Leaderboard() {
+function Leaderboard() {  const variant = {
+  entry : {
+      opacity: [0,1], 
+      transition:{
+          duration:0.25,
+          times:[0,1],
+      }
+  },
+  exit : {
+      opacity: [1,0], 
+      transition:{
+          duration:0.25,
+          times:[0,1],
+      }
+  },
+}
+
   return (
-    <div className='flex flex-col items-center justify-center pt-16'>
+    <motion.div className='flex flex-col items-center justify-center pt-16' variants={variant} animate='entry' exit='exit'>
       <Leader data={data}/>
       <LeaderboardTable data={data}/>
-    </div>
+    </motion.div>
   )
 }
 

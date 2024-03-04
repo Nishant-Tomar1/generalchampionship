@@ -24,7 +24,7 @@ import {
     TableRow,
 } from "./../Components/Eventscomponents/table";
 import axios from 'axios'
-
+import {motion} from 'framer-motion'
 
 const roughMatches = [
     {
@@ -464,8 +464,25 @@ function Events() {
             rowSelection,
         },
     });
+
+    const variant = {
+        entry : {
+            opacity: [0,1], 
+            transition:{
+                duration:0.25,
+                times:[0,1],
+            }
+        },
+        exit : {
+            opacity: [1,0], 
+            transition:{
+                duration:0.25,
+                times:[0,1],
+            }
+        },
+    }
     return (
-        <div className='flex flex-col justify-center items-center'>
+        <motion.div className='flex flex-col justify-center items-center' variants={variant} animate='entry' exit='exit'>
             <h1 className="text-5xl font-semibold text-center mt-20 mb-3">Events</h1>
             <div className="bg-blur w-5/6 shadow-lg md:w-3/4 lg:w-2/3 py-1 lg:py-2 mx-auto flex items-center justify-around px-auto rounded-full mt-7 border-3 border-pink-600">
                 <button
@@ -869,7 +886,7 @@ function Events() {
                     )}
                 </>
             )}
-        </div>
+        </motion.div>
     );
 }
 

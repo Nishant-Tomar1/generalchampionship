@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 
 function Team() {
     const team = [
@@ -10,10 +11,27 @@ function Team() {
         ["Anurag Mani Tripathi","Secretary - WebnD Society"],     
     ]
 
+    const variant = {
+      entry : {
+          opacity: [0,1], 
+          transition:{
+              duration:0.25,
+              times:[0,1],
+          }
+      },
+      exit : {
+          opacity: [1,0], 
+          transition:{
+              duration:0.25,
+              times:[0,1],
+          }
+      },
+  }
+
 
   return (
     
-    <section className=" body-font">
+    <motion.section className=" body-font" variants={variant} animate='entry' exit='exit'>
 
 
     <div className="container px-5 py-24 mx-auto">
@@ -39,7 +57,7 @@ function Team() {
                
       </div>
     </div>
-  </section>
+  </motion.section>
     
   )
 }
