@@ -2,11 +2,12 @@ import React from 'react'
 import Leader from '../Components/Leader.tsx'
 import LeaderboardTable from '../Components/LeaderBoard/leaderboard_table.tsx'
 import {motion} from 'framer-motion'
+import { Data } from '../Components/LeaderBoard/model.tsx'
 
 export const data: Data[] = [
   {
     branch: "EE",
-    score: "120",
+    score: "220",
   },
   {
     branch: "CSE",
