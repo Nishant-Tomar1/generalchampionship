@@ -44,7 +44,7 @@ export default function Navbar() {
           <Link className={Styles.NavlinkListElement} to ="/team" onClick={()=> window.scrollTo(0,0)}>Team</Link>
         </div> */}
         <div className="nav-item">
-          <Link className={`${Styles.NavlinkListElement} cursor-not-allowed `} onClick={()=> window.scrollTo(0,0)}>Rulebook</Link>
+          <Link className={`${Styles.NavlinkListElement}`} onClick={()=> window.scrollTo(0,0)}  to ="https://drive.google.com/file/d/1z3p-uV4j-kxkKuHTIGXbt9WHzqYDkI7z/view?usp=drivesdk" target='blank'>Rulebook</Link>
         </div> 
 
       

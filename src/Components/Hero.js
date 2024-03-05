@@ -1,6 +1,7 @@
 import React from 'react'
 import Styles from "../Styles/Home.module.css"
 import logo from "../Assets/IMAGES/GClogo.png"
+import {Link} from 'react-router-dom';
 
 function Hero() {
   return (
@@ -16,7 +17,7 @@ function Hero() {
     <span className='text-sm lg:text-lg 2xl:text-xl'>           
     Get ready to witness the pinnacle of departmental competition at the annual General Championship. As departments clash in Technical, Cultural, and Sports events, the quest for pride and camaraderie unfolds.</span>
 
-    <button className='mt-6 flex shadow-lg rounded-3xl bg-pink-700 px-5 py-2 hover:bg-pink-800 font-semibold'>Rulebook</button>      
+    <button className='mt-6 flex shadow-lg rounded-3xl bg-pink-700 px-5 py-2 hover:bg-pink-800 font-semibold'><Link className=' text-white' style={{textDecoration:"none"}} to ="https://drive.google.com/file/d/1z3p-uV4j-kxkKuHTIGXbt9WHzqYDkI7z/view?usp=drivesdk" target='blank' > Rulebook</Link></button>      
   </div>
 </div>
 
