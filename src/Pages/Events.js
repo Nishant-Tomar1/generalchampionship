@@ -24,7 +24,7 @@ import {
     TableRow,
 } from "./../Components/Eventscomponents/table";
 import axios from 'axios'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const roughMatches = [
     {
@@ -355,14 +355,14 @@ function Events() {
                 console.log(response.data.events);
                 // setcultevents(response.data.events)
                 const upcomingcultraw = filterUpcomingEvents(cultdummydata, currentDate);
-                const pastcultraw =  filterpastEvents(cultdummydata, currentDate);
+                const pastcultraw = filterpastEvents(cultdummydata, currentDate);
                 const filteredcultdummydataup1 = filterUpcomingEvents(upcomingcultraw, currentDate);
                 const filteredcultdummydatapast1 = filterpastEvents(pastcultraw, currentDate);
                 const upcomingcult = sortEventsByDateup(filteredcultdummydataup1);
                 const pastcult = sortEventsByDatedown(filteredcultdummydatapast1);
-                 const filteredcultdummydataup = upcomingcult.map((item) => ({
-                     ...item,
-                      combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                const filteredcultdummydataup = upcomingcult.map((item) => ({
+                    ...item,
+                    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
                 }));
                 const filteredcultdummydatapast = pastcult.map((item) => ({
                     ...item,
@@ -385,14 +385,14 @@ function Events() {
                 console.log(response.data.events);
                 // setcultevents(response.data.events)
                 const upcomingtechsraw = filterUpcomingEvents(data, currentDate);
-                const pasttechraw =  filterpastEvents(data, currentDate);
+                const pasttechraw = filterpastEvents(data, currentDate);
                 const dummyup1 = filterUpcomingEvents(upcomingtechsraw, currentDate);
                 const dummypast1 = filterpastEvents(pasttechraw, currentDate);
                 const upcomingtech = sortEventsByDateup(dummyup1);
                 const pasttech = sortEventsByDatedown(dummypast1);
-                 const filteredtechdummydataup = upcomingtech.map((item) => ({
-                     ...item,
-                      combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                const filteredtechdummydataup = upcomingtech.map((item) => ({
+                    ...item,
+                    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
                 }));
                 const filteredtechdummydatapast = pasttech.map((item) => ({
                     ...item,
@@ -414,7 +414,7 @@ function Events() {
                 console.log(response.data.events);
                 // setcultevents(response.data.events)
                 const upcomingsportsraw = filterUpcomingEvents(roughMatches, currentDate);
-                const pastsportsraw =  filterpastEvents(roughMatches, currentDate);
+                const pastsportsraw = filterpastEvents(roughMatches, currentDate);
                 const dummyup1 = filterUpcomingEvents(upcomingsportsraw, currentDate);
                 const dummypast1sports = filterpastEvents(pastsportsraw, currentDate);
                 const upcomingsports = sortEventsByDateup(dummyup1);
@@ -429,7 +429,7 @@ function Events() {
         fetchdata();
     }, [currentDate])
     const table = useReactTable({
-        data:showupcomingtech ? upcommingtechevents:pasttechevents,
+        data: showupcomingtech ? upcommingtechevents : pasttechevents,
         columns,
         onSortingChange: setSorting,
         onColumnFiltersChange: setColumnFilters,
@@ -447,7 +447,7 @@ function Events() {
         },
     });
     const table1 = useReactTable({
-        data: showupcomingcult ? upcommingcultevents: pastcultevents,
+        data: showupcomingcult ? upcommingcultevents : pastcultevents,
         columns,
         onSortingChange: setSorting,
         onColumnFiltersChange: setColumnFilters,
@@ -466,23 +466,23 @@ function Events() {
     });
 
     const variant = {
-        entry : {
-            opacity: [0,1], 
-            transition:{
-                duration:0.25,
-                times:[0,1],
+        entry: {
+            opacity: [0, 1],
+            transition: {
+                duration: 0.25,
+                times: [0, 1],
             }
         },
-        exit : {
-            opacity: [1,0], 
-            transition:{
-                duration:0.25,
-                times:[0,1],
+        exit: {
+            opacity: [1, 0],
+            transition: {
+                duration: 0.25,
+                times: [0, 1],
             }
         },
     }
     return (
-        <motion.div className='flex flex-col justify-center items-center' variants={variant} animate='entry' exit='exit'>
+        <motion.div className='flex flex-col  items-center min-h-screen'  variants={variant} animate='entry' exit='exit'>
             <h1 className="text-5xl font-semibold text-center mt-20 mb-3">Events</h1>
             <div className="bg-blur w-5/6 shadow-lg md:w-3/4 lg:w-2/3 py-1 lg:py-2 mx-auto flex items-center justify-around px-auto rounded-full mt-7 border-3 border-pink-600">
                 <button
