@@ -50,6 +50,7 @@ const roughMatches = [
                 score: "",
                 sets: "",
             },
+
         },
     },
     {
@@ -1441,7 +1442,7 @@ function Events() {
 
                                     <div className="text-lg lg:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white text-center ">Venue :- {match.venue}</div>
 
-                                    <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">Date :- {formatDate(match.Date)}</div>
+                                    <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">Date :- {formatDate(match.Date)}, {match.Time}</div>
                                 </div>
                             ))}
 
@@ -1481,15 +1482,18 @@ function Events() {
                                     </div>
 
 
-                                    <div className="text-2xl lg:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white text-center ">(2) 32 - 33 (1)</div>
+                                    {match.teams.teamA.sets && (<div> <div className="text-2xl lg:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white text-center "> {match.teams.teamA.score}{`(${match.teams.teamA.sets})`} - {match.teams.teamB.score}{`(${match.teams.teamB.sets})`}</div>
+                                        <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">{match.teams.teamA.sets > match.teams.teamB.sets ? match.teams.teamA.Name : match.teams.teamB.Name} Won</div></div>)}
 
-                                    <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">{match.winner} Won</div>
+                                    {!match.teams.teamA.sets && <><div className="text-2xl lg:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white text-center "> {match.teams.teamA.score} - {match.teams.teamB.score}</div>
+                                        <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">{match.teams.teamA.score > match.teams.teamB.score ? match.teams.teamA.Name : match.teams.teamB.Name} Won</div></>}
+
                                 </div>
 
 
                             ))}
 
-                            {/* <h3 className=" text-gray-400 text-md mt-56">To be updated soon !!!</h3> */}
+                            <h3 className=" text-gray-400 text-md mt-56">To be updated soon !!!</h3>
                         </div>
                     )}
                 </>
