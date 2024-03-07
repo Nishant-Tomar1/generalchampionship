@@ -368,7 +368,7 @@ const data_tech = [
         event_name: "Observational Astronomy",
         Date: "2024-03-11",
         Time: "10:30 PM",
-        Venue: "SAC Terrace",
+        Venue: "SAC",
     },
     {
 
