@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 
-// import cse from '../Assets/IMAGES/cse.png'
-// import ece_meta from '../Assets/IMAGES/ece-meta.png'
-// import ee from '../Assets/IMAGES/ee.png'
-// import mech from '../Assets/IMAGES/mech.png'
-// import civil from '../Assets/IMAGES/civil.png'
-// import mtech from '../Assets/IMAGES/mtech.png'
-// import msc from '../Assets/IMAGES/msc.png'
-// import phd from './../Assets/IMAGES/phd.png'
+import gc from '../Assets/IMAGES/GClogo.png';
+import cse from '../Assets/IMAGES/cse.png'
+import ece_meta from '../Assets/IMAGES/ece-meta.png'
+import ee from '../Assets/IMAGES/ee.png'
+import mech from '../Assets/IMAGES/mech.png'
+import civil from '../Assets/IMAGES/civil.png'
+import mtech from '../Assets/IMAGES/mtech.png'
+import msc from '../Assets/IMAGES/msc.png'
+import phd from './../Assets/IMAGES/phd.png'
 
 import {
     flexRender,
@@ -28,7 +29,474 @@ import {
 // import axios from 'axios'
 import { motion } from 'framer-motion'
 
-const roughMatches = [];
+
+const roughMatches = [
+    {
+        matchname: "Kho-Kho (Boys)",
+        type: "League Match 1",
+        venue: "Hockey Ground",
+        Date: "2024-03-08",
+        Time: "6:00 AM",
+        teams: {
+            teamA: {
+                Name: "ECE-META",
+                img: ece_meta,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "MSC",
+                img: msc,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Kho-Kho (Boys)",
+        type: "League Match 2",
+        venue: "Hockey Ground",
+        Date: "2024-03-08",
+        Time: "7:00 AM",
+        teams: {
+            teamA: {
+                Name: "Mtech",
+                img: mtech,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Mechanical",
+                img: mech,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Kho-Kho (Boys)",
+        type: "League Match 3",
+        venue: "Hockey Ground",
+        Date: "2024-03-08",
+        Time: "8:00 AM",
+        teams: {
+            teamA: {
+                Name: "CSE",
+                img: cse,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Civil",
+                img: civil,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Kho-Kho (Boys)",
+        type: "League Match 4",
+        venue: "Hockey Ground",
+        Date: "2024-03-08",
+        Time: "9:00 AM",
+        teams: {
+            teamA: {
+                Name: "Electrical",
+                img: ee,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "PHD",
+                img: phd,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Kho-Kho (Boys)",
+        type: "Semi-Final 1",
+        venue: "Hockey Ground",
+        Date: "2024-03-09",
+        Time: "7:00 AM",
+        teams: {
+            teamA: {
+                Name: "Winner of League Match 1",
+                img: gc,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Winner of League Match 3",
+                img: gc,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Kho-Kho (Boys)",
+        type: "Semi-Final 2",
+        venue: "Hockey Ground",
+        Date: "2024-03-09",
+        Time: "8:00 AM",
+        teams: {
+            teamA: {
+                Name: "Winner of League Match 2",
+                img: gc,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Winner of League Match 4",
+                img: gc,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Kho-Kho (Girls)",
+        type: "League Match 1",
+        venue: "Hockey Ground",
+        Date: "2024-03-09",
+        Time: "9:00 AM",
+        teams: {
+            teamA: {
+                Name: "ECE-META",
+                img: ece_meta,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "MSC",
+                img: msc,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Kho-Kho (Girls)",
+        type: "League Match 2",
+        venue: "Hockey Ground",
+        Date: "2024-03-10",
+        Time: "7:00 AM",
+        teams: {
+            teamA: {
+                Name: "Mtech",
+                img: mtech,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Mechanical",
+                img: mech,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Kho-Kho (Girls)",
+        type: "League Match 3",
+        venue: "Hockey Ground",
+        Date: "2024-03-10",
+        Time: "8:00 AM",
+        teams: {
+            teamA: {
+                Name: "CSE",
+                img: cse,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Civil",
+                img: civil,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Kho-Kho (Girls)",
+        type: "League Match 4",
+        venue: "Hockey Ground",
+        Date: "2024-03-10",
+        Time: "9:00 AM",
+        teams: {
+            teamA: {
+                Name: "Electrical",
+                img: ee,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "PHD",
+                img: phd,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Basketball (Boys)",
+        type: "League Match",
+        venue: "BB Court 2",
+        Date: "2024-03-12",
+        Time: "7:00 PM",
+        teams: {
+            teamA: {
+                Name: "Civil",
+                img: civil,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "MSC",
+                img: msc,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Basketball (Girls)",
+        type: "League Match",
+        venue: "BB Court 1",
+        Date: "2024-03-12",
+        Time: "7:00 PM",
+        teams: {
+            teamA: {
+                Name: "Mtech",
+                img: mtech,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "PHD",
+                img: phd,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Volleyball (Boys)",
+        type: "League Match",
+        venue: "Volleyball Court 1",
+        Date: "2024-03-12",
+        Time: "7:00 PM",
+        teams: {
+            teamA: {
+                Name: "ECE-META",
+                img: ece_meta,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Mechanical",
+                img: mech,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Volleyball (Girls)",
+        type: "League Match",
+        venue: "Volleyball Court 2",
+        Date: "2024-03-12",
+        Time: "7:00 PM",
+        teams: {
+            teamA: {
+                Name: "MSC",
+                img: msc,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Mechanical",
+                img: mech,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Basketball (Boys)",
+        type: "League Match",
+        venue: "BB Court 2",
+        Date: "2024-03-12",
+        Time: "8:15 PM",
+        teams: {
+            teamA: {
+                Name: "ECE-META",
+                img: ece_meta,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Mechanical",
+                img: mech,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Basketball (Girls)",
+        type: "League Match",
+        venue: "BB Court 1",
+        Date: "2024-03-12",
+        Time: "8:15 PM",
+        teams: {
+            teamA: {
+                Name: "CSE",
+                img: cse,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Electrical",
+                img: ee,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Volleyball (Boys)",
+        type: "League Match",
+        venue: "Volleyball Court 1",
+        Date: "2024-03-12",
+        Time: "8:15 PM",
+        teams: {
+            teamA: {
+                Name: "PHD",
+                img: phd,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Electrical",
+                img: ee,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Volleyball (Girls)",
+        type: "League Match",
+        venue: "Volleyball Court 2",
+        Date: "2024-03-12",
+        Time: "8:15 PM",
+        teams: {
+            teamA: {
+                Name: "Mtech",
+                img: mtech,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "CSE",
+                img: cse,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Basketball (Boys)",
+        type: "League Match",
+        venue: "BB Court 2",
+        Date: "2024-03-12",
+        Time: "9:30 PM",
+        teams: {
+            teamA: {
+                Name: "Electrical",
+                img: ee,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "PHD",
+                img: phd,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Basketball (Girls)",
+        type: "League Match",
+        venue: "BB Court 1",
+        Date: "2024-03-12",
+        Time: "9:30 PM",
+        teams: {
+            teamA: {
+                Name: "ECE-META",
+                img: ece_meta,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "MSC",
+                img: msc,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Volleyball (Boys)",
+        type: "League Match",
+        venue: "Volleyball Court 1",
+        Date: "2024-03-12",
+        Time: "9:30 PM",
+        teams: {
+            teamA: {
+                Name: "Civil",
+                img: civil,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "MSC",
+                img: msc,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Volleyball (Girls)",
+        type: "League Match",
+        venue: "Volleyball Court 2",
+        Date: "2024-03-12",
+        Time: "9:30 PM",
+        teams: {
+            teamA: {
+                Name: "Civil",
+                img: civil,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "ECE-META",
+                img: ece_meta,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+
+
+
+];
 
 const cultdummydata = [
     {
@@ -408,10 +876,10 @@ function sortEventsByDatedown(events) {
         return dateB - dateA;
     });
 }
-// function formatDate(dateString) {
-//     const [year, month, day] = dateString.split('-');
-//     return `${day}-${month}-${year}`;
-// }
+function formatDate(dateString) {
+    const [year, month, day] = dateString.split('-');
+    return `${day}-${month}-${year}`;
+}
 
 function formatDatetomonth(inputDate) {
     const dateObject = new Date(inputDate);
@@ -424,14 +892,14 @@ function formatDatetomonth(inputDate) {
 }
 function filterUpcomingEvents(matches, currentDate) {
     const filteredEvents = matches.filter(
-        (match) => new Date(match.Date).setHours(0, 0, 0, 0) > currentDate
+        (match) => new Date(match.Date).setHours(0, 0, 0, 0) >= currentDate
     );
 
     return filteredEvents;
 }
 function filterpastEvents(matches, currentDate) {
     const filteredEvents = matches.filter(
-        (match) => new Date(match.Date).setHours(0, 0, 0, 0) <= currentDate
+        (match) => new Date(match.Date).setHours(0, 0, 0, 0) < currentDate
     );
 
     return filteredEvents;
@@ -476,8 +944,8 @@ function Events() {
     const [rowSelection, setRowSelection] = React.useState({});
     const [upcommingcultevents, setupcomingcultevents] = useState([]);
     const [pastcultevents, setpastcultevents] = useState([]);
-    // const [upcommingsportsevents, setupcommingsportsevents] = useState([]);
-    // const [pastsportsevents, setpastsportsevents] = useState([]);
+    const [upcommingsportsevents, setupcommingsportsevents] = useState([true]);
+    const [pastsportsevents, setpastsportsevents] = useState([]);
     const [upcommingtechevents, setupcomingtechevents] = useState([]);
     const [pasttechevents, setpasttechevents] = useState([]);
     const currentDate = new Date().setHours(0, 0, 0, 0);
@@ -550,13 +1018,13 @@ function Events() {
                 // setcultevents(response.data.events)
                 console.log(roughMatches)
                 const upcomingsportsraw = filterUpcomingEvents(roughMatches, currentDate);
-                // const pastsportsraw = filterpastEvents(roughMatches, currentDate);
+                const pastsportsraw = filterpastEvents(roughMatches, currentDate);
                 const dummyup1 = filterUpcomingEvents(upcomingsportsraw, currentDate);
-                // const dummypast1sports = filterpastEvents(pastsportsraw, currentDate);
+                const dummypast1sports = filterpastEvents(pastsportsraw, currentDate);
                 const upcomingsports = sortEventsByDateup(dummyup1);
                 console.log(upcomingsports);
-                // setupcommingsportsevents(upcomingsports);
-                // setpastsportsevents(dummypast1sports);
+                setupcommingsportsevents(upcomingsports);
+                setpastsportsevents(dummypast1sports);
             }
             catch (e) {
                 console.log(e);
@@ -941,7 +1409,7 @@ function Events() {
 
                         <div className="flex flex-col justify-center items-center w-full">
 
-                            {/* {upcommingsportsevents.map((match, index) => (
+                            {upcommingsportsevents.map((match, index) => (
 
 
                                 <div key={index} className="flex flex-col bg-gray-500 border-3 border-black rounded-2xl  md:rounded-3xl shadow-lg shadow-black w-5/6 md:w-3/4 lg:w-2/3 my-2 my-lg-3 overflow-hidden">
@@ -975,16 +1443,16 @@ function Events() {
 
                                     <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">Date :- {formatDate(match.Date)}</div>
                                 </div>
-                            ))} */}
+                            ))}
 
-                            <h3 className=" text-gray-400 text-md mt-56 sm:mt-36">To be updated soon !!!</h3>
+                            {/* <h3 className=" text-gray-400 text-md mt-56 sm:mt-36">To be updated soon !!!</h3> */}
                         </div>
                     )}
 
                     {showpastsports && (
                         <div className="flex flex-col justify-center items-center w-full">
 
-                            {/* {pastsportsevents.map((match, index) => (
+                            {pastsportsevents.map((match, index) => (
 
                                 <div key={index} className="flex flex-col bg-gray-500 border-3 border-black rounded-2xl md:rounded-3xl shadow-lg shadow-black w-5/6 md:w-3/4 lg:w-2/3 my-2 my-lg-3 overflow-hidden">
 
@@ -1019,9 +1487,9 @@ function Events() {
                                 </div>
 
 
-                            ))} */}
+                            ))}
 
-                            <h3 className=" text-gray-400 text-md mt-56">To be updated soon !!!</h3>
+                            {/* <h3 className=" text-gray-400 text-md mt-56">To be updated soon !!!</h3> */}
                         </div>
                     )}
                 </>
