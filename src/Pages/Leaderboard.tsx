@@ -7,21 +7,21 @@ import { Data } from '../Components/LeaderBoard/model.tsx'
 export const data: Data[] = [
   {
     branch: "EE",
-    score: "220",
+    score: "0",
   },
   {
     branch: "CSE",
-    score: "10",
+    score: "0",
   },
   {
     branch: "ECE-META",
-    score: "105",
+    score: "0",
   },
-  { branch: "MECH", score: "100" },
-  { branch: "MSC", score: "100" },
-  { branch: "MTECH", score: "100" },
-  { branch: "PHD", score: "103" },
-  { branch: "CIVIL", score: "130" },
+  { branch: "MECH", score: "0" },
+  { branch: "MSC", score: "0" },
+  { branch: "MTECH", score: "0" },
+  { branch: "PHD", score: "0" },
+  { branch: "CIVIL", score: "0" },
 ];
 
 

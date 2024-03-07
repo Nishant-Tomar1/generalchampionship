@@ -134,7 +134,7 @@ const cultdummydata = [
 
         event_name: "Music Composition Challenge",
         Date: "2024-03-06",
-        Time: "12 am",
+        Time: "12 AM",
         Venue: "Online",
     },
     {
@@ -239,7 +239,7 @@ const cultdummydata = [
 
         event_name: "Live Sketching",
         Date: "2024-03-23",
-        Time: "9 am",
+        Time: "9 AM",
         Venue: "Main Building",
     },
     {
@@ -409,10 +409,11 @@ function sortEventsByDatedown(events) {
         return dateB - dateA;
     });
 }
-function formatDate(dateString) {
-    const [year, month, day] = dateString.split('-');
-    return `${day}-${month}-${year}`;
-}
+// function formatDate(dateString) {
+//     const [year, month, day] = dateString.split('-');
+//     return `${day}-${month}-${year}`;
+// }
+
 function formatDatetomonth(inputDate) {
     const dateObject = new Date(inputDate);
 
@@ -461,9 +462,9 @@ export const columns = [
 
 
 function Events() {
-    const [showcult, setshowcult] = useState(false);
+    const [showcult, setshowcult] = useState(true);
     const [showtech, setshowtech] = useState(false);
-    const [showsports, setshowsports] = useState(true);
+    const [showsports, setshowsports] = useState(false);
     const [showupcomingsports, setshowupcomingsports] = useState(true);
     const [showpastsports, setshowpastsports] = useState(false);
     const [showupcomingcult, setshowupcomingcult] = useState(true);
@@ -476,8 +477,8 @@ function Events() {
     const [rowSelection, setRowSelection] = React.useState({});
     const [upcommingcultevents, setupcomingcultevents] = useState([]);
     const [pastcultevents, setpastcultevents] = useState([]);
-    const [upcommingsportsevents, setupcommingsportsevents] = useState([]);
-    const [pastsportsevents, setpastsportsevents] = useState([]);
+    // const [upcommingsportsevents, setupcommingsportsevents] = useState([]);
+    // const [pastsportsevents, setpastsportsevents] = useState([]);
     const [upcommingtechevents, setupcomingtechevents] = useState([]);
     const [pasttechevents, setpasttechevents] = useState([]);
     const currentDate = new Date().setHours(0, 0, 0, 0);
@@ -496,11 +497,11 @@ function Events() {
                 const pastcult = sortEventsByDatedown(filteredcultdummydatapast1);
                 const filteredcultdummydataup = upcomingcult.map((item) => ({
                     ...item,
-                    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                    combinedDateTime: `${formatDatetomonth(item.Date)} ${item.Time ? "," : ""} ${(item.Time)}`,
                 }));
                 const filteredcultdummydatapast = pastcult.map((item) => ({
                     ...item,
-                    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                    combinedDateTime: `${formatDatetomonth(item.Date)} ${item.Time ? "," : ""} ${(item.Time)}`,
                 }));
                 setupcomingcultevents(filteredcultdummydataup);
                 setpastcultevents(filteredcultdummydatapast);
@@ -527,11 +528,11 @@ function Events() {
                 const pasttech = sortEventsByDatedown(dummypast1);
                 const filteredtechdummydataup = upcomingtech.map((item) => ({
                     ...item,
-                    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                    combinedDateTime: `${formatDatetomonth(item.Date)} ${item.Time ? "," : ""} ${(item.Time)}`,
                 }));
                 const filteredtechdummydatapast = pasttech.map((item) => ({
                     ...item,
-                    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                    combinedDateTime: `${formatDatetomonth(item.Date)} ${item.Time ? "," : ""} ${(item.Time)}`,
                 }));
                 setupcomingtechevents(filteredtechdummydataup);
                 setpasttechevents(filteredtechdummydatapast);
@@ -550,13 +551,13 @@ function Events() {
                 // setcultevents(response.data.events)
                 console.log(roughMatches)
                 const upcomingsportsraw = filterUpcomingEvents(roughMatches, currentDate);
-                const pastsportsraw = filterpastEvents(roughMatches, currentDate);
+                // const pastsportsraw = filterpastEvents(roughMatches, currentDate);
                 const dummyup1 = filterUpcomingEvents(upcomingsportsraw, currentDate);
-                const dummypast1sports = filterpastEvents(pastsportsraw, currentDate);
+                // const dummypast1sports = filterpastEvents(pastsportsraw, currentDate);
                 const upcomingsports = sortEventsByDateup(dummyup1);
                 console.log(upcomingsports);
-                setupcommingsportsevents(upcomingsports);
-                setpastsportsevents(dummypast1sports);
+                // setupcommingsportsevents(upcomingsports);
+                // setpastsportsevents(dummypast1sports);
             }
             catch (e) {
                 console.log(e);
@@ -941,7 +942,7 @@ function Events() {
 
                         <div className="flex flex-col justify-center items-center w-full">
 
-                            {upcommingsportsevents.map((match, index) => (
+                            {/* {upcommingsportsevents.map((match, index) => (
 
 
                                 <div key={index} className="flex flex-col bg-gray-500 border-3 border-black rounded-2xl  md:rounded-3xl shadow-lg shadow-black w-5/6 md:w-3/4 lg:w-2/3 my-2 my-lg-3 overflow-hidden">
@@ -975,14 +976,16 @@ function Events() {
 
                                     <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">Date :- {formatDate(match.Date)}</div>
                                 </div>
-                            ))}
+                            ))} */}
+
+                            <h3 className=" text-gray-400 text-md mt-56 sm:mt-36">To be updated soon !!!</h3>
                         </div>
                     )}
 
                     {showpastsports && (
                         <div className="flex flex-col justify-center items-center w-full">
 
-                            {pastsportsevents.map((match, index) => (
+                            {/* {pastsportsevents.map((match, index) => (
 
                                 <div key={index} className="flex flex-col bg-gray-500 border-3 border-black rounded-2xl md:rounded-3xl shadow-lg shadow-black w-5/6 md:w-3/4 lg:w-2/3 my-2 my-lg-3 overflow-hidden">
 
@@ -1017,7 +1020,9 @@ function Events() {
                                 </div>
 
 
-                            ))}
+                            ))} */}
+
+                            <h3 className=" text-gray-400 text-md mt-56">To be updated soon !!!</h3>
                         </div>
                     )}
                 </>
