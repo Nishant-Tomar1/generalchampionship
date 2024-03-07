@@ -417,10 +417,10 @@ function formatDatetomonth(inputDate) {
     const dateObject = new Date(inputDate);
 
     // const options = { day: 'numeric', month: 'numeric' };
-    const formattedDate = dateObject.toLocaleDateString();
+    const fullDate = dateObject.toLocaleDateString('en-GB');
 
-    const [month] = formattedDate.split(' ');
-    return `${month}`;
+    // const [month] = formattedDate.split(' ');
+    return fullDate;
 }
 function filterUpcomingEvents(matches, currentDate) {
     const filteredEvents = matches.filter(
