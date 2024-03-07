@@ -29,7 +29,6 @@ import {
 import { motion } from 'framer-motion'
 
 const roughMatches = [
-
 ];
 const cultdummydata = [
     {
@@ -61,8 +60,8 @@ const cultdummydata = [
         Venue: "LBC/LHC",
     },
     {
-        // id: "3",
-        event_name: "Drams",
+
+        event_name: "Potpourri",
         Date: "2024-03-19",
         Time: "7 PM",
         Venue: "LBC",
@@ -359,7 +358,7 @@ const data_tech = [
     },
     {
 
-        event_name: "Astrophotography",
+        event_name: "Astro photography",
         Date: "2024-03-15",
         Time: "12 AM",
         Venue: "Online",
@@ -402,22 +401,22 @@ function sortEventsByDateup(events) {
         return dateA - dateB;
     });
 }
-// function sortEventsByDatedown(events) {
-//     return events.slice().sort((a, b) => {
-//         const dateA = new Date(a.Date);
-//         const dateB = new Date(b.Date);
-//         return dateB - dateA;
-//     });
-// }
+function sortEventsByDatedown(events) {
+    return events.slice().sort((a, b) => {
+        const dateA = new Date(a.Date);
+        const dateB = new Date(b.Date);
+        return dateB - dateA;
+    });
+}
 function formatDate(dateString) {
     const [year, month, day] = dateString.split('-');
     return `${day}-${month}-${year}`;
 }
-// function formatDatetomonth(inputDate) {
-//     const dateObject = new Date(inputDate);
+function formatDatetomonth(inputDate) {
+    const dateObject = new Date(inputDate);
 
-//     const options = { day: 'numeric', month: 'long' };
-//     const formattedDate = dateObject.toLocaleDateString(undefined, options);
+    const options = { day: 'numeric', month: 'long' };
+    const formattedDate = dateObject.toLocaleDateString(undefined, options);
 
     const [month, day] = formattedDate.split(' ');
     return `${day} ${month}  `;
@@ -429,23 +428,6 @@ function filterUpcomingEvents(matches, currentDate) {
 
     return filteredEvents;
 }
-function timestampToDateTime(timestamp) {
-    // Create a new Date object with the timestamp in milliseconds
-    const date = new Date(timestamp);
-
-    // Get the individual components of the date and time
-    const year = date.getFullYear();
-    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-indexed
-    const day = date.getDate().toString().padStart(2, '0');
-    const hours = date.getHours().toString().padStart(2, '0') % 12 || 12;
-    const minutes = date.getMinutes().toString().padStart(2, '0');
-    const ampm = hours >= 12 ? 'AM' : 'PM';
-    
-    // Format the result as a string
-    const formattedDateTime = `${day}/${month}/${year} ${hours}:${minutes} ${ampm}`;
-
-    return formattedDateTime;
-}
 function filterpastEvents(matches, currentDate) {
     const filteredEvents = matches.filter(
         (match) => new Date(match.Date).setHours(0, 0, 0, 0) <= currentDate
@@ -453,23 +435,24 @@ function filterpastEvents(matches, currentDate) {
 
     return filteredEvents;
 }
+
 export const columns = [
     {
-        accessorKey: "title",
+        accessorKey: "event_name",
         header: "EVENT",
-        cell: ({ row }) => <div className='capitalize'>{row.getValue("title")}</div>,
+        cell: ({ row }) => <div className='capitalize'>{row.getValue("event_name")}</div>,
     },
     {
-        accessorKey: "timestamp",
+        accessorKey: "combinedDateTime",
         header: "DATE",
-        cell: ({ row }) => <div className="capitalize">{timestampToDateTime(row.getValue('timestamp'))}</div>,
+        cell: ({ row }) => <div className="capitalize">{row.getValue("combinedDateTime")}</div>,
     },
 
     {
-        accessorKey: "location",
+        accessorKey: "Venue",
         header: "VENUE",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("location")}</div>
+            <div className="capitalize">{row.getValue("Venue")}</div>
         ),
     },
 
@@ -497,12 +480,12 @@ function Events() {
     const [upcommingtechevents, setupcomingtechevents] = useState([]);
     const [pasttechevents, setpasttechevents] = useState([]);
     const currentDate = new Date().setHours(0, 0, 0, 0);
-
+    // console.log("sdvb")
     useEffect(() => {
         const fetchdata = async () => {
             try {
-                const response = await axios.get('http://localhost:3002/api/event/getEventByCategory?category=cult');
-                console.log(response.data.events);
+                // const response = await axios.get('http://localhost:3002/api/event/getEventByCategory?category=cult');
+                // console.log(response.data.events);
                 // setcultevents(response.data.events)
                 const upcomingcultraw = filterUpcomingEvents(cultdummydata, currentDate);
                 const pastcultraw = filterpastEvents(cultdummydata, currentDate);
@@ -531,11 +514,12 @@ function Events() {
     useEffect(() => {
         const fetchdata = async () => {
             try {
-                const response = await axios.get('http://localhost:3002/api/event/getEventByCategory?category=tech');
-                console.log(response.data.events);
+                // const response = await axios.get('http://localhost:3002/api/event/getEventByCategory?category=tech');
+                // console.log(response.data.events);
                 // setcultevents(response.data.events)
-                const upcomingtechsraw = filterUpcomingEvents(data, currentDate);
-                const pasttechraw = filterpastEvents(data, currentDate);
+                console.log(data_tech)
+                const upcomingtechsraw = filterUpcomingEvents(data_tech, currentDate);
+                const pasttechraw = filterpastEvents(data_tech, currentDate);
                 const dummyup1 = filterUpcomingEvents(upcomingtechsraw, currentDate);
                 const dummypast1 = filterpastEvents(pasttechraw, currentDate);
                 const upcomingtech = sortEventsByDateup(dummyup1);
@@ -557,7 +541,6 @@ function Events() {
         }
         fetchdata();
     }, [currentDate])
-
     useEffect(() => {
         const fetchdata = async () => {
             try {
@@ -570,7 +553,7 @@ function Events() {
                 const dummyup1 = filterUpcomingEvents(upcomingsportsraw, currentDate);
                 const dummypast1sports = filterpastEvents(pastsportsraw, currentDate);
                 const upcomingsports = sortEventsByDateup(dummyup1);
-                // console.log(upcomingsports);
+                console.log(upcomingsports);
                 setupcommingsportsevents(upcomingsports);
                 setpastsportsevents(dummypast1sports);
             }
@@ -580,7 +563,6 @@ function Events() {
         }
         fetchdata();
     }, [currentDate])
-
     const table = useReactTable({
         data: showupcomingtech ? upcommingtechevents : pasttechevents,
         columns,
@@ -599,7 +581,6 @@ function Events() {
             rowSelection,
         },
     });
-    
     const table1 = useReactTable({
         data: showupcomingcult ? upcommingcultevents : pastcultevents,
         columns,
