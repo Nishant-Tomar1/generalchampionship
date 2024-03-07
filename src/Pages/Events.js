@@ -496,11 +496,11 @@ function Events() {
                 const pastcult = sortEventsByDatedown(filteredcultdummydatapast1);
                 const filteredcultdummydataup = upcomingcult.map((item) => ({
                     ...item,
-                    combinedDateTime: `${formatDatetomonth(item.Date)} ${item.Time ? "," : ""} ${(item.Time)}`,
+                    combinedDateTime: `${formatDatetomonth(item.Date)}${item.Time ? "," : ""} ${(item.Time)}`,
                 }));
                 const filteredcultdummydatapast = pastcult.map((item) => ({
                     ...item,
-                    combinedDateTime: `${formatDatetomonth(item.Date)} ${item.Time ? "," : ""} ${(item.Time)}`,
+                    combinedDateTime: `${formatDatetomonth(item.Date)}${item.Time ? "," : ""} ${(item.Time)}`,
                 }));
                 setupcomingcultevents(filteredcultdummydataup);
                 setpastcultevents(filteredcultdummydatapast);
@@ -527,11 +527,11 @@ function Events() {
                 const pasttech = sortEventsByDatedown(dummypast1);
                 const filteredtechdummydataup = upcomingtech.map((item) => ({
                     ...item,
-                    combinedDateTime: `${formatDatetomonth(item.Date)} ${item.Time ? "," : ""} ${(item.Time)}`,
+                    combinedDateTime: `${formatDatetomonth(item.Date)}${item.Time ? "," : ""} ${(item.Time)}`,
                 }));
                 const filteredtechdummydatapast = pasttech.map((item) => ({
                     ...item,
-                    combinedDateTime: `${formatDatetomonth(item.Date)} ${item.Time ? "," : ""} ${(item.Time)}`,
+                    combinedDateTime: `${formatDatetomonth(item.Date)}${item.Time ? "," : ""} ${(item.Time)}`,
                 }));
                 setupcomingtechevents(filteredtechdummydataup);
                 setpasttechevents(filteredtechdummydatapast);
