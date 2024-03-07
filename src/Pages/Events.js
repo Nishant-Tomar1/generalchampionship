@@ -29,7 +29,6 @@ import {
 import { motion } from 'framer-motion'
 
 const roughMatches = [
-
 ];
 const cultdummydata = [
     {
@@ -359,7 +358,7 @@ const data_tech = [
     },
     {
 
-        event_name: "Astrophotography",
+        event_name: "Astro photography",
         Date: "2024-03-15",
         Time: "12 AM",
         Venue: "Online",
