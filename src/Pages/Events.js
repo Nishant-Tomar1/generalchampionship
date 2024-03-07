@@ -28,70 +28,70 @@ import {
 // import axios from 'axios'
 import { motion } from 'framer-motion'
 
-const roughMatches = [
-];
+const roughMatches = [];
+
 const cultdummydata = [
     {
 
         event_name: "Asian Parliamentary Debate",
         Date: "2024-03-23",
-        Time: "1 PM",
+        Time: "1:00 PM",
         Venue: "SAC",
     },
     {
 
         event_name: "Asian Parliamentary Debate",
         Date: "2024-03-24",
-        Time: "1 PM",
+        Time: "1:00 PM",
         Venue: "SAC",
     },
     {
 
         event_name: "Scrabble",
         Date: "2024-03-20",
-        Time: "7 PM",
+        Time: "7:00 PM",
         Venue: "LBC/LHC",
     },
     {
 
         event_name: "Scrabble",
         Date: "2024-03-21",
-        Time: "7 PM",
+        Time: "7:00 PM",
         Venue: "LBC/LHC",
     },
     {
 
         event_name: "Potpourri",
         Date: "2024-03-19",
-        Time: "7 PM",
+        Time: "7:00 PM",
         Venue: "LBC",
     },
     {
 
         event_name: "Adalat",
         Date: "2024-03-15",
-        Time: "6 PM",
+        Time: "6:00 PM",
         Venue: "LBC/LHC",
     },
     {
 
         event_name: "Kavya Paath",
         Date: "2024-04-12",
-        Time: "6 PM",
+        Time: "6:00 PM",
         Venue: "LBC/LHC",
     },
     {
 
         event_name: "Hindi Poetry Writing",
         Date: "2024-03-21",
-        Time: "6 PM",
+        Time: "6:00 PM",
         Venue: "LBC/LHC",
     },
     {
 
         event_name: "Hindi Creative Writing",
         Date: "2024-03-19",
-        Time: "6 PM",
+        Time: "6:00 PM",
         Venue: "LBC/LHC",
     },
     {
@@ -133,49 +133,49 @@ const cultdummydata = [
 
         event_name: "Music Composition Challenge",
         Date: "2024-03-06",
-        Time: "12 am",
+        Time: "12:00 AM",
         Venue: "Online",
     },
     {
 
         event_name: "Improv Battle",
         Date: "2024-03-11",
-        Time: "6 PM",
+        Time: "6:00 PM",
         Venue: "LHC",
     },
     {
 
         event_name: "Mono Act",
         Date: "2024-03-13",
-        Time: "6 PM",
+        Time: "6:00 PM",
         Venue: "LHC",
     },
     {
 
         event_name: "Skit",
         Date: "2024-03-23",
-        Time: "4 PM",
+        Time: "4:00 PM",
         Venue: "CC",
     },
     {
 
         event_name: "Duo/Trio Dance Competition",
         Date: "2024-03-19",
-        Time: "7 PM",
+        Time: "7:00 PM",
         Venue: "BB Court",
     },
     {
 
         event_name: "Solo Dance Competition",
         Date: "2024-03-23",
-        Time: "6 PM",
+        Time: "6:00 PM",
         Venue: "BB Court",
     },
     {
 
         event_name: "Group Dance Competition",
         Date: "2024-03-31",
-        Time: "6 PM",
+        Time: "6:00 PM",
         Venue: "BB Court",
     },
     {
@@ -183,69 +183,69 @@ const cultdummydata = [
         event_name: "B-Roll Making",
         Date: "2024-03-06",
         Time: "",
-        Venue: "",
+        Venue: "Online",
     },
     {
 
         event_name: "Short Film Making",
         Date: "2024-03-06",
         Time: "",
-        Venue: "",
+        Venue: "Online",
     },
     {
 
         event_name: "Ad Making",
         Date: "2024-03-06",
         Time: "",
-        Venue: "",
+        Venue: "Online",
     },
     {
 
         event_name: "51 Hour Short Film Making",
         Date: "2024-03-29",
-        Time: "9 PM",
-        Venue: "",
+        Time: "9:00 PM",
+        Venue: "Online",
     },
     {
 
         event_name: "Online Photography Competition",
         Date: "2024-03-06",
         Time: "",
-        Venue: "",
+        Venue: "Online",
     },
     {
 
         event_name: "Photostory Competition",
         Date: "2024-03-06",
         Time: "",
-        Venue: "",
+        Venue: "Online",
     },
     {
 
         event_name: "Street Photography",
         Date: "2024-03-06",
         Time: "",
-        Venue: "",
+        Venue: "Online",
     },
     {
 
         event_name: "Painting Competition",
         Date: "2024-03-11",
-        Time: "6 PM",
+        Time: "6:00 PM",
         Venue: "LBC",
     },
     {
 
         event_name: "Live Sketching",
         Date: "2024-03-23",
-        Time: "9 am",
+        Time: "9:00 am",
         Venue: "Main Building",
     },
     {
 
         event_name: "Charcoal Art",
         Date: "2024-03-18",
-        Time: "6 PM",
+        Time: "6:00 PM",
         Venue: "SAC 1st Floor",
     },
     {
@@ -280,14 +280,14 @@ const cultdummydata = [
 
         event_name: "Dumb Charades",
         Date: "2024-03-22",
-        Time: "6 PM",
+        Time: "6:00 PM",
         Venue: "BB Court",
     },
     {
 
         event_name: "Antakshari",
         Date: "2024-03-30",
-        Time: "7 PM",
+        Time: "7:00 PM",
         Venue: "BB Court",
     },
 
@@ -297,70 +297,70 @@ const data_tech = [
 
         event_name: "Game Development Hackathon",
         Date: "2024-03-15",
-        Time: "10 PM",
+        Time: "10:00 PM",
         Venue: "Online",
     },
     {
 
         event_name: "Capture the Flag",
         Date: "2024-03-23",
-        Time: "10 AM",
+        Time: "10:00 AM",
         Venue: "Online",
     },
     {
 
         event_name: "Software Development Hackathon",
         Date: "2024-03-29",
-        Time: "10 PM",
+        Time: "10:00 PM",
         Venue: "Online",
     },
     {
 
         event_name: "Handwriting to Text",
         Date: "2024-03-06",
-        Time: "10 PM",
-        Venue: "",
+        Time: "10:00 PM",
+        Venue: "Online",
     },
     {
 
         event_name: "ArduGem",
         Date: "2024-03-17",
-        Time: "12 AM",
-        Venue: "",
+        Time: "12:00 AM",
+        Venue: "Online",
     },
     {
 
         event_name: "ESP-Trade",
         Date: "2024-03-17",
-        Time: "12 AM",
-        Venue: "",
+        Time: "12:00 AM",
+        Venue: "Online",
     },
     {
 
         event_name: "Web Development Hackathon",
         Date: "2024-03-22",
-        Time: "10 PM",
+        Time: "10:00 PM",
         Venue: "Online",
     },
     {
 
         event_name: "GC Design Battle",
         Date: "2024-03-15",
-        Time: "10 PM",
+        Time: "10:00 PM",
         Venue: "Online",
     },
     {
 
         event_name: "ML Hackathon",
         Date: "2024-03-22",
-        Time: "10 PM",
+        Time: "10:00 PM",
         Venue: "Online",
     },
     {
 
         event_name: "Astro photography",
         Date: "2024-03-15",
-        Time: "12 AM",
+        Time: "12:00 AM",
         Venue: "Online",
     },
     {
@@ -381,14 +381,14 @@ const data_tech = [
 
         event_name: "Strategic Spotlight",
         Date: "2024-03-23",
-        Time: "11 AM",
+        Time: "11:00 AM",
         Venue: "LHC",
     },
     {
 
         event_name: "Optimax",
         Date: "2024-03-08",
-        Time: "12:01 AM",
+        Time: "12:00 AM",
         Venue: "Online",
     }
 
@@ -415,11 +415,11 @@ function formatDate(dateString) {
 function formatDatetomonth(inputDate) {
     const dateObject = new Date(inputDate);
 
-    const options = { day: 'numeric', month: 'long' };
-    const formattedDate = dateObject.toLocaleDateString(undefined, options);
+    // const options = { day: 'numeric', month: 'numeric' };
+    const formattedDate = dateObject.toLocaleDateString();
 
-    const [month, day] = formattedDate.split(' ');
-    return `${day} ${month}  `;
+    const [month] = formattedDate.split(' ');
+    return `${month}`;
 }
 function filterUpcomingEvents(matches, currentDate) {
     const filteredEvents = matches.filter(
@@ -677,7 +677,7 @@ function Events() {
 
                     {showupcomingcult && (
                         <>
-                            <div className="w-11/12 md:w-7/12 rounded-xl border-2">
+                            <div className="w-11/12 md:w-7/12 rounded-xl border-2" >
                                 <Table >
                                     <TableHeader >
                                         {table1.getHeaderGroups().map((headerGroup) => (
