@@ -27,605 +27,240 @@ import axios from 'axios'
 import { motion } from 'framer-motion'
 
 const roughMatches = [
-    {
-        matchname: "Football",
-        type: "Semifinal",
-        venue: "Football Ground",
-        Date: "2024-03-22",
-        teams: {
-            teamA: {
-                Name: "Electrical",
-                img: ee,
-                score: "",
-                sets: "",
-            },
-            teamB: {
-                Name: "Mechanical",
-                img: mech,
-                score: "",
-                sets: "",
-            },
-        },
-    },
-    {
-        matchname: "Cricket",
-        type: "Final",
-        venue: "MHR Ground",
-        Date: "2024-03-12",
-        teams: {
-            teamA: {
-                Name: "CSE",
-                img: cse,
-                score: "",
-                sets: "",
-            },
-            teamB: {
-                Name: "Civil",
-                img: civil,
-                score: "",
-                sets: "",
-            },
-        },
-    },
-    {
-        matchname: "Basketball",
-        type: "League Match ",
-        venue: "Basketball Court",
-        Date: "2024-03-15",
-        teams: {
-            teamA: {
-                Name: "MTech",
-                img: mtech,
-                score: "",
-                sets: "",
-            },
-            teamB: {
-                Name: "Ece-Meta",
-                img: ece_meta,
-                score: "",
-                sets: "",
-            },
-        },
-    },
-    {
-        matchname: "Volleyball",
-        type: "Quarter final",
-        venue: "Baseball Court",
-        Date: "2024-02-25",
-        winner: "Msc",
-        teams: {
-            teamA: {
-                Name: "MSC",
-                img: msc,
-                score: "25",
-                sets: "2",
-            },
-            teamB: {
-                Name: "PhD",
-                img: phd,
-                score: "18",
-                sets: "1",
-            },
-        },
-    },
-    {
-        matchname: "Badminton",
-        type: "tournament",
-        venue: "Tennis Court",
-        Date: "2024-02-21",
-        winner: "Electrical",
-        teams: {
-            teamA: {
-                Name: "Electrical",
-                img: ee,
-                score: "21",
-                sets: "",
-            },
-            teamB: {
-                Name: "CSE",
-                img: cse,
-                score: "16",
-                sets: "",
-            },
-        },
-    },
+    // {
+    //     matchname: "Football",
+    //     type: "Semifinal",
+    //     venue: "Football Ground",
+    //     Date: "2024-03-22",
+    //     teams: {
+    //         teamA: {
+    //             Name: "Electrical",
+    //             img: ee,
+    //             score: "",
+    //             sets: "",
+    //         },
+    //         teamB: {
+    //             Name: "Mechanical",
+    //             img: mech,
+    //             score: "",
+    //             sets: "",
+    //         },
+    //     },
+    // },
+    // {
+    //     matchname: "Cricket",
+    //     type: "Final",
+    //     venue: "MHR Ground",
+    //     Date: "2024-03-12",
+    //     teams: {
+    //         teamA: {
+    //             Name: "CSE",
+    //             img: cse,
+    //             score: "",
+    //             sets: "",
+    //         },
+    //         teamB: {
+    //             Name: "Civil",
+    //             img: civil,
+    //             score: "",
+    //             sets: "",
+    //         },
+    //     },
+    // },
+    // {
+    //     matchname: "Basketball",
+    //     type: "League Match ",
+    //     venue: "Basketball Court",
+    //     Date: "2024-03-15",
+    //     teams: {
+    //         teamA: {
+    //             Name: "MTech",
+    //             img: mtech,
+    //             score: "",
+    //             sets: "",
+    //         },
+    //         teamB: {
+    //             Name: "Ece-Meta",
+    //             img: ece_meta,
+    //             score: "",
+    //             sets: "",
+    //         },
+    //     },
+    // },
+    // {
+    //     matchname: "Volleyball",
+    //     type: "Quarter final",
+    //     venue: "Baseball Court",
+    //     Date: "2024-02-25",
+    //     winner: "Msc",
+    //     teams: {
+    //         teamA: {
+    //             Name: "MSC",
+    //             img: msc,
+    //             score: "25",
+    //             sets: "2",
+    //         },
+    //         teamB: {
+    //             Name: "PhD",
+    //             img: phd,
+    //             score: "18",
+    //             sets: "1",
+    //         },
+    //     },
+    // },
+    // {
+    //     matchname: "Badminton",
+    //     type: "tournament",
+    //     venue: "Tennis Court",
+    //     Date: "2024-02-21",
+    //     winner: "Electrical",
+    //     teams: {
+    //         teamA: {
+    //             Name: "Electrical",
+    //             img: ee,
+    //             score: "21",
+    //             sets: "",
+    //         },
+    //         teamB: {
+    //             Name: "CSE",
+    //             img: cse,
+    //             score: "16",
+    //             sets: "",
+    //         },
+    //     },
+    // },
 ];
 
 const cultdummydata = [
     {
-
-        event_name: "Asian Parliamentary Debate",
-        Date: "2024-03-23",
-        Time: "1pm",
-        Venue: "SAC",
-    },
-    {
-
-        event_name: "Asian Parliamentary Debate",
-        Date: "2024-03-24",
-        Time: "1pm",
-        Venue: "SAC",
-    },
-    {
-
-        event_name: "Scrabble",
-        Date: "2024-03-20",
-        Time: "7pm",
-        Venue: "LBC/LHC",
-    },
-    {
-
-        event_name: "Scrabble",
-        Date: "2024-03-21",
-        Time: "7pm",
-        Venue: "LBC/LHC",
-    },
-    {
-
-        event_name: "Potpourri",
-        Date: "2024-03-19",
-        Time: "7pm",
+        // id: "1",
+        event_name: "Dance Battle",
+        Date: "2024-03-15",
+        Time: "8pm",
         Venue: "LBC",
     },
     {
-
-        event_name: "Adalat",
-        Date: "2024-03-15",
-        Time: "6pm",
-        Venue: "LBC/LHC",
+        // id: "2",
+        event_name: "Singing",
+        Date: "2024-03-14",
+        Time: "10pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "Kavya Paath",
-        Date: "2024-04-12",
-        Time: "6pm",
-        Venue: "LBC/LHC",
-    },
-    {
-
-        event_name: "Hindi Poetry Writing",
-        Date: "2024-03-21",
-        Time: "6pm",
-        Venue: "LBC/LHC",
-    },
-    {
-
-        event_name: "Hindi Creative Writing",
+        // id: "3",
+        event_name: "Drams",
         Date: "2024-03-19",
-        Time: "6pm",
-        Venue: "LBC/LHC",
+        Time: "3pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "India Quiz",
-        Date: "2024-03-18",
-        Time: "6:30pm",
-        Venue: "LHC P0-120-1",
+        // id: "4",
+        event_name: "Drams",
+        Date: "2024-03-12",
+        Time: "8pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "General Quiz",
-        Date: "2024-03-21",
-        Time: "6:30pm",
-        Venue: "LHC P0-120-1",
+        // id: "5",
+        event_name: "Mic drop",
+        Date: "2023-04-15",
+        Time: "8pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "Mela Quiz",
-        Date: "2024-03-29",
-        Time: "6:30pm",
-        Venue: "LHC P0-120-1",
+        // id: "1",
+        event_name: "Singing",
+        Date: "2023-07-15",
+        Time: "8pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "Sports Quiz",
-        Date: "2024-04-02",
-        Time: "6:30pm",
-        Venue: "LHC P0-120-1",
+        // id: "2",
+        event_name: "Costume",
+        Date: "2024-06-15",
+        Time: "8pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "Solo Music Competition",
-        Date: "2024-03-06",
-        Time: "6:30pm",
-        Venue: "CC",
-    },
-    {
-
-        event_name: "Music Composition Challenge",
-        Date: "2024-03-06",
-        Time: "12am",
-        Venue: "Online",
-    },
-    {
-
-        event_name: "Improv Battle",
-        Date: "2024-03-11",
-        Time: "6pm",
-        Venue: "LHC",
-    },
-    {
-
-        event_name: "Mono Act",
-        Date: "2024-03-13",
-        Time: "6pm",
-        Venue: "LHC",
-    },
-    {
-
+        // id: "5",
         event_name: "Skit",
-        Date: "2024-03-23",
-        Time: "4pm",
-        Venue: "CC",
+        Date: "2023-03-16",
+        Time: "8pm",
+        Venue: "LBC",
     },
+];
+const data = [
     {
-
-        event_name: "Duo/Trio Dance Competition",
-        Date: "2024-03-19",
-        Time: "7pm",
-        Venue: "BB Court",
-    },
-    {
-
-        event_name: "Solo Dance Competition",
-        Date: "2024-03-23",
-        Time: "6pm",
-        Venue: "BB Court",
-    },
-    {
-
-        event_name: "Group Dance Competition",
-        Date: "2024-03-31",
-        Time: "6pm",
-        Venue: "BB Court",
-    },
-    {
-
-        event_name: "B-Roll Making",
-        Date: "2024-03-06",
-        Time: "",
-        Venue: "",
-    },
-    {
-
-        event_name: "Short Film Making",
-        Date: "2024-03-06",
-        Time: "",
-        Venue: "",
-    },
-    {
-
-        event_name: "Ad Making",
-        Date: "2024-03-06",
-        Time: "",
-        Venue: "",
-    },
-    {
-
-        event_name: "51 Hour Short Film Making",
-        Date: "2024-03-29",
-        Time: "9pm",
-        Venue: "",
-    },
-    {
-
-        event_name: "Online Photography Competition",
-        Date: "2024-03-06",
-        Time: "",
-        Venue: "",
-    },
-    {
-
-        event_name: "Photostory Competition",
-        Date: "2024-03-06",
-        Time: "",
-        Venue: "",
-    },
-    {
-
-        event_name: "Street Photography",
-        Date: "2024-03-06",
-        Time: "",
-        Venue: "",
-    },
-    {
-
-        event_name: "Painting Competition",
-        Date: "2024-03-11",
-        Time: "6pm",
+        // id: "1",
+        event_name: "GC webathon",
+        Date: "2024-03-15",
+        Time: "8-9pm",
         Venue: "LBC",
     },
     {
-
-        event_name: "Live Sketching",
-        Date: "2024-03-23",
-        Time: "9am",
-        Venue: "Main Building",
+        // id: "2",
+        event_name: "GC webathon",
+        Date: "2024-03-14",
+        Time: "8-9pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "Charcoal Art",
-        Date: "2024-03-18",
-        Time: "6pm",
-        Venue: "SAC 1st Floor",
+        // id: "3",
+        event_name: "GC webathon",
+        Date: "2024-03-19",
+        Time: "8-9pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "Comic Strip Making",
-        Date: "2024-03-21",
-        Time: "11:59pm",
-        Venue: "Online",
+        // id: "4",
+        event_name: "GC webathon",
+        Date: "2024-03-12",
+        Time: "8-9pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "Quest for Change",
-        Date: "2024-03-10",
-        Time: "6:30pm",
-        Venue: "LHC",
+        // id: "5",
+        event_name: "GC webathon",
+        Date: "2023-04-15",
+        Time: "8-9pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "Meme Making",
-        Date: "2024-03-21",
-        Time: "11:59pm",
-        Venue: "Online",
+        // id: "1",
+        event_name: "GC webathon",
+        Date: "2023-07-15",
+        Time: "8-9pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "A Fashion Affair",
-        Date: "2024-03-24",
-        Time: "6:30pm",
-        Venue: "CC",
+        // id: "2",
+        event_name: "GC webathon",
+        Date: "2024-06-15",
+        Time: "8-9pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "Dumb Charades",
-        Date: "2024-03-22",
-        Time: "6pm",
-        Venue: "BB Court",
+        // id: "3",
+        event_name: "GC webathon",
+        Date: "2023-04-5",
+        Time: "8-9pm",
+        Venue: "LBC",
     },
     {
-
-        event_name: "Antakshari",
-        Date: "2024-03-30",
-        Time: "7pm",
-        Venue: "BB Court",
+        // id: "4",
+        event_name: "GC webathon",
+        Date: "2023-03-17",
+        Time: "8-9pm",
+        Venue: "LBC",
     },
-
+    {
+        // id: "5",
+        event_name: "GC webathon",
+        Date: "2023-03-16",
+        Time: "8-9pm",
+        Venue: "LBC",
+    },
 ];
-
-const data_tech = [
-    {
-
-        event_name: "Game Development Hackathon",
-        Date: "2024-03-15",
-        Time: "10pm",
-        Venue: "Online",
-    },
-    {
-
-        event_name: "Capture the Flag",
-        Date: "2024-03-23",
-        Time: "10am",
-        Venue: "Online",
-    },
-    {
-
-        event_name: "Software Development Hackathon",
-        Date: "2024-03-29",
-        Time: "10pm",
-        Venue: "Online",
-    },
-    {
-
-        event_name: "Handwriting to Text",
-        Date: "2024-03-06",
-        Time: "10am",
-        Venue: "",
-    },
-    {
-
-        event_name: "ArduGem",
-        Date: "2024-03-17",
-        Time: "12am",
-        Venue: "",
-    },
-    {
-
-        event_name: "ESP-Trade",
-        Date: "2024-03-17",
-        Time: "12am",
-        Venue: "",
-    },
-    {
-
-        event_name: "Web Development Hackathon",
-        Date: "2024-03-22",
-        Time: "10pm",
-        Venue: "Online",
-    },
-    {
-
-        event_name: "GC Design Battle",
-        Date: "2024-03-15",
-        Time: "10pm",
-        Venue: "Online",
-    },
-    {
-
-        event_name: "ML Hackathon",
-        Date: "2024-03-22",
-        Time: "10pm",
-        Venue: "Online",
-    },
-    {
-
-        event_name: "Astrophotography",
-        Date: "2024-03-15",
-        Time: "12am",
-        Venue: "Online",
-    },
-    {
-
-        event_name: "Observational Astronomy",
-        Date: "2024-03-11",
-        Time: "10:30pm",
-        Venue: "SAC Terrace",
-    },
-    {
-
-        event_name: "Blast Off",
-        Date: "2024-03-17",
-        Time: "09:30am",
-        Venue: "MHR/Hockey Ground",
-    },
-    {
-
-        event_name: "Strategic Spotlight",
-        Date: "2024-03-23",
-        Time: "11am",
-        Venue: "LHC",
-    },
-    {
-
-        event_name: "Optimax",
-        Date: "2024-03-08",
-        Time: "12:01am",
-        Venue: "Online",
-    }
-
-];
-
-// const cultdummydata = [
-//     {
-//         // id: "1",
-//         event_name: "Dance Battle",
-//         Date: "2024-03-15",
-//         Time: "8pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "2",
-//         event_name: "Singing",
-//         Date: "2024-03-14",
-//         Time: "10pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "3",
-//         event_name: "Drams",
-//         Date: "2024-03-19",
-//         Time: "3pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "4",
-//         event_name: "Drams",
-//         Date: "2024-03-12",
-//         Time: "8pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "5",
-//         event_name: "Mic drop",
-//         Date: "2023-04-15",
-//         Time: "8pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "1",
-//         event_name: "Singing",
-//         Date: "2023-07-15",
-//         Time: "8pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "2",
-//         event_name: "Costume",
-//         Date: "2024-06-15",
-//         Time: "8pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "5",
-//         event_name: "Skit",
-//         Date: "2023-03-16",
-//         Time: "8pm",
-//         Venue: "LBC",
-//     },
-// ];
-// const data = [
-//     {
-//         // id: "1",
-//         event_name: "GC webathon",
-//         Date: "2024-03-15",
-//         Time: "8-9pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "2",
-//         event_name: "GC webathon",
-//         Date: "2024-03-14",
-//         Time: "8-9pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "3",
-//         event_name: "GC webathon",
-//         Date: "2024-03-19",
-//         Time: "8-9pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "4",
-//         event_name: "GC webathon",
-//         Date: "2024-03-12",
-//         Time: "8-9pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "5",
-//         event_name: "GC webathon",
-//         Date: "2023-04-15",
-//         Time: "8-9pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "1",
-//         event_name: "GC webathon",
-//         Date: "2023-07-15",
-//         Time: "8-9pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "2",
-//         event_name: "GC webathon",
-//         Date: "2024-06-15",
-//         Time: "8-9pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "3",
-//         event_name: "GC webathon",
-//         Date: "2023-04-5",
-//         Time: "8-9pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "4",
-//         event_name: "GC webathon",
-//         Date: "2023-03-17",
-//         Time: "8-9pm",
-//         Venue: "LBC",
-//     },
-//     {
-//         // id: "5",
-//         event_name: "GC webathon",
-//         Date: "2023-03-16",
-//         Time: "8-9pm",
-//         Venue: "LBC",
-//     },
-// ];
 
 function sortEventsByDateup(events) {
     return events.slice().sort((a, b) => {
@@ -733,30 +368,25 @@ function Events() {
     useEffect(() => {
         const fetchdata = async () => {
             try {
-                const response = await axios.get('https://gc2024iitbbs.onrender.com/api/event/getEventByCategory?category=cult');
-                console.log(response.data.events)
-                // const upcomingcultraw = filterUpcomingEvents(response.data.events, currentDate);
-                // const pastcultraw = filterpastEvents(response.data.events, currentDate);
-                // const filteredcultdummydataup1 = filterUpcomingEvents(upcomingcultraw, currentDate);
-                // const filteredcultdummydatapast1 = filterpastEvents(pastcultraw, currentDate);
-                // const upcomingcult = sortEventsByDateup(filteredcultdummydataup1);
-                // const pastcult = sortEventsByDatedown(filteredcultdummydatapast1);
-                // const filteredcultdummydataup = upcomingcult.map((item) => ({
-                //     ...item,
-                //     combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
-                // }));
-                // const filteredcultdummydatapast = pastcult.map((item) => ({
-                //     ...item,
-                //     combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
-                // }));
-                
-                const dummycultdata =[];
-                response.data.events.map((item) => 
-                    (item !== null && dummycultdata.push(item.data.details))
-                  );
-                  console.log(dummycultdata);
-                setupcomingcultevents(dummycultdata);
-                setpastcultevents(dummycultdata);
+                const response = await axios.get('http://localhost:3002/api/event/getEventByCategory?category=cult');
+                console.log(response.data.events);
+                // setcultevents(response.data.events)
+                const upcomingcultraw = filterUpcomingEvents(cultdummydata, currentDate);
+                const pastcultraw = filterpastEvents(cultdummydata, currentDate);
+                const filteredcultdummydataup1 = filterUpcomingEvents(upcomingcultraw, currentDate);
+                const filteredcultdummydatapast1 = filterpastEvents(pastcultraw, currentDate);
+                const upcomingcult = sortEventsByDateup(filteredcultdummydataup1);
+                const pastcult = sortEventsByDatedown(filteredcultdummydatapast1);
+                const filteredcultdummydataup = upcomingcult.map((item) => ({
+                    ...item,
+                    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                }));
+                const filteredcultdummydatapast = pastcult.map((item) => ({
+                    ...item,
+                    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                }));
+                setupcomingcultevents(filteredcultdummydataup);
+                setpastcultevents(filteredcultdummydatapast);
             }
             catch (e) {
                 console.log(e);
@@ -768,29 +398,25 @@ function Events() {
     useEffect(() => {
         const fetchdata = async () => {
             try {
-                const response = await axios.get('https://gc2024iitbbs.onrender.com/api/event/getEventByCategory?category=tech');
-                // console.log(response.data.events);
+                const response = await axios.get('http://localhost:3002/api/event/getEventByCategory?category=tech');
+                console.log(response.data.events);
                 // setcultevents(response.data.events)
-                // const upcomingtechsraw = filterUpcomingEvents(data, currentDate);
-                // const pasttechraw = filterpastEvents(data, currentDate);
-                // const dummyup1 = filterUpcomingEvents(upcomingtechsraw, currentDate);
-                // const dummypast1 = filterpastEvents(pasttechraw, currentDate);
-                // const upcomingtech = sortEventsByDateup(dummyup1);
-                // const pasttech = sortEventsByDatedown(dummypast1);
-                // const filteredtechdummydataup = upcomingtech.map((item) => ({
-                //     ...item,
-                //     combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
-                // }));
-                // const filteredtechdummydatapast = pasttech.map((item) => ({
-                //     ...item,
-                //     combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
-                // }));
-                const dummytechdata =[];
-                response.data.events.map((item) => 
-                    (item !== null && dummytechdata.push(item.data.details))
-                  );
-                setupcomingtechevents(dummytechdata);
-                setpasttechevents(dummytechdata);
+                const upcomingtechsraw = filterUpcomingEvents(data, currentDate);
+                const pasttechraw = filterpastEvents(data, currentDate);
+                const dummyup1 = filterUpcomingEvents(upcomingtechsraw, currentDate);
+                const dummypast1 = filterpastEvents(pasttechraw, currentDate);
+                const upcomingtech = sortEventsByDateup(dummyup1);
+                const pasttech = sortEventsByDatedown(dummypast1);
+                const filteredtechdummydataup = upcomingtech.map((item) => ({
+                    ...item,
+                    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                }));
+                const filteredtechdummydatapast = pasttech.map((item) => ({
+                    ...item,
+                    combinedDateTime: `${formatDatetomonth(item.Date)} ${(item.Time)}`,
+                }));
+                setupcomingtechevents(filteredtechdummydataup);
+                setpasttechevents(filteredtechdummydatapast);
             }
             catch (e) {
                 console.log(e);
@@ -805,6 +431,7 @@ function Events() {
                 // const response = await axios.get('http://localhost:3002/api/event/getEventByCategory?category=sports');
                 // console.log(response.data.events);
                 // setcultevents(response.data.events)
+                console.log(roughMatches)
                 const upcomingsportsraw = filterUpcomingEvents(roughMatches, currentDate);
                 const pastsportsraw = filterpastEvents(roughMatches, currentDate);
                 const dummyup1 = filterUpcomingEvents(upcomingsportsraw, currentDate);
