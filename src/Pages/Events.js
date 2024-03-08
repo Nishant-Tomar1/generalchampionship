@@ -1413,7 +1413,7 @@ function Events() {
                             {upcommingsportsevents.map((match, index) => (
 
 
-                                <div key={index} className="flex flex-col bg-gray-500 border-3 border-black rounded-2xl  md:rounded-3xl shadow-lg shadow-black w-5/6 md:w-3/4 lg:w-2/3 my-2 my-lg-3 overflow-hidden">
+                                <div key={index} className="flex flex-col bg-gray-500 border-3 border-black rounded-2xl  md:rounded-3xl shadow-lg shadow-black w-11/12 md:w-3/4 lg:w-2/3 my-2 my-lg-3 overflow-hidden">
 
                                     <div className="text-2xl lg:text-4xl font-bold tracking-tight text-gray-900 dark:text-white text-center my-2 md:my-4 px-1">
                                         {match.matchname} - {match.type}
