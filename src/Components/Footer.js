@@ -21,7 +21,7 @@ function Footer() {
 
                     <div className="gap-3 lg:ml-auto flex md:mt-2 lg:mt-0 justify-center items-center sm:justify-end text-2xl pt-3 pt-md-0">
                         <a href='https://www.instagram.com/gc.iitbbs' target='#'><FaInstagram /></a>
-                        <a href='https://play.google.com/store/apps/details?id=com.samthemathlete.gcapp' target='#'><IoLogoGooglePlaystore /></a>
+                        {/* <a href='https://play.google.com/store/apps/details?id=com.samthemathlete.gcapp' target='#'><IoLogoGooglePlaystore /></a> */}
                     </div>
 
                 </div>
