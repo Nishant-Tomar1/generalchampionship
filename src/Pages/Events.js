@@ -7,7 +7,7 @@ import ee from '../Assets/IMAGES/ee.png'
 import mech from '../Assets/IMAGES/mech.png'
 import civil from '../Assets/IMAGES/civil.png'
 import mtech from '../Assets/IMAGES/mtech.png'
-import msc from '../Assets/IMAGES/msc.png'
+import msc from '../Assets/IMAGES/msc+itep.png'
 import phd from './../Assets/IMAGES/phd.png'
 
 import {
@@ -786,7 +786,7 @@ const data_tech = [
     {
 
         event_name: "Handwriting to Text",
-        Date: "2024-03-06",
+        Date: "2024-03-17",
         Time: "10:00 PM",
         Venue: "Online",
     },
@@ -856,7 +856,7 @@ const data_tech = [
     {
 
         event_name: "Optimax",
-        Date: "2024-03-08",
+        Date: "2024-03-10",
         Time: "12:00 AM",
         Venue: "Online",
     }

@@ -18,7 +18,7 @@ export const data: Data[] = [
     score: "0",
   },
   { branch: "MECH", score: "0" },
-  { branch: "MSC", score: "0" },
+  { branch: "MSC+ITEP", score: "0" },
   { branch: "MTECH", score: "0" },
   { branch: "PHD", score: "0" },
   { branch: "CIVIL", score: "0" },
