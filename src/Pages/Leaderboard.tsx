@@ -17,9 +17,9 @@ export const data: Data[] = [
     branch: "ECE-META",
     score: "0",
   },
-  { branch: "MECH", score: "20" },
-  { branch: "MSC-ITEP", score: "10" },
-  { branch: "MTECH", score: "30" },
+  { branch: "MECH", score: "0" },
+  { branch: "MSC-ITEP", score: "0" },
+  { branch: "MTECH", score: "0" },
   { branch: "PHD", score: "0" },
   { branch: "CIVIL", score: "0" },
 ];
