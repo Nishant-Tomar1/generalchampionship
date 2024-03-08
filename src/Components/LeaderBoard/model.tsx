@@ -1,5 +1,5 @@
 export interface Data {
-    branch: "CSE" | "ECE-META" |"CIVIL"| "EE" | "MECH" | "MSC+ITEP" | "MTECH" | "PHD";
+    branch: "CSE" | "ECE-META" |"CIVIL"| "EE" | "MECH" | "MSC-ITEP" | "MTECH" | "PHD";
     score: string;
   }
   

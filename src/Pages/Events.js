@@ -7,7 +7,7 @@ import ee from '../Assets/IMAGES/ee.png'
 import mech from '../Assets/IMAGES/mech.png'
 import civil from '../Assets/IMAGES/civil.png'
 import mtech from '../Assets/IMAGES/mtech.png'
-import msc from '../Assets/IMAGES/msc+itep.png'
+import msc from '../Assets/IMAGES/msc-itep.png'
 import phd from './../Assets/IMAGES/phd.png'
 
 import {
