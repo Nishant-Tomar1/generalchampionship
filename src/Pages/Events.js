@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import gc from '../Assets/IMAGES/GClogo.png';
+// import gc from '../Assets/IMAGES/GClogo.png';
 import cse from '../Assets/IMAGES/cse.png'
 import ece_meta from '../Assets/IMAGES/ece-meta.png'
 import ee from '../Assets/IMAGES/ee.png'
@@ -50,8 +50,10 @@ const roughMatches = [
                 score: "",
                 sets: "",
             },
+            winner:"ECE-META"
 
         },
+        
     },
     {
         matchname: "Kho-Kho (Boys)",
@@ -72,6 +74,7 @@ const roughMatches = [
                 score: "",
                 sets: "",
             },
+            winner: "Mechanical"
         },
     },
     {
@@ -93,6 +96,7 @@ const roughMatches = [
                 score: "",
                 sets: "",
             },
+            winner: "Civil"
         },
     },
     {
@@ -114,6 +118,7 @@ const roughMatches = [
                 score: "",
                 sets: "",
             },
+            winner: "Electrical"
         },
     },
     {
@@ -124,14 +129,14 @@ const roughMatches = [
         Time: "7:00 AM",
         teams: {
             teamA: {
-                Name: "Winner of League Match 1",
-                img: gc,
+                Name: "ECE-META",
+                img: ece_meta,
                 score: "",
                 sets: "",
             },
             teamB: {
-                Name: "Winner of League Match 3",
-                img: gc,
+                Name: "Civil",
+                img: civil,
                 score: "",
                 sets: "",
             },
@@ -145,14 +150,14 @@ const roughMatches = [
         Time: "8:00 AM",
         teams: {
             teamA: {
-                Name: "Winner of League Match 2",
-                img: gc,
+                Name: "Electrical",
+                img: ee,
                 score: "",
                 sets: "",
             },
             teamB: {
-                Name: "Winner of League Match 4",
-                img: gc,
+                Name: "Mechanical",
+                img: mech,
                 score: "",
                 sets: "",
             },
@@ -1482,11 +1487,12 @@ function Events() {
                                     </div>
 
 
-                                    {match.teams.teamA.sets && (<div> <div className="text-2xl lg:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white text-center "> {match.teams.teamA.score}{`(${match.teams.teamA.sets})`} - {match.teams.teamB.score}{`(${match.teams.teamB.sets})`}</div>
+                                    {/* {match.teams.teamA.sets && (<div> <div className="text-2xl lg:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white text-center "> {match.teams.teamA.score}{`(${match.teams.teamA.sets})`} - {match.teams.teamB.score}{`(${match.teams.teamB.sets})`}</div>
                                         <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">{match.teams.teamA.sets > match.teams.teamB.sets ? match.teams.teamA.Name : match.teams.teamB.Name} Won</div></div>)}
 
                                     {!match.teams.teamA.sets && <><div className="text-2xl lg:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white text-center "> {match.teams.teamA.score} - {match.teams.teamB.score}</div>
-                                        <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">{match.teams.teamA.score > match.teams.teamB.score ? match.teams.teamA.Name : match.teams.teamB.Name} Won</div></>}
+                                        <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">{match.teams.teamA.score > match.teams.teamB.score ? match.teams.teamA.Name : match.teams.teamB.Name} Won</div></>} */}
+                                        {match.teams.winner && <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">{match.teams.winner} Won</div>}
 
                                 </div>
 
