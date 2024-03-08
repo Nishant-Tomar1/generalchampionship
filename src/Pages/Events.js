@@ -1499,7 +1499,7 @@ function Events() {
 
                             ))}
 
-                            <h3 className=" text-gray-400 text-md mt-56">To be updated soon !!!</h3>
+                            {/* <h3 className=" text-gray-400 text-md mt-56">To be updated soon !!!</h3> */}
                         </div>
                     )}
                 </>
