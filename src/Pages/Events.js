@@ -162,6 +162,7 @@ const roughMatches = [
                 score: "",
                 sets: "",
             },
+            winner: "Mechanical"
         },
     },
     {
@@ -960,7 +961,7 @@ function Events() {
     const [upcommingtechevents, setupcomingtechevents] = useState([]);
     const [pasttechevents, setpasttechevents] = useState([]);
     const currentDate = new Date().setHours(0, 0, 0, 0);
-    // console.log("sdvb")
+    
     useEffect(() => {
         const fetchdata = async () => {
             try {
