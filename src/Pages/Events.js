@@ -50,10 +50,10 @@ const roughMatches = [
                 score: "",
                 sets: "",
             },
-            winner:"ECE-META"
+            winner: "ECE-META"
 
         },
-        
+
     },
     {
         matchname: "Kho-Kho (Boys)",
@@ -140,6 +140,7 @@ const roughMatches = [
                 score: "",
                 sets: "",
             },
+            winner: "ECE-META"
         },
     },
     {
@@ -182,13 +183,14 @@ const roughMatches = [
                 score: "",
                 sets: "",
             },
+            winner: "ECE-META"
         },
     },
     {
         matchname: "Kho-Kho (Girls)",
         type: "League Match 2",
         venue: "Hockey Ground",
-        Date: "2024-03-10",
+        Date: "2024-03-09",
         Time: "7:00 AM",
         teams: {
             teamA: {
@@ -203,13 +205,14 @@ const roughMatches = [
                 score: "",
                 sets: "",
             },
+            winner: "Mechanical"
         },
     },
     {
         matchname: "Kho-Kho (Girls)",
         type: "League Match 3",
         venue: "Hockey Ground",
-        Date: "2024-03-10",
+        Date: "2024-03-09",
         Time: "8:00 AM",
         teams: {
             teamA: {
@@ -224,13 +227,14 @@ const roughMatches = [
                 score: "",
                 sets: "",
             },
+            winner: "Civil"
         },
     },
     {
         matchname: "Kho-Kho (Girls)",
         type: "League Match 4",
         venue: "Hockey Ground",
-        Date: "2024-03-10",
+        Date: "2024-03-09",
         Time: "9:00 AM",
         teams: {
             teamA: {
@@ -245,6 +249,7 @@ const roughMatches = [
                 score: "",
                 sets: "",
             },
+            winner: "Electrical"
         },
     },
     {
@@ -1492,7 +1497,7 @@ function Events() {
 
                                     {!match.teams.teamA.sets && <><div className="text-2xl lg:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white text-center "> {match.teams.teamA.score} - {match.teams.teamB.score}</div>
                                         <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">{match.teams.teamA.score > match.teams.teamB.score ? match.teams.teamA.Name : match.teams.teamB.Name} Won</div></>} */}
-                                        {match.teams.winner && <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">{match.teams.winner} Won</div>}
+                                    {match.teams.winner && <div className="text-md lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white text-center mb-3">{match.teams.winner} Won</div>}
 
                                 </div>
 
