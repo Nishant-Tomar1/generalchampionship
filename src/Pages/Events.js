@@ -845,7 +845,6 @@ const roughMatches = [
 
 
 ];
-
 const cultdummydata = [
     {
 
@@ -1277,9 +1276,9 @@ export const columns = [
 
 
 function Events() {
-    const [showcult, setshowcult] = useState(true);
+    const [showcult, setshowcult] = useState(false);
     const [showtech, setshowtech] = useState(false);
-    const [showsports, setshowsports] = useState(false);
+    const [showsports, setshowsports] = useState(true);
     const [showupcomingsports, setshowupcomingsports] = useState(true);
     const [showpastsports, setshowpastsports] = useState(false);
     const [showupcomingcult, setshowupcomingcult] = useState(true);
@@ -1292,7 +1291,7 @@ function Events() {
     const [rowSelection, setRowSelection] = React.useState({});
     const [upcommingcultevents, setupcomingcultevents] = useState([]);
     const [pastcultevents, setpastcultevents] = useState([]);
-    const [upcommingsportsevents, setupcommingsportsevents] = useState([true]);
+    const [upcommingsportsevents, setupcommingsportsevents] = useState([]);
     const [pastsportsevents, setpastsportsevents] = useState([]);
     const [upcommingtechevents, setupcomingtechevents] = useState([]);
     const [pasttechevents, setpasttechevents] = useState([]);
@@ -1358,19 +1357,20 @@ function Events() {
         }
         fetchdata();
     }, [currentDate])
+
     useEffect(() => {
         const fetchdata = async () => {
             try {
                 // const response = await axios.get('http://localhost:3002/api/event/getEventByCategory?category=sports');
                 // console.log(response.data.events);
                 // setcultevents(response.data.events)
-                console.log(roughMatches)
+                // console.log(roughMatches)
                 const upcomingsportsraw = filterUpcomingEvents(roughMatches, currentDate);
                 const pastsportsraw = filterpastEvents(roughMatches, currentDate);
                 const dummyup1 = filterUpcomingEvents(upcomingsportsraw, currentDate);
                 const dummypast1sports = filterpastEvents(pastsportsraw, currentDate);
                 const upcomingsports = sortEventsByDateup(dummyup1);
-                console.log(upcomingsports);
+                // console.log(upcomingsports);
                 setupcommingsportsevents(upcomingsports);
                 setpastsportsevents(dummypast1sports);
             }
@@ -1471,7 +1471,7 @@ function Events() {
 
             {showcult && (
                 <>
-                    <div className="flex items-center justify-around mt-4 mb-3 md:mt-6 w-5/6 md:w-3/4 lg:w-2/3 gap-3 ">
+                    <motion.div className="flex items-center justify-around mt-4 mb-3 md:mt-6 w-5/6 md:w-3/4 lg:w-2/3 gap-3 " variants={variant} animate='entry' exit='exit'>
                         <button
                             onClick={() => {
                                 setshowupcomingcult(true);
@@ -1490,7 +1490,7 @@ function Events() {
                         >
                             Past Events
                         </button>
-                    </div>
+                    </motion.div>
 
                     {showupcomingcult && (
                         <>
@@ -1606,7 +1606,7 @@ function Events() {
             )}
             {showtech && (
                 <>
-                    <div className="flex items-center justify-around mt-4 mb-3 md:mt-6 w-5/6 md:w-3/4 lg:w-2/3 gap-3">
+                    <motion.div className="flex items-center justify-around mt-4 mb-3 md:mt-6 w-5/6 md:w-3/4 lg:w-2/3 gap-3" variants={variant} animate='entry' exit='exit'>
                         <button
                             onClick={() => {
                                 setshowupcomingtech(true);
@@ -1625,7 +1625,7 @@ function Events() {
                         >
                             Past Events
                         </button>
-                    </div>
+                    </motion.div>
                     {showpasttech && (
                         <>
                             <div className="w-11/12 md:w-7/12 rounded-xl border-2">
@@ -1738,7 +1738,7 @@ function Events() {
             )}
             {showsports && (
                 <>
-                    <div className="flex items-center justify-around mt-4 mb-2 md:mt-6 w-4/5 md:w-3/4 lg:w-2/3 gap-3">
+                    <motion.div className="flex items-center justify-around mt-4 mb-2 md:mt-6 w-4/5 md:w-3/4 lg:w-2/3 gap-3" variants={variant} animate='entry' exit='exit'>
 
                         <button onClick={() => {
                             setshowupcomingsports(true);
@@ -1750,7 +1750,7 @@ function Events() {
                             setshowupcomingsports(false);
                             setshowpastsports(true);
                         }} className={`duration-300 md:text-xl ${showpastsports ? "text-pink-700 font-bold border-b-2 border-pink-700" : "text-gray-400"}`}>Past Events</button>
-                    </div>
+                    </motion.div>
 
 
                     {showupcomingsports && (
