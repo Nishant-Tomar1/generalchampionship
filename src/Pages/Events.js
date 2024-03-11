@@ -673,6 +673,174 @@ const roughMatches = [
             },
         },
     },
+    {
+        matchname: "Badminton",
+        type: "League Match",
+        venue: "Court 1",
+        Date: "2024-03-13",
+        Time: "7:00 PM",
+        teams: {
+            teamA: {
+                Name: "Msc-ITEP",
+                img: msc,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Civil",
+                img: civil,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Badminton",
+        type: "League Match",
+        venue: "Court 2",
+        Date: "2024-03-13",
+        Time: "7:00 PM",
+        teams: {
+            teamA: {
+                Name: "Mechanical",
+                img: mech,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "CSE",
+                img: cse,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Table Tennis",
+        type: "League Match",
+        venue: "Table no. 1",
+        Date: "2024-03-13",
+        Time: "7:00 PM",
+        teams: {
+            teamA: {
+                Name: "Mtech",
+                img: mtech,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Electrical",
+                img: ee,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Table Tennis",
+        type: "League Match",
+        venue: "Table no. 3",
+        Date: "2024-03-13",
+        Time: "7:00 PM",
+        teams: {
+            teamA: {
+                Name: "ECE-Meta",
+                img: ece_meta,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "PHD",
+                img: phd,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Table Tennis",
+        type: "League Match",
+        venue: "Table no. 1",
+        Date: "2024-03-13",
+        Time: "9:00 PM",
+        teams: {
+            teamA: {
+                Name: "Civil",
+                img: civil,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "MSc-ITEP",
+                img: msc,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Table Tennis",
+        type: "League Match",
+        venue: "Table no. 3",
+        Date: "2024-03-13",
+        Time: "9:00 PM",
+        teams: {
+            teamA: {
+                Name: "Mechanical",
+                img: mech,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "CSE",
+                img: cse,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Badminton",
+        type: "League Match",
+        venue: "Court 1",
+        Date: "2024-03-13",
+        Time: "9:00 PM",
+        teams: {
+            teamA: {
+                Name: "Electical",
+                img: ee,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "Mtech",
+                img: mtech,
+                score: "",
+                sets: "",
+            },
+        },
+    },
+    {
+        matchname: "Badminton",
+        type: "League Match",
+        venue: "Court 2",
+        Date: "2024-03-13",
+        Time: "9:00 PM",
+        teams: {
+            teamA: {
+                Name: "ECE-Meta",
+                img:ece_meta,
+                score: "",
+                sets: "",
+            },
+            teamB: {
+                Name: "PHD",
+                img: phd,
+                score: "",
+                sets: "",
+            },
+        },
+    },
 
 
 
