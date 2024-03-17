@@ -7,21 +7,21 @@ import { Data } from "../Components/LeaderBoard/model.tsx";
 export const data: Data[] = [
   {
     branch: "EE",
-    score: "300",
+    score: "1670",
   },
   {
     branch: "CSE",
-    score: "600",
+    score: "3970",
   },
   {
     branch: "ECE-META",
-    score: "100",
+    score: "2140",
   },
-  { branch: "MECH", score: "300" },
-  { branch: "MSC-ITEP", score: "0" },
-  { branch: "MTECH", score: "0" },
-  { branch: "PHD", score: "0" },
-  { branch: "CIVIL", score: "1700" },
+  { branch: "MECH", score: "3070" },
+  { branch: "MSC-ITEP", score: "2235" },
+  { branch: "MTECH", score: "1315" },
+  { branch: "PHD", score: "245" },
+  { branch: "CIVIL", score: "5755" },
 ];
 
 function Leaderboard() {
